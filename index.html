@@ -7,112 +7,54 @@
     <title>To Pigeon-Fill the Sky</title>
 </head>
 
-<body class="wrapper">
-    <aside class="spine">
-        <span>To Pigeon-Fill the Sky</span>
-        <span><img src="" /></span>
-        <span><a href="https://duncanpetrie.com">Duncan Petrie</a></span>
-    </aside>
-    <main class="content">
-        <section id="1">
-            <img src="/cover-collage.jpg" />
+<body>
+    <div id="grid-lines"></div>
+    <main>
+        <section id="oldenough">
+            <img data-speed="1.125" src="/public/1.jpg" />
+            <p data-speed="1.375">I'm old enough to remember<br>when pigeons filled the sky.</p>
         </section>
-        <section id="2">
-            I'm old enough to remember<br />when pigeons filled the sky.
+        <section id="soar1">
+            <img src="/public/2.jpg" />
         </section>
-        <section id="3">
-            <img src="/film-0.jpg" />
+        <section id="reflection">
+            <p data-speed="0.5">Back then, there were poetic<br>birds in all of my photographs.</p>
+            <img src="/public/3.jpg" />
+            <img src="/public/4.jpg" />
         </section>
-        <section id="4">
-            <img src="/cambridge-split.jpg" />
+        <section id="magpies">
+            <img src="/public/5.jpg" />
+            <p data-speed="1.25">There were magpies in the slipstreams of air above the eaves.</p>
         </section>
+        <section id="crows">
+            <img src="/public/6.jpg" />
+            <p data-speed="1.25">Crows playing coy, thick as<br>thieves between the trees.</p>
+        </section>
+        <section id="gulls">
+            <p data-speed="1.25">Gulls brushing wingtips with<br>the shape of the wind.</p>
+            <img src="/public/7.jpg" />
+        </section>
+        <section id="thosewerethedays">
+            <p data-speed="0.8">Those were the days.</p>
+        </section>
+        <section id="now">
+            <div class="switcher">
+                <img class="new" src="/public/9.jpg" />
+                <img class="old" src="/public/8.jpg" />
+            </div>
+            <img class="new new-sidekick" src="/public/10.jpg" />
+        </section>
+        <section id="arentsoeasy">
+            <p data-speed="0.8">Now, things aren't so easy.</p>
+            <img src="/public/11.jpg" />
+        </section>
+        <section id="stillgetlucky">
+            <p data-speed="0.8">I still get lucky, sometimes.</p>
+            <img src="/public/12.jpg" />
+        </section>
+        <section></section>
     </main>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/script.ts"></script>
 </body>
-
-<style type="text/css">
-    :root {
-        overscroll-behavior: none;
-        background-color: #fafaff;
-
-        --margin: 1.5rem;
-    }
-
-    * {
-        box-sizing: border-box;
-        padding: unset;
-        margin: unset;
-
-        font-family: 'Times New Roman', Times, serif;
-        font-style: italic;
-        font-weight: 400;
-    }
-
-    img {
-        width: 100%;
-        display: block;
-    }
-
-    a {
-        color: unset;
-        text-decoration: unset;
-    }
-
-    a:hover {
-        text-decoration-thickness: 2px;
-        text-decoration-style: dotted;
-        text-decoration-line: underline;
-        text-underline-offset: 0;
-    }
-
-    .wrapper {
-        display: flex;
-    }
-
-    .spine {
-        position: sticky;
-        top: 0;
-        writing-mode: vertical-lr;
-        height: 100svh;
-        display: flex;
-        justify-content: space-between;
-        padding: var(--margin) calc(var(--margin) / 2);
-        box-shadow: 0px 0 2px #00000004, inset -2px 0px 2px #00000004;
-    }
-
-    .content {
-
-        width: 100%;
-
-        section {
-            min-height: 100svh;
-            width: min(calc(150svh - var(--margin) * 2), 100%);
-            padding: var(--margin) calc(var(--margin) / 2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                aspect-ratio: 3 / 2;
-            }
-        }
-
-        /* section:nth-child(1) {
-        background-color: green;
-    }
-
-    section:nth-child(2) {
-        background-color: yellow;
-    }
-
-    section:nth-child(3) {
-        background-color: red;
-    }
-
-    section:nth-child(4) {
-        background-color: blue;
-    } */
-    }
-</style>
 
 </html>

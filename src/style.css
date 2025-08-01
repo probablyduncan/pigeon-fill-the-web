@@ -1,0 +1,204 @@
+:root {
+    overscroll-behavior: none;
+    background-color: #fafaff;
+
+    --margin: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: unset;
+    margin: unset;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+img {
+    width: 100%;
+    display: block;
+    user-select: none;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    padding: 8px;
+    align-items: start;
+    margin: 50svh 0;
+    border-collapse: collapse;
+}
+
+section#oldenough {
+    img {
+        grid-column: 2 / 7;
+    }
+
+    p {
+        margin-top: 50%;
+        grid-column: 10 / 12
+    }
+}
+
+section#soar1 img {
+    grid-column: 5 / 9;
+}
+
+section#reflection {
+    grid-template-rows: 1fr 1fr;
+    row-gap: 4px;
+
+    p {
+        margin-top: 100%;
+        grid-column: 2 / 4;
+        text-align: right;
+    }
+
+    img:first-of-type {
+        grid-column: 7 / 12;
+        grid-row: 1;
+    }
+
+    img:last-of-type {
+        grid-column: 7 / 12;
+        transform: translateX(-7%);
+        grid-row: 2;
+    }
+}
+
+section#magpies {
+    align-items: flex-end;
+
+    img {
+        grid-column: 3 / 7;
+    }
+
+    p {
+        margin-bottom: -50%;
+        grid-column: 10 / 12;
+    }
+}
+
+section#crows {
+    img {
+        grid-column: 4 / 10;
+    }
+
+    p {
+        grid-column: 8 / 10;
+        grid-row: 2;
+        text-align: right;
+        margin-top: 50%;
+    }
+}
+
+section#gulls {
+    p {
+        grid-column: 4 / 6;
+        margin-bottom: 40%;
+    }
+
+    img {
+        grid-row: 2;
+        grid-column: 7 / 13;
+    }
+}
+
+section#thosewerethedays {
+    p {
+        text-align: center;
+        grid-column: 6 / 8;
+        background-color: #fafaff;
+        /* padding-top: 128px;
+        padding-bottom: 386px; */
+    }
+}
+
+section#now {
+
+    height: 100svh;
+    align-items: center;
+
+    .switcher {
+        grid-column: 6 / 12;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        img.old {
+            transform: scale(0.96) translate(-1.441%, 21.141%);
+        }
+    }
+
+    img.new-sidekick {
+        grid-column: 2 / 6;
+        margin-top: 40%;
+    }
+
+    .new {
+        opacity: 0;
+    }
+}
+
+section#arentsoeasy {
+    row-gap: 50svh;
+
+    p {
+        text-align: center;
+        grid-column: 6 / 8;
+        background-color: #fafaff;
+    }
+
+    img {
+        grid-column: 7 / 13;
+    }
+}
+
+section#stillgetlucky {
+    row-gap: 50svh;
+
+    p {
+        text-align: center;
+        grid-column: 6 / 8;
+        background-color: #fafaff;
+    }
+
+    img {
+        grid-column: 7 / 13;
+    }
+}
+
+
+
+
+#grid-lines {
+
+    width: 100%;
+    height: 100svh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    inset: 0;
+    pointer-events: none;
+
+    --border-width: 1px;
+    --border-color: #2f2f3120;
+
+    background:
+        linear-gradient(90deg, transparent calc(4px - var(--border-width)/2), var(--border-color) calc(4px - var(--border-width)/2), var(--border-color) calc(4px + var(--border-width)/2), transparent calc(4px + var(--border-width)/2)),
+
+        linear-gradient(90deg, transparent calc(25% + 2px - var(--border-width)/2), var(--border-color) calc(25% + 2px - var(--border-width)/2), var(--border-color) calc(25% + 2px + var(--border-width)/2), transparent calc(25% + 2px + var(--border-width)/2)),
+
+        linear-gradient(90deg, transparent calc(50% - var(--border-width)/2), var(--border-color) calc(50% - var(--border-width)/2), var(--border-color) calc(50% + var(--border-width)/2), transparent calc(50% + var(--border-width)/2)),
+
+        linear-gradient(90deg, transparent calc(75% - 2px - var(--border-width)/2), var(--border-color) calc(75% - 2px - var(--border-width)/2), var(--border-color) calc(75% - 2px + var(--border-width)/2), transparent calc(75% - 2px + var(--border-width)/2)),
+
+        linear-gradient(90deg, transparent calc(100% - 4px - var(--border-width)/2), var(--border-color) calc(100% - 4px - var(--border-width)/2), var(--border-color) calc(100% - 4px + var(--border-width)/2), transparent calc(100% - 4px + var(--border-width)/2));
+}
