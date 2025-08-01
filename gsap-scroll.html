@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Pigeon-Fill the Sky</title>
+</head>
+
+<body>
+    <main>
+        <section id="cover">
+            <img class="cover-background" src="DSC_0145.jpg" />
+            <img class="cover-foreground" src="film-1.jpg" />
+        </section>
+        <section style="background-color: green; width: 100%; height: 100svh;">
+
+        </section>
+    </main>
+    <script type="module" src="/src/gsap-scroll.ts"></script>
+</body>
+
+<style type="text/css">
+    :root {
+        background-color: #fafaff;
+    }
+
+    * {
+        box-sizing: border-box;
+        padding: unset;
+        margin: unset;
+
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    main {
+        margin-bottom: 400vh;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    section#cover {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100svh;
+
+        img.cover-background {
+            aspect-ratio: 3/2;
+            position: absolute;
+            padding-top: min(5svh, 5vw);
+            width: min(90vw, calc(90svh * 3 / 2));
+        }
+
+        img.cover-foreground {
+            aspect-ratio: 3/2;
+            position: absolute;
+            bottom: -100svh;
+            width: min(30vw, calc(30svh * 3 / 2));
+        }
+    }
+</style>
+
+</html>
