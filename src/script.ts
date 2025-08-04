@@ -1,4 +1,5 @@
 import "./style.css"
+import "./shader"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
@@ -12,7 +13,7 @@ ScrollSmoother.create({
 });
 
 ScrollTrigger.defaults({
-    markers: true,
+    // markers: true,
 })
 
 ScrollTrigger.create({
@@ -31,4 +32,22 @@ ScrollTrigger.create({
         opacity: 0,
         ease: "power1.out",
     }, 0),
+})
+
+ScrollTrigger.create({
+    id: "ai-1",
+    trigger: "section#goneplenty",
+    start: "top top",
+    end: "bottom top",
+    // pin: "section#goneplenty .img-wrapper",
+    scrub: 0.5,
+    animation: gsap.timeline().to("section#goneplenty img.ai", {
+        opacity: 1,
+        ease: "power1.out",
+        delay: 0.1,
+    }).to("section#goneplenty img.empty", {
+        opacity: 0,
+        ease: "power1.out",
+        delay: 0.1,
+    })
 })

@@ -8,11 +8,20 @@
 </head>
 
 <body>
+    <!-- <shader-doodle>
+        void main() {
+        vec2 st = gl_FragCoord.xy / u_resolution.xy;
+        vec3 color = vec3(st.x, st.y, abs(sin(u_time)));
+
+        gl_FragColor = vec4(color, 1.0);
+        }
+    </shader-doodle> -->
+    <!-- <canvas id="shader"></canvas> -->
     <div id="grid-lines"></div>
     <main>
         <section id="oldenough">
-            <img data-speed="1.125" src="/public/1.jpg" />
-            <p data-speed="1.375">I'm old enough to remember<br>when pigeons filled the sky.</p>
+            <img data-speed="1" src="/public/1.jpg" />
+            <p data-speed="1.125">I'm old enough to remember<br>when pigeons filled the sky.</p>
         </section>
         <section id="soar1">
             <img src="/public/2.jpg" />
@@ -52,7 +61,41 @@
             <p data-speed="0.8">I still get lucky, sometimes.</p>
             <img src="/public/12.jpg" />
         </section>
-        <section></section>
+        <section id="mostlyempty">
+            <p data-speed="0.8">But the skies, these days, are mostly empty.</p>
+            <img src="/public/13.jpg" />
+        </section>
+        <section id="hardlypoetic">
+            <p data-speed="0.8">And the birds are<br/>hardly poetic.</p>
+            <img src="/public/14.jpg" />
+        </section>
+        <section id="hidingdisguises">
+            <p data-speed="0.8">Mostly, I think, they are hiding.</p>
+            <img id="hiding" src="/public/15.jpg" />
+            <img data-speed="0.8" id="disguises" src="/public/16.jpg" />
+            <p>Perhaps, they're wearing disguises.</p>
+        </section>
+        <section id="nonotwhatusetobe">
+            <p data-speed="0.8">No, pictures of the sky aren't what they used to be.</p>
+            <img src="public/17.jpg" />
+        </section>
+        <section id="emptyspread">
+            <img data-speed="0.8" src="/public/18.jpg" />
+            <img data-speed="0.85" src="/public/19.jpg" />
+        </section>
+        <section id="goneplenty">
+            <div data-speed="0.5" class="img-col">
+                <div class="img-wrapper">
+                    <img class="empty" src="public/20.webp" />
+                    <img class="ai" src="public/21.webp" />
+                </div>
+            </div>
+            <div class="text-col">
+                <p>Gone are the days of plenty.</p>
+                <p>Now you have to do things yourself.</p>
+            </div>
+        </section>
+
     </main>
     <script type="module" src="/src/script.ts"></script>
 </body>

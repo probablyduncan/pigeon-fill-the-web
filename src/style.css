@@ -15,10 +15,23 @@
     font-weight: 400;
 }
 
+canvas#shader {
+    width: 100vw;
+    height: 100svh;
+    position: fixed;
+    user-select: none;
+    pointer-events: none;
+
+}
+
 img {
     width: 100%;
     display: block;
     user-select: none;
+}
+
+main {
+    padding-bottom: 100svh;
 }
 
 section {
@@ -28,10 +41,11 @@ section {
     padding: 8px;
     align-items: start;
     margin: 50svh 0;
-    border-collapse: collapse;
 }
 
 section#oldenough {
+    margin-top: calc(100svh - 100vw * 5/12 * 2/3 - 8px * 4 * 2/3);
+
     img {
         grid-column: 2 / 7;
     }
@@ -164,17 +178,112 @@ section#stillgetlucky {
     row-gap: 50svh;
 
     p {
-        text-align: center;
-        grid-column: 6 / 8;
-        background-color: #fafaff;
+        grid-column: 10 / 12;
     }
 
     img {
+        grid-column: 4 / 9;
+    }
+}
+
+section#mostlyempty {
+    row-gap: 50svh;
+
+    p {
+        grid-column: 10 / 12;
+    }
+
+    img {
+        grid-column: 3 / 12;
+        padding-left: 6.6%;
+    }
+}
+
+section#hardlypoetic {
+    p {
+        grid-column: 8 / 10;
+    }
+
+    img {
+        grid-column: 3 / 7;
+    }
+}
+
+section#hidingdisguises {
+    row-gap: 20svh;
+    p {
+        grid-column: 7 / 10;
+    }
+
+    img#hiding {
+        grid-column: 9 / 13;
+        grid-row: 2;
+    }
+    
+    img#disguises {
+        grid-column: 3 / 7;
+        grid-row: 3;
+    }
+
+    p:last-of-type {
+        grid-row: 4;
+    }
+}
+
+section#nonotwhatusetobe {
+    row-gap: 50svh;
+    p {
+        grid-column: 4 / 6;
+    }
+
+    img {
+        grid-column: 1 / 12;
+    }
+}
+
+section#emptyspread {
+    margin-top: 80svh;
+    img:first-of-type {
+        margin-top: 2vw;
+        grid-column: 1 / 7;
+    }
+
+    img:last-of-type {
         grid-column: 7 / 13;
     }
 }
 
+section#goneplenty {
 
+    
+    & > div {
+        padding: 50svh 0;
+    }
+
+    div.img-col {
+        grid-column: 2 / 8;
+    }
+
+    div.img-wrapper {
+        position: relative;
+
+        img {
+            position: absolute;
+        }
+
+        img.ai {
+            opacity: 0;
+        }
+    }
+
+    div.text-col {
+        grid-column: 10 / 13;
+
+        p {
+            margin-bottom: 80svh;
+        }
+    }
+}
 
 
 #grid-lines {
