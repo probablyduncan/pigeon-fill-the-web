@@ -31,7 +31,8 @@ img {
 }
 
 main {
-    padding-bottom: 100svh;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -40,7 +41,7 @@ section {
     gap: 8px;
     padding: 8px;
     align-items: start;
-    margin: 50svh 0;
+    margin: 25svh 0;
 }
 
 section#oldenough {
@@ -125,19 +126,19 @@ section#thosewerethedays {
         text-align: center;
         grid-column: 6 / 8;
         background-color: #fafaff;
-        /* padding-top: 128px;
-        padding-bottom: 386px; */
     }
 }
 
 section#now {
 
+    margin: 50svh 0;
     height: 100svh;
     align-items: center;
 
     .switcher {
         grid-column: 6 / 12;
         position: relative;
+        aspect-ratio: 3 / 2;
 
         img {
             position: absolute;
@@ -146,13 +147,13 @@ section#now {
         }
 
         img.old {
-            transform: scale(0.96) translate(-1.441%, 21.141%);
+            transform: scale(1.135) translate(-3.9%, 13.2%);
         }
     }
 
     img.new-sidekick {
         grid-column: 2 / 6;
-        margin-top: 40%;
+        margin-top: 78%;
     }
 
     .new {
@@ -162,6 +163,7 @@ section#now {
 
 section#arentsoeasy {
     row-gap: 50svh;
+    margin-top: 50svh;
 
     p {
         text-align: center;
@@ -255,6 +257,7 @@ section#emptyspread {
 
 section#goneplenty {
 
+    align-items: end;
     
     & > div {
         padding: 50svh 0;
@@ -266,9 +269,11 @@ section#goneplenty {
 
     div.img-wrapper {
         position: relative;
+        aspect-ratio: 3 / 2;
 
         img {
             position: absolute;
+            bottom: 0;
         }
 
         img.ai {
@@ -279,8 +284,8 @@ section#goneplenty {
     div.text-col {
         grid-column: 10 / 13;
 
-        p {
-            margin-bottom: 80svh;
+        p:first-of-type {
+            margin-bottom: 100svh;
         }
     }
 }
