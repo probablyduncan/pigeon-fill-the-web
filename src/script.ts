@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         start: "center center",
         end: "center+=100 center",
         scrub: 0.5,
+        markers: true,
         animation: gsap.timeline().to("section#now .new", {
             opacity: 1,
             ease: "power1.out",
@@ -34,16 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ScrollTrigger.create({
         id: "ai-1",
-        trigger: "section#goneplenty img.ai",
-        start: "center center",
-        end: "center center",
-        toggleActions: "play none reverse none",
-        animation: gsap.timeline().to("section#goneplenty img.ai", {
+        trigger: "section#goneplenty .stack",
+        start: "center-=100 center",
+        markers: true,
+        toggleActions: "play none none reverse",
+        animation: gsap.timeline().to("section#goneplenty img.pigeon", {
             opacity: 1,
-            ease: roughEase,
-            duration: 0.5,
-        }).to("section#goneplenty img.empty", {
-            opacity: 0,
             ease: roughEase,
             duration: 0.5,
         })

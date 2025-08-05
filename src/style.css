@@ -21,7 +21,6 @@ canvas#shader {
     position: fixed;
     user-select: none;
     pointer-events: none;
-
 }
 
 img {
@@ -42,6 +41,16 @@ section {
     padding: 8px;
     align-items: start;
     margin: 25svh 0;
+}
+
+.stack {
+    position: relative;
+
+    & > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 section#oldenough {
@@ -267,16 +276,10 @@ section#goneplenty {
         grid-column: 2 / 8;
     }
 
-    div.img-wrapper {
-        position: relative;
+    div.stack {
         aspect-ratio: 3 / 2;
 
-        img {
-            position: absolute;
-            bottom: 0;
-        }
-
-        img.ai {
+        img.pigeon {
             opacity: 0;
         }
     }
