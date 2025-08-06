@@ -20,6 +20,28 @@
         display: block;
         user-select: none;
     }
+
+    header {
+        z-index: 999;
+        position: fixed;
+        top: calc(var(--margin) / 4);
+        left: calc(var(--margin) / 2);
+    }
+
+    footer {
+        z-index: 999;
+        position: fixed;
+        bottom: calc(var(--margin) / 4);
+        right: calc(var(--margin) / 2);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    ::selection, a:hover {
+        background-color: rgb(212, 231, 245);
+    }
 }
 
 @layer utilities {
