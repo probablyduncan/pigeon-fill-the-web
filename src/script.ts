@@ -42,13 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         toggleActions: "play none none reset",
         animation: gsap.timeline().to("section#mostlyempty img.glitch", {
-            opacity: 0.5,
-            repeat: 2,
+            opacity: 1,
+            repeat: 3,
+            repeatDelay: 0.1,
             duration: 0.1,
         }, 0).to("section#mostlyempty img.glitch", {
             opacity: 0,
             duration: 0.01,
-        }, 0.4)
+        }, 1)
     })
 
     ScrollTrigger.create({
