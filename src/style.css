@@ -150,13 +150,13 @@ section#now {
         }
 
         img.old {
-            transform: scale(1.135) translate(-3.9%, 13.2%);
+            transform: scale(0.9716713881) translate(-8.16326531%, 15.75492341%);
         }
     }
 
     img.new-sidekick {
         grid-column: 2 / 6;
-        margin-top: 78%;
+        margin-top: 80%;
     }
 
     .new {
