@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# only .webp should be hosted
+*.jpg
+*.png
+*.tif
+*.psd
+*.afphoto
+*.afphoto~lock~

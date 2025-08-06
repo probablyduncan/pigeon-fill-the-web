@@ -16,85 +16,100 @@
         gl_FragColor = vec4(color, 1.0);
         }
     </shader-doodle> -->
-    <!-- <canvas id="shader"></canvas> -->
-    <div id="grid-lines"></div>
-    <main>
+    <!-- <canvas id="shader" class="fixed w-dvw h-dvw select-none pointer-events-none"></canvas> -->
+    <div id="grid-lines" class="hidden"></div>
+    <main class="flex flex-col">
+
         <section id="oldenough">
-            <img data-speed="1" src="/public/1.jpg" />
-            <p data-speed="1.125">I'm old enough to remember<br>when pigeons filled the sky.</p>
+            <img src="/public/i/flock.webp" />
+            <p data-speed="0.8">I'm old enough to remember<br>when pigeons filled the sky.</p>
         </section>
+        
         <section id="soar1">
-            <img src="/public/2.jpg" />
+            <img src="/public/i/soar.webp" />
         </section>
+        
         <section id="reflection">
-            <p data-speed="0.5">Back then, there were poetic<br>birds in all of my photographs.</p>
-            <img src="/public/3.jpg" />
-            <img src="/public/4.jpg" />
+            <p data-speed="0.8">
+                Back then, there were poetic birds<br>in all of my photographs.
+            </p>
+            <img src="/public/i/reflection_top.webp" />
+            <img src="/public/i/reflection_bottom.webp" />
         </section>
+        
         <section id="magpies">
-            <img src="/public/5.jpg" />
-            <p data-speed="1.25">There were magpies in the slipstreams of air above the eaves.</p>
+            <img src="/public/i/magpie.webp" />
+            <p data-speed="0.8">There were magpies in the slip-<br>streams of air above the eaves.</p>
         </section>
+        
         <section id="crows">
-            <img src="/public/6.jpg" />
-            <p data-speed="1.25">Crows playing coy, thick as<br>thieves between the trees.</p>
+            <img src="/public/i/crow.webp" />
+            <p data-speed="0.8">Crows playing coy, thick as<br>thieves between the trees.</p>
         </section>
+        
         <section id="gulls">
-            <p data-speed="1.25">Gulls brushing wingtips with<br>the shape of the wind.</p>
-            <img src="/public/7.jpg" />
+            <p data-speed="0.8">Gulls brushing wingtips with<br>the shape of the wind.</p>
+            <img src="/public/i/gulls.webp" />
         </section>
+        
         <section id="thosewerethedays">
             <p data-speed="0.8">Those were the days.</p>
         </section>
-        <section id="now" data-speed="0.5">
-            <img class="new new-sidekick" src="/public/10.jpg" />
+        
+        <section id="now">
+            <img class="new new-sidekick" src="/public/i/first_fade_sidecar.webp" />
             <div class="switcher">
-                <img class="new" src="/public/9.jpg" />
-                <img class="old" src="/public/8.jpg" />
+                <img class="new" src="/public/i/first_fade_color.webp" />
+                <img class="old" src="/public/i/first_fade_bw.webp" />
             </div>
         </section>
+        
         <section id="arentsoeasy">
             <p data-speed="0.8">Now, things aren't so easy.</p>
-            <img src="/public/11.jpg" />
+            <img src="/public/i/hyde_lens_flare.webp" />
         </section>
+        
         <section id="stillgetlucky">
             <p data-speed="0.8">I still get lucky, sometimes.</p>
-            <img src="/public/12.jpg" />
+            <img src="/public/i/margate.webp" />
         </section>
+        
         <section id="mostlyempty">
             <p data-speed="0.8">But the skies, these days, are mostly empty.</p>
-            <img src="/public/13.jpg" />
+            <div class="stack">
+                <img src="/public/i/beach_pole.webp" />
+                <img class="glitch" src="/public/i/beach_pole_glitch.webp" />
+            </div>
         </section>
+        
         <section id="hardlypoetic">
             <p data-speed="0.8">And the birds are<br />hardly poetic.</p>
-            <img src="/public/14.jpg" />
+            <img src="/public/i/pelican.webp" />
         </section>
-        <section id="hidingdisguises">
-            <p data-speed="0.8">Mostly, I think, they are hiding.</p>
-            <img id="hiding" src="/public/15.jpg" />
-            <img data-speed="0.8" id="disguises" src="/public/16.jpg" />
-            <p>Perhaps, they're wearing disguises.</p>
-        </section>
+        
         <section id="nonotwhatusetobe">
             <p data-speed="0.8">No, pictures of the sky aren't what they used to be.</p>
-            <img src="public/17.jpg" />
+            <img src="public/i/bigempty.webp" />
         </section>
+        
         <section id="emptyspread">
-            <img data-speed="0.8" src="/public/18.jpg" />
-            <img data-speed="0.85" src="/public/19.jpg" />
+            <img data-speed="1" src="/public/i/spread_left.webp" />
+            <img data-speed="1.05" src="/public/i/spread_right.webp" />
         </section>
+        
         <section id="goneplenty">
-            <div data-speed="0.5" class="img-col">
+            <div class="img-col">
                 <div class="stack">
-                    <img class="empty" src="public/ai/1_empty.webp" />
-                    <img class="pigeon" src="public/ai/1_pigeon.webp" />
+                    <img class="empty" src="public/ii/1/1_empty.webp" />
+                    <img class="pigeon" src="public/ii/1/1_final.webp" />
                 </div>
             </div>
-            <div class="text-col">
+            <div data-speed="0.8" class="text-col">
                 <p>Gone are the days of plenty.</p>
                 <p class="trigger">Now you have to do things yourself.</p>
             </div>
         </section>
+
         <!-- <section>
             
         </section> -->

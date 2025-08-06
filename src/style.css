@@ -1,37 +1,38 @@
-:root {
-    overscroll-behavior: none;
-    background-color: #fafaff;
+@import "tailwindcss";
 
-    --margin: 1.5rem;
+@layer base {
+    :root {
+        overscroll-behavior: none;
+        background-color: #fafaff;
+        --margin: 1.5rem;
+    }
+
+    * {
+        box-sizing: border-box;
+        padding: unset;
+        margin: unset;
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        user-select: none;
+    }
 }
 
-* {
-    box-sizing: border-box;
-    padding: unset;
-    margin: unset;
+@layer utilities {
+    .stack {
+        position: relative;
+        aspect-ratio: 3 / 2;
 
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 400;
-}
-
-canvas#shader {
-    width: 100vw;
-    height: 100svh;
-    position: fixed;
-    user-select: none;
-    pointer-events: none;
-}
-
-img {
-    width: 100%;
-    display: block;
-    user-select: none;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
+        & > * {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
 }
 
 section {
@@ -41,20 +42,47 @@ section {
     padding: 8px;
     align-items: start;
     margin: 25svh 0;
+
+    /* &, & * {
+            @apply transform-gpu;
+        } */
 }
 
-.stack {
-    position: relative;
+section#crows {
+    img {
+        grid-column: 4 / 10;
+    }
 
-    & > * {
-        position: absolute;
-        top: 0;
-        left: 0;
+    p {
+        grid-column: 8 / 10;
+        grid-row: 2;
+        text-align: right;
+        margin-top: 50%;
+    }
+}
+
+section#gulls {
+    p {
+        grid-column: 4 / 6;
+        margin-bottom: 40%;
+    }
+
+    img {
+        grid-row: 2;
+        grid-column: 7 / 13;
+    }
+}
+
+section#thosewerethedays {
+    p {
+        text-align: center;
+        grid-column: 6 / 8;
+        background-color: #fafaff;
     }
 }
 
 section#oldenough {
-    margin-top: calc(100svh - 100vw * 5/12 * 2/3 - 8px * 4 * 2/3);
+    margin-top: calc(100svh - 100vw * 5 / 12 * 2 / 3 - 8px * 4 * 2 / 3);
 
     img {
         grid-column: 2 / 7;
@@ -62,7 +90,7 @@ section#oldenough {
 
     p {
         margin-top: 50%;
-        grid-column: 10 / 12
+        grid-column: 10 / 12;
     }
 }
 
@@ -105,41 +133,7 @@ section#magpies {
     }
 }
 
-section#crows {
-    img {
-        grid-column: 4 / 10;
-    }
-
-    p {
-        grid-column: 8 / 10;
-        grid-row: 2;
-        text-align: right;
-        margin-top: 50%;
-    }
-}
-
-section#gulls {
-    p {
-        grid-column: 4 / 6;
-        margin-bottom: 40%;
-    }
-
-    img {
-        grid-row: 2;
-        grid-column: 7 / 13;
-    }
-}
-
-section#thosewerethedays {
-    p {
-        text-align: center;
-        grid-column: 6 / 8;
-        background-color: #fafaff;
-    }
-}
-
 section#now {
-
     margin: 50svh 0;
     height: 100svh;
     align-items: center;
@@ -204,9 +198,13 @@ section#mostlyempty {
         grid-column: 10 / 12;
     }
 
-    img {
+    .stack {
         grid-column: 3 / 12;
         padding-left: 6.6%;
+    }
+
+    img.glitch {
+        opacity: 0;
     }
 }
 
@@ -230,7 +228,7 @@ section#hidingdisguises {
         grid-column: 9 / 13;
         grid-row: 2;
     }
-    
+
     img#disguises {
         grid-column: 3 / 7;
         grid-row: 3;
@@ -265,9 +263,8 @@ section#emptyspread {
 }
 
 section#goneplenty {
-
     align-items: end;
-    
+
     & > div {
         padding: 50svh 0;
     }
@@ -276,12 +273,8 @@ section#goneplenty {
         grid-column: 2 / 8;
     }
 
-    div.stack {
-        aspect-ratio: 3 / 2;
-
-        img.pigeon {
-            opacity: 0;
-        }
+    img.pigeon {
+        opacity: 0;
     }
 
     div.text-col {
@@ -293,9 +286,7 @@ section#goneplenty {
     }
 }
 
-
 #grid-lines {
-
     width: 100%;
     height: 100svh;
     position: fixed;
@@ -308,14 +299,39 @@ section#goneplenty {
     --border-width: 1px;
     --border-color: #2f2f3120;
 
-    background:
-        linear-gradient(90deg, transparent calc(4px - var(--border-width)/2), var(--border-color) calc(4px - var(--border-width)/2), var(--border-color) calc(4px + var(--border-width)/2), transparent calc(4px + var(--border-width)/2)),
-
-        linear-gradient(90deg, transparent calc(25% + 2px - var(--border-width)/2), var(--border-color) calc(25% + 2px - var(--border-width)/2), var(--border-color) calc(25% + 2px + var(--border-width)/2), transparent calc(25% + 2px + var(--border-width)/2)),
-
-        linear-gradient(90deg, transparent calc(50% - var(--border-width)/2), var(--border-color) calc(50% - var(--border-width)/2), var(--border-color) calc(50% + var(--border-width)/2), transparent calc(50% + var(--border-width)/2)),
-
-        linear-gradient(90deg, transparent calc(75% - 2px - var(--border-width)/2), var(--border-color) calc(75% - 2px - var(--border-width)/2), var(--border-color) calc(75% - 2px + var(--border-width)/2), transparent calc(75% - 2px + var(--border-width)/2)),
-
-        linear-gradient(90deg, transparent calc(100% - 4px - var(--border-width)/2), var(--border-color) calc(100% - 4px - var(--border-width)/2), var(--border-color) calc(100% - 4px + var(--border-width)/2), transparent calc(100% - 4px + var(--border-width)/2));
+    background: linear-gradient(
+            90deg,
+            transparent calc(4px - var(--border-width) / 2),
+            var(--border-color) calc(4px - var(--border-width) / 2),
+            var(--border-color) calc(4px + var(--border-width) / 2),
+            transparent calc(4px + var(--border-width) / 2)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(25% + 2px - var(--border-width) / 2),
+            var(--border-color) calc(25% + 2px - var(--border-width) / 2),
+            var(--border-color) calc(25% + 2px + var(--border-width) / 2),
+            transparent calc(25% + 2px + var(--border-width) / 2)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(50% - var(--border-width) / 2),
+            var(--border-color) calc(50% - var(--border-width) / 2),
+            var(--border-color) calc(50% + var(--border-width) / 2),
+            transparent calc(50% + var(--border-width) / 2)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(75% - 2px - var(--border-width) / 2),
+            var(--border-color) calc(75% - 2px - var(--border-width) / 2),
+            var(--border-color) calc(75% - 2px + var(--border-width) / 2),
+            transparent calc(75% - 2px + var(--border-width) / 2)
+        ),
+        linear-gradient(
+            90deg,
+            transparent calc(100% - 4px - var(--border-width) / 2),
+            var(--border-color) calc(100% - 4px - var(--border-width) / 2),
+            var(--border-color) calc(100% - 4px + var(--border-width) / 2),
+            transparent calc(100% - 4px + var(--border-width) / 2)
+        );
 }

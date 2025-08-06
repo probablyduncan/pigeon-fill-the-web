@@ -34,6 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     ScrollTrigger.create({
+        id: "foreshadowing",
+        trigger: "section#mostlyempty .stack",
+        start: "bottom top+=300",
+        markers: {
+            indent: 600,
+        },
+        toggleActions: "play none none reset",
+        animation: gsap.timeline().to("section#mostlyempty img.glitch", {
+            opacity: 0.5,
+            repeat: 2,
+            duration: 0.1,
+        }, 0).to("section#mostlyempty img.glitch", {
+            opacity: 0,
+            duration: 0.01,
+        }, 0.4)
+    })
+
+    ScrollTrigger.create({
         id: "ai-1",
         trigger: "section#goneplenty .stack",
         start: "center-=100 center",
