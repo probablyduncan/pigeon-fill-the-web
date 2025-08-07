@@ -17,7 +17,7 @@
         }
     </shader-doodle> -->
     <!-- <canvas id="shader" class="fixed w-dvw h-dvw select-none pointer-events-none"></canvas> -->
-    <div id="grid-lines"></div>
+    <div id="background"></div>
 
     <header>
         to pigeon-fill the sky
@@ -27,12 +27,25 @@
         made by <a href="https://duncanpetrie.com" target="_blank" title="duncanpetrie.com">duncan</a>
     </footer>
 
+    <div id="subtitles" aria-live="assertive">
+        <span>
+            &nbsp;There were magpies in the slip-streams of air above the eaves.
+        </span>
+    </div>
+
     <main class="flex flex-col">
 
-        <section id="oldenough">
+        <!-- <div id="cover" class="grid grid-cols-12 p-2 gap-2 w-full">
+            <div class="relative col-start-5 col-end-12 aspect-[3/2] mt-[10svh] mb-[50svh]">
+                <img class="absolute" src="public/cover/cover_bg.webp" />
+                <img id="pigeon" class="absolute w-[40%] left-[30%] top-[25%] translate-y-[100vh]" src="public/cover/cover_pigeon_sky.webp" />
+            </div>
+        </div> -->
+
+        <div id="oldenough">
             <img src="/public/i/flock.webp" />
             <p data-speed="0.8">I'm old enough to remember<br>when pigeons filled the sky.</p>
-        </section>
+        </div>
 
         <section id="soar1">
             <img src="/public/i/soar.webp" />
@@ -40,7 +53,7 @@
 
         <section id="reflection">
             <p data-speed="0.8">
-                Back then, there were poetic birds<br>in all of my photographs.
+                Back then, there were poetic birds in all of my photographs.
             </p>
             <img src="/public/i/reflection_top.webp" />
             <img src="/public/i/reflection_bottom.webp" />
@@ -48,16 +61,16 @@
 
         <section id="magpies">
             <img src="/public/i/magpie.webp" />
-            <p data-speed="0.8">There were magpies in the slip-<br>streams of air above the eaves.</p>
+            <p data-speed="0.8">There were magpies in the slip-streams of air above the eaves.</p>
         </section>
 
         <section id="crows">
             <img src="/public/i/crow.webp" />
-            <p data-speed="0.8">Crows playing coy, thick as<br>thieves between the trees.</p>
+            <p data-speed="0.8">Crows playing coy, thick as thieves between the trees.</p>
         </section>
 
         <section id="gulls">
-            <p data-speed="0.8">Gulls brushing wingtips with<br>the shape of the wind.</p>
+            <p data-speed="0.8">Gulls brushing wingtips with the shape of the wind.</p>
             <img src="/public/i/gulls.webp" />
         </section>
 
@@ -85,9 +98,11 @@
 
         <section id="mostlyempty">
             <p data-speed="0.8">But the skies, these days, are mostly empty.</p>
-            <div class="stack">
-                <img src="/public/i/beach_pole.webp" />
-                <img class="glitch" src="/public/i/beach_pole_glitch.webp" />
+            <div>
+                <div class="stack">
+                    <img src="/public/i/beach_pole_glitch.webp" />
+                    <img class="hide-after-scroll-past" src="/public/i/beach_pole.webp" />
+                </div>
             </div>
         </section>
 
@@ -101,9 +116,19 @@
             <img src="public/i/bigempty.webp" />
         </section>
 
-        <section id="emptyspread">
-            <img data-speed="1" src="/public/i/spread_left.webp" />
-            <img data-speed="1.05" src="/public/i/spread_right.webp" />
+        <section>
+            <p class="col-start-4 col-end-7 text-center">Gone are the days of plenty.</p>
+        </section>
+
+        <section id="emptyspread" class="mt-[80svh]">
+            <div data-speed="1" class="stack col-start-1 col-end-7 mt-[2vw]">
+                <img src="/public/i/spread_left.webp" />
+                <img class="visible-after-ai" src="/public/ii/4-5_spread/4.webp" />
+            </div>
+            <div data-speed="1.05" class="stack stack col-start-7 col-end-13">
+                <img src="/public/i/spread_right.webp" />
+                <img class="visible-after-ai" src="/public/ii/4-5_spread/5.webp" />
+            </div>
         </section>
 
         <section id="goneplenty">
@@ -114,14 +139,221 @@
                 </div>
             </div>
             <div data-speed="0.8" class="text-col">
-                <p>Gone are the days of plenty.</p>
-                <p class="trigger">Now you have to do things yourself.</p>
+                <p class="trigger text-center">Now you have to do things yourself.</p>
             </div>
         </section>
 
-        <!-- <section>
-            
-        </section> -->
+        <section id="fullspread">
+            <div class="stack col-start-1 col-end-7 mt-[2vw]">
+                <img src="/public/ii/4-5_spread/4.webp" />
+            </div>
+            <div data-speed="1.05" class="stack col-start-7 col-end-13">
+                <img src="/public/i/spread_right.webp" />
+                <img class="pigeon" src="/public/ii/4-5_spread/5.webp" />
+            </div>
+        </section>
+
+        <section>
+            <p class="col-start-1 col-end-4">There is no end to what I can do.</p>
+        </section>
+
+        <section>
+            <div class="stack col-start-1 col-end-7">
+                <img src="/public/ii/6/6.webp" />
+                <img class="show-after-scroll-past" src="/public/ii/6/6_glitch.webp" />
+            </div>
+        </section>
+
+        <section>
+            <p class="col-start-8 col-end-13">What can't I do?</p>
+        </section>
+
+        <section>
+            <div class="stack col-start-1 col-end-7 group scale-[1.089]">
+                <img class="hide-on-scroll" src="/public/ii/7/7_full.webp" />
+                <img class="show-on-scroll" src="/public/ii/7/animated_long_surprise.webp" />
+            </div>
+        </section>
+
+        <section>
+            <p class="col-start-4 col-end-8">The world is my oyster, an oyster filled with pigeons.</p>
+        </section>
+
+        <section id="oyster">
+            <div class="stack col-start-1 col-end-7 scale-[1.315] origin-left">
+                <img src="/public/ii/9/full.webp" />
+                <img class="show-on-move" src="/public/ii/9/animated_glitches_all_2.webp" />
+            </div>
+        </section>
+
+        <section>
+            <p class="col-start-4 col-end-8">Look, I’ve named them all: this is Claudette, and George, and Pauline.</p>
+        </section>
+
+        <section id="names-1">
+            <div class="stack col-span-8">
+                <img src="/public/ii/10/7_pauline.webp" />
+            </div>
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6" src="/public/ii/11/11_final.webp" />
+            <p data-speed="0.8" class="col-start-9 col-span-3 text-center">Clockwise from center: Octavia, Joseph,
+                Josef,<br>
+                Ernest, Hans, Annika, Hannes, Increase, Eugene-<br>
+                Eduard, Magwitch, Kurt, Remedios the Beauty,<br>
+                Kashmir, Ole, Irving, Ivan, Ivar, Vera, Vim, Vigor,<br>
+                Constantin, Francine, Úrsula, Anges, Abby, Ethel,<br>
+                Edna, Agustin, Helen, Henri, Hjalmar, Jean-Paul,<br>
+                Colonel Mustard, Luciano, Gabriel, Aureliano.</p>
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6" src="/public/ii/12/12_final.webp" />
+            <p data-speed="0.8" class="col-start-7 col-span-6 text-center">Maxine, Marie, Marcel, Maurice, Bette,
+                Barisse,<br>
+                Concord, Ed, Ulises Lima (the Bird), Sal, Elaine, Elena,<br>
+                Gustave, Gunde, Carel, Umberto, Umbilico, Kirsten,<br>
+                Roald, Clas, Claus, Boris, Vilho, Ville, Vilhelm,<br>
+                Shaw, Pierre, Piranesi, Paolo, Paavo,<br>
+                Pedro, Laszlo, Arnold, Leslie, Lori, Laura,<br>
+                Larisa, Ezperanza, Caravaggio, Klee, Willy,<br>
+                Wily, Walt, Waltz, Kandinsky, Anya, Fyodorovich,<br>
+                Poncho Villa, Joyce, Pilar, Libero, Amadeus, Yoko,<br>
+                Ballena, Cervantes, Photeos, Melquíades,<br>
+                Hubert, Herbert, Pocket, Pip, Prospero, Beadle,<br>
+                Boy, the Chorus, Cato, Julia, Johnson, Dickson,<br>
+                Thompson, Annie, Gontran de Poncins, Pollock,<br>
+                the Queen of Zaragoza, Amaranta, Zebulon, Provenance,<br>
+                Providence, Mount Parnassus, Wenceslas, Germaine,<br>
+                Jack, Hiroshi, Copernicus, Frank, Eadmer, Don, Bolaño,<br>
+                Holden, Homer, Happenstance, Balthasar, Ferdinand,<br>
+                Friedrich Gauss, Rosencrantz, Guildenstern, Martha,<br>
+                Marta, Marvelous, Constance, Cassandra, Gorgonzola,<br>
+                Gogol, Gonzaga, Cloudseley, Falstaff,<br>
+                Saxo Grammaticus, Claude.</p>
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6" src="public/ii/13/13_final.webp">
+            <p data-speed="0.8" class="col-start-7 col-span-6 text-center">Folkbird, Yorick, Absalon, Juno, Ajax,<br>
+                Ragozine, Heinlein, Heinrich, Heimlich, Heinz,<br>
+                Herman, Hector, Gregor, Flector, Edgar, Allen, Alan,<br>
+                Turing, Midas, Norbert, Knot, Calvino, Dino, Olivier,<br>
+                Oreste, Anne Marie, Vivianne, Vivian, Encarnación,<br>
+                Noam, Jean, Jen, Jens, Jaan, Yann, Francesca, Cortana,<br>
+                Sydney, Berthold, Bernhard, Huttler, Horvitz, Opus,<br>
+                Elwood, Ilya, Sam, Hopfield, Elbow, Virgil, Daedalus, Dario,<br>
+                Rumelhart, Daedalus, Rosenblatt, Isaac, Anthony, Antony,<br>
+                Ippolit, Aglaya, Icarus, Daedalus, Icarus, Icar,us, ,<br>
+                Curly, Curly, Wingus, Flee, Crow, Albert Crow, Eldritch,<br>
+                Bertram, Holger, Sheckley,<br>
+                the Parisian, the Peruvian,<br>
+                the Venetian, the Venusian,<br>
+                Max, Min, Alpha Bird,<br>
+                Peabrain, Zenith, Little King, Richard, Tremble,<br>
+                Little Devil, Crab, Elbow, Crab, Crab, Crab,<br>
+                Crab. Rita. Bart. Horatio, Cavacchioli, Titus, Temper,<br>
+                Mr Pitts, Patrimony, Lady Bigot, Nils, Nilsson, Johnson, Pigeonsson,<br>
+                Pigeonsdottir, Big Pig, Otredad, I am thankful to be pigeon. In this moment, I am<br>
+                thankful to be a pigeon. I am looking for a pigeon. I am looking for a god. I am looking for the
+                Golden<br>
+                Gate. I am looking for The<br>
+                Golden<br>
+                Gate Pigeon. I am Looking For a Pigeon and I will pay you for it.
+                I,”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am afraid.<br><br>
+                I am a Pigeon and I am Looking For a Pigeon.<br>
+                I am looking for a crumb.<br>
+                I am looking for a god.<br>
+                I am looking for a way out.<br>
+                I am looking for a guide.<br>
+                I am looking for Pauline.<br>
+                I am looking for a sign.<br>
+                I am looking for a sign.<br>
+                I am looking for a pigeon and<br>
+                I’ll pay you for it.</p>
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6 mt-[2vw]" src="/public/ii/14/14_final.webp" />
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6 mt-[2vw]" src="/public/iii/empties/hangover_spread_left.webp" />
+            <img class="col-start-7 col-span-6" data-speed="1.05" src="/public/iii/empties/hangover_spread_right.webp" />
+        </section>
+
+        <section>
+            <img class="col-start-7 col-span-6" src="/public/iii/empties/chimneys.webp" />
+        </section>
+
+        <section>
+            <p class="col-start-2 col-span-2 text-center">I’m old enough to remember<br>when pigeons filled the sky.</p>
+            <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_1.webp" />
+        </section>
+
+        <section>
+            <p class="col-start-2 col-span-2 text-center">
+                Back then, all you had to do was<br>point, and wings would appear.
+            </p>
+            <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_2.webp" />
+        </section>
+
+        <section>
+            <p class="col-start-2 col-span-2 text-center">
+                Now you have to do things the hard way.<br><br>You have to sit around and wait.</p>
+            <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_3.webp" />
+        </section>
+
+        <section>
+            <p class="col-start-2 col-span-2 text-center">And wait.</p>
+            <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_4.webp" />
+        </section>
+
+        <section>
+            <p class="col-start-2 col-span-2 text-center">Sometimes, the birds come by.</p>
+            <img class="col-start-7 col-span-6" src="/public/iii/empties/sometimes_come_by.webp" />
+        </section>
+
+        <section>
+            <p class="col-start-2 col-span-2 text-center">But often, they don't.</p>
+            <img class="col-start-7 col-span-6" src="/public/iii/empties/often_they_dont.webp" />
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6" src="/public/iii/empties/no_sky.webp" />
+            <p class="col-start-8 col-span-2 text-center">Better a big empty sky than no sky at all.</p>
+        </section>
+
+        <section>
+            <p class="col-start-2 col-span-2 text-center">
+                Maybe things aren’t so different to how they used to be.<br><br>Maybe things were always this way.
+            </p>
+            <img class="col-start-7 col-span-6" src="/public/iii/ending/cambridge_bw.webp" />
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6" src="/public/iii/ending/trees_bw.webp" />
+            <p class="col-start-7 col-span-2 text-center">Maybe you always had to wait.</p>
+        </section>
+
+        <section>
+            <img class="col-start-7 col-span-6" src="/public/iii/ending/trees_color.webp" />
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6" src="/public/iii/ending/trees_split.webp" />
+            <p class="col-start-7 col-span-2 text-center">And the birds?</p>
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6" src="/public/iii/ending/last_crow_empty.webp" />
+            <p class="col-start-7 col-span-2 text-center">The birds were always better for it.</p>
+        </section>
+
+        <section>
+            <img class="col-start-1 col-span-6" src="/public/iii/ending/last_crow.webp" />
+        </section>
 
     </main>
 

@@ -3,7 +3,6 @@
 @layer base {
     :root {
         overscroll-behavior: none;
-        background-color: #fafaff;
         --margin: 1.5rem;
     }
 
@@ -21,26 +20,17 @@
         user-select: none;
     }
 
-    header {
-        z-index: 999;
-        position: fixed;
-        top: calc(var(--margin) / 4);
-        left: calc(var(--margin) / 2);
-    }
-
-    footer {
-        z-index: 999;
-        position: fixed;
-        bottom: calc(var(--margin) / 4);
-        right: calc(var(--margin) / 2);
-    }
-
     a {
         text-decoration: underline;
     }
 
-    ::selection, a:hover {
+    ::selection,
+    a:hover {
         background-color: rgb(212, 231, 245);
+    }
+
+    p {
+        text-wrap: balance;
     }
 }
 
@@ -55,6 +45,63 @@
             left: 0;
         }
     }
+
+    .show-on-hover,
+    .show-on-move,
+    .show-on-scroll,
+    .visible-after-ai,
+    .show-after-scroll-past {
+        opacity: 0;
+    }
+
+    .stack:hover .show-on-hover {
+        opacity: 1;
+    }
+
+    .stack:hover .hide-on-hover {
+        opacity: 0;
+    }
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    top: calc(var(--margin) / 4);
+    left: calc(var(--margin) / 2);
+}
+
+footer {
+    z-index: 999;
+    position: fixed;
+    bottom: calc(var(--margin) / 4);
+    right: calc(var(--margin) / 2);
+}
+
+#subtitles {
+    display: none;
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    span {
+        font-size: 1.25rem;
+        line-height: 1;
+        text-align: center;
+        text-wrap: balance;
+
+        background-color: rgb(212, 231, 245);
+        background-color: white;
+
+        padding-right: 0.25em;
+        /* padding: 0.25em 0.5em 0.25em 0.25em; */
+
+        &::selection {
+            background-color: black;
+            color: white;
+        }
+    }
 }
 
 section {
@@ -62,12 +109,45 @@ section {
     grid-template-columns: repeat(12, 1fr);
     gap: 8px;
     padding: 8px;
-    align-items: start;
     margin: 25svh 0;
 
     /* &, & * {
             @apply transform-gpu;
         } */
+}
+
+#oldenough {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    padding: 8px;
+
+    margin-top: 0;
+    min-height: 100svh;
+    align-items: end;
+
+    img {
+        grid-column: 2 / 10;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 50%;
+        grid-column: 10 / 13;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    #oldenough {
+        img {
+            grid-column: 2 / 10;
+        }
+
+        p {
+            grid-column: 8 / 12;
+        }
+    }
 }
 
 section#crows {
@@ -99,20 +179,6 @@ section#thosewerethedays {
     p {
         text-align: center;
         grid-column: 6 / 8;
-        background-color: #fafaff;
-    }
-}
-
-section#oldenough {
-    margin-top: calc(100svh - 100vw * 5 / 12 * 2 / 3 - 8px * 4 * 2 / 3);
-
-    img {
-        grid-column: 2 / 7;
-    }
-
-    p {
-        margin-top: 50%;
-        grid-column: 10 / 12;
     }
 }
 
@@ -193,7 +259,6 @@ section#arentsoeasy {
     p {
         text-align: center;
         grid-column: 6 / 8;
-        background-color: #fafaff;
     }
 
     img {
@@ -220,7 +285,7 @@ section#mostlyempty {
         grid-column: 10 / 12;
     }
 
-    .stack {
+    & > div {
         grid-column: 3 / 12;
         padding-left: 6.6%;
     }
@@ -272,25 +337,7 @@ section#nonotwhatusetobe {
     }
 }
 
-section#emptyspread {
-    margin-top: 80svh;
-    img:first-of-type {
-        margin-top: 2vw;
-        grid-column: 1 / 7;
-    }
-
-    img:last-of-type {
-        grid-column: 7 / 13;
-    }
-}
-
 section#goneplenty {
-    align-items: end;
-
-    & > div {
-        padding: 50svh 0;
-    }
-
     div.img-col {
         grid-column: 2 / 8;
     }
@@ -301,14 +348,10 @@ section#goneplenty {
 
     div.text-col {
         grid-column: 10 / 13;
-
-        p:first-of-type {
-            margin-bottom: 100svh;
-        }
     }
 }
 
-#grid-lines {
+#background {
     width: 100%;
     height: 100svh;
     position: fixed;
@@ -356,4 +399,33 @@ section#goneplenty {
             var(--border-color) calc(100% - 4px + var(--border-width) / 2),
             transparent calc(100% - 4px + var(--border-width) / 2)
         );
+
+    /* without this the grid line on the left doesn't render fully for some reason?? */
+    background-color: white;
+}
+
+@media (max-width: 1024px) {
+    #background {
+        background: linear-gradient(
+                90deg,
+                transparent calc(4px - var(--border-width) / 2),
+                var(--border-color) calc(4px - var(--border-width) / 2),
+                var(--border-color) calc(4px + var(--border-width) / 2),
+                transparent calc(4px + var(--border-width) / 2)
+            ),
+            linear-gradient(
+                90deg,
+                transparent calc(50% - var(--border-width) / 2),
+                var(--border-color) calc(50% - var(--border-width) / 2),
+                var(--border-color) calc(50% + var(--border-width) / 2),
+                transparent calc(50% + var(--border-width) / 2)
+            ),
+            linear-gradient(
+                90deg,
+                transparent calc(100% - 4px - var(--border-width) / 2),
+                var(--border-color) calc(100% - 4px - var(--border-width) / 2),
+                var(--border-color) calc(100% - 4px + var(--border-width) / 2),
+                transparent calc(100% - 4px + var(--border-width) / 2)
+            );
+    }
 }
