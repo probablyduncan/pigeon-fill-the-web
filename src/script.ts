@@ -7,14 +7,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { SplitText } from "gsap/SplitText"
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, RoughEase, SplitText)
+gsap.registerPlugin(
+    ScrollTrigger,
+    // ScrollSmoother,
+    RoughEase,
+    SplitText
+)
 
 document.addEventListener("DOMContentLoaded", () => {
-    ScrollSmoother.create({
-        content: "main",
-        smooth: 0.5,
-        effects: true,
-    })
+    // ScrollSmoother.create({
+    //     content: "main",
+    //     smooth: 0.5,
+    //     effects: true,
+    // })
 
     const roughEase = "rough({template: elastic.inOut, points: 100, randomize:true, clamp:true})"
 
@@ -32,16 +37,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // })
 
     ScrollTrigger.create({
+        id: "title-icon",
+        trigger: "#title-wrapper",
+        start: "top top",
+        end: "center top",
+        scrub: 0.5,
+        // markers: true,
+        animation: gsap.to("#title img", {
+            y: -90,
+            x: -60,
+            scale: 2,
+        })
+    })
+
+    ScrollTrigger.create({
         id: "old-new",
-        trigger: "section#now",
+        trigger: "#now",
         start: "center center",
         toggleActions: "play none none reverse",
         // scrub: 0.5,
         // markers: true,
-        animation: gsap.timeline().to("section#now .new", {
+        animation: gsap.timeline().to("#now .new", {
             opacity: 1,
             ease: "power1.out",
-        }, 0).to("section#now .old", {
+        }, 0).to("#now .old", {
             ease: "power1.out",
             opacity: 0,
         }, 0),
@@ -49,11 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ScrollTrigger.create({
         id: "ai-1",
-        trigger: "section#goneplenty .stack",
+        trigger: "#goneplenty .stack",
         start: "center-=100 center",
         // markers: true,
         toggleActions: "play none none reverse",
-        animation: gsap.timeline().to("section#goneplenty img.pigeon", {
+        animation: gsap.timeline().to("#goneplenty img.pigeon", {
             opacity: 1,
             ease: roughEase,
             duration: 0.5,
@@ -62,16 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ScrollTrigger.create({
         id: "fullspread",
-        trigger: "section#fullspread",
+        trigger: "#fullspread",
         start: "center+=100 center",
         // markers: true,
         toggleActions: "play none none none",
-        animation: gsap.timeline().to("section#fullspread img.pigeon", {
+        animation: gsap.timeline().to("#fullspread img.pigeon", {
             opacity: 0,
             duration: 0.05,
             yoyo: true,
             repeat: 3,
-        }).to("section#fullspread img.pigeon", {
+        }).to("#fullspread img.pigeon", {
             opacity: 0,
             duration: 0.1,
             yoyo: true,
@@ -84,11 +103,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ScrollTrigger.create({
         id: "oyster",
-        trigger: "section#oyster",
+        trigger: "#oyster",
         toggleActions: "play none none reset",
         start: "center+=100 center",
         // markers: true,
-        animation: gsap.to("section#oyster .show-on-move", {
+        animation: gsap.to("#oyster .show-on-move", {
             opacity: 1,
             yoyo: true,
             repeat: 5,
@@ -189,8 +208,14 @@ function initShowHideAfterPass() {
 function initSubtitles() {
 
     const subtitleHolder = document.getElementById("subtitle")!
-    if (!subtitleHolder) {
+    const subtitleWrapper = subtitleHolder.parentElement!;
+    const subtitleContainer = subtitleWrapper.parentElement!;
+    if (!subtitleHolder || !subtitleWrapper || !subtitleContainer) {
         return
+    }
+
+    function toggleSubtitle(show: boolean) {
+        subtitleWrapper.style.display = show ? "unset" : "none"
     }
 
     const subtitles: {
@@ -198,50 +223,33 @@ function initSubtitles() {
         text: string,
     }[] = []
 
-    const xSpacing = ""//"&nbsp;&nbsp;"
     document.querySelectorAll("[data-subtitle]").forEach(_e => {
         subtitles.push({
             trigger: _e,
-            text: xSpacing + (_e as HTMLElement).dataset.subtitle! + xSpacing,
+            text: (_e as HTMLElement).dataset.subtitle!,
         })
     })
-
-    // const split = SplitText.create(subtitleHolder, { type: "words", })
-    // const splitVars: SplitText.Vars = {
-    //     type: "words",
-    //     autoSplit: true,
-    //     onSplit: (self: SplitText) => {
-    //         console.log(self.words)
-    //         return gsap.from(self.words, {
-    //             duration: 1,
-    //             stagger: 0.05
-    //         })
-    //     }
-    // }
 
     const splitType = "words";
     let currentSplit: SplitText | undefined;
 
-    const wordFromVars: gsap.TweenVars = {
-        duration: 0.01,
-        stagger: 0.1,
-        display: "none"
-    }
-
     function enter(st: ScrollTrigger, text: string) {
         currentSplit?.revert()
-        subtitleHolder.style.display = "none"
+        toggleSubtitle(false)
         subtitleHolder.innerHTML = text
         currentSplit = SplitText.create("#subtitle", {
             type: splitType,
             reduceWhiteSpace: false,
+            tag: "div",
+            wordsClass: "word",
             onSplit: (split) => gsap.timeline({
-                onStart: () => { subtitleHolder.style.display = "unset" },
+                onStart: () => { toggleSubtitle(true) },
                 onComplete: () => { split.revert() },
             }).from(split[splitType], {
                 duration: 0.01,
                 stagger: 0.1,
-                display: "none"
+                display: "none",
+                // autoAlpha: 0,
             }, 0.01)
         })
     }
@@ -251,16 +259,19 @@ function initSubtitles() {
         currentSplit = SplitText.create("#subtitle", {
             type: splitType,
             reduceWhiteSpace: false,
+            tag: "div",
+            wordsClass: "word",
             onSplit: (split) => gsap.timeline({
                 onComplete: () => {
-                    subtitleHolder.style.display = "none"
+                    toggleSubtitle(false)
                     split.revert()
                     subtitleHolder.innerHTML = ""
                 },
             }).to(split[splitType], {
                 duration: 0.01,
-                stagger: 0.1,
+                stagger: 0.05,
                 display: "none",
+                // autoAlpha: 0,
                 reversed: true,
             })
         })

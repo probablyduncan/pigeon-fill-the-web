@@ -5,6 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Pigeon-Fill the Sky</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -19,193 +24,214 @@
     <!-- <canvas id="shader" class="fixed w-dvw h-dvw select-none pointer-events-none"></canvas> -->
     <div id="background"></div>
 
-    <header>
+    <div class="top-left">
         to pigeon-fill the sky
-    </header>
+    </div>
 
-    <footer>
+    <div class="top-right">
         made by <a href="https://duncanpetrie.com" target="_blank" title="duncanpetrie.com">duncan</a>
-    </footer>
+    </div>
+
+    <!-- <div class="top-right"><a href="/about">about</a></div> -->
+
+    <!-- <div class="bottom-left">there's a <a href="/book">book</a>??</div> -->
 
     <div id="subtitle-container">
-        <span id="subtitle" aria-live="assertive"></span>
+        <div id="subtitle-wrapper">
+            <span id="subtitle" aria-live="assertive"></span>
+        </div>
     </div>
 
     <main class="flex flex-col">
 
-        <!-- <div id="cover" class="grid grid-cols-12 p-2 gap-2 w-full">
-            <div class="relative col-start-5 col-end-12 aspect-[3/2] mt-[10svh] mb-[50svh]">
-                <img class="absolute" src="public/cover/cover_bg.webp" />
-                <img id="pigeon" class="absolute w-[40%] left-[30%] top-[25%] translate-y-[100vh]" src="public/cover/cover_pigeon_sky.webp" />
-            </div>
-        </div> -->
-
-        <div id="title-wrapper">
-            <section id="title">
-                <img src="public/icon.jpg"/>
+        <header id="title-wrapper">
+            <div id="title" class="grid-cols">
+                <img src="public/cover/icon.webp" />
                 <h1>To Pigeon-Fill the Sky</h1>
                 <h3>Duncan Petrie</h3>
-            </section>
-        </div>
+            </div>
+        </header>
 
-        <section id="oldenough" data-subtitle="I’m old enough to remember when pigeons filled the sky.">
-            <img src="/public/i/flock.webp" />
-            <!-- <p data-speed="0.8">I'm old enough to remember<br>when pigeons filled the sky.</p> -->
+        <section data-subtitle="hey" class="h-[10vh]"></section>
+        <section data-subtitle="hi" class="h-[10vh]"></section>
+
+        <section class="grid-cols" data-subtitle="I’m old enough to remember when pigeons filled the sky.">
+            <img class="col-span-full pt-[10vw] mb-[30vh] md:col-start-1 md:col-end-11" src="/public/i/flock.webp" />
         </section>
 
-        <section id="soar1">
-            <img src="/public/i/soar.webp" />
+        <section id="soar1" class="grid-cols mt-[80vh]">
+            <img class="col-start-3 col-end-11 md:col-start-5 md:col-end-9" src="/public/i/soar.webp" />
         </section>
 
-        <section id="reflection" data-subtitle="Back then, there were poetic birds in all of my photographs.">
-            <!-- <p data-speed="0.8">
-                Back then, there were poetic birds in all of my photographs.
-            </p> -->
-            <img src="/public/i/reflection_top.webp" />
-            <img src="/public/i/reflection_bottom.webp" />
+        <section id="reflection" class="grid-cols my-[20vh] grid-rows-2 gap-y-1"
+            data-subtitle="Back then, there were poetic birds in all of my photographs.">
+            <img class="mt-[30vh] col-start-2 col-end-13 lg:col-start-7 lg:col-end-12"
+                src="/public/i/reflection_top.webp" />
+            <img class="mb-[30vh] col-start-2 col-end-13 lg:col-start-7 lg:col-end-12 -translate-x-[7%]"
+                src="/public/i/reflection_bottom.webp" />
         </section>
 
-        <section id="magpies" data-subtitle="There were magpies in the slip-streams of air above the eaves.">
-            <img src="/public/i/magpie.webp" />
-            <!-- <p data-speed="0.8">There were magpies in the slip-streams of air above the eaves.</p> -->
+        <section class="grid-cols mb-[40vh]">
+            <img class="col-start-3 col-end-9 md:col-start-4 md:col-end-9 lg:col-start-4 lg:col-end-8"
+                src="/public/i/power_lines.webp" />
         </section>
 
-        <section id="crows" data-subtitle="Crows playing coy, thick as thieves between the trees.">
-            <img src="/public/i/crow.webp" />
-            <!-- <p data-speed="0.8">Crows playing coy, thick as thieves between the trees.</p> -->
+        <section id="magpies" class="grid-cols my-[20vh]"
+            data-subtitle="There were magpies in the slip-streams of air above the eaves.">
+            <img class="mt-[50vh] mb-[30vh] col-start-2 col-end-13 lg:col-start-3 lg:col-end-7"
+                src="/public/i/magpie.webp" />
         </section>
 
-        <section id="gulls" data-subtitle="Gulls brushing wingtips with the shape of the wind.">
-            <!-- <p data-speed="0.8">Gulls brushing wingtips with the shape of the wind.</p> -->
-            <img src="/public/i/gulls.webp" />
+        <section id="crows" class="grid-cols my-[20vh]"
+            data-subtitle="Crows playing coy, thick as thieves between the trees.">
+            <img class="mt-[50vh] mb-[30vh] col-start-2 col-end-13 lg:col-start-2 lg:col-end-8"
+                src="/public/i/crow.webp" />
         </section>
 
-        <section id="thosewerethedays" class="h-svh items-center justify-center" data-subtitle="Those were the days.">
-            <!-- <p data-speed="0.8">Those were the days.</p> -->
-             <img class="col-start-12 w-8" src="/public/icon2.jpg" />
+        <section id="gulls" class="grid-cols my-[20vh]"
+            data-subtitle="Gulls brushing wingtips with the shape of the wind.">
+            <img class="mt-[50vh] mb-[30vh] col-start-2 col-end-13 lg:col-start-2 lg:col-end-7"
+                src="/public/i/gulls.webp" />
         </section>
 
-        <section id="now">
-            <img class="new new-sidekick" src="/public/i/first_fade_sidecar.webp" />
-            <div class="switcher">
-                <img class="new" src="/public/i/first_fade_color.webp" />
-                <img class="old" src="/public/i/first_fade_bw.webp" />
+        <section class="grid-cols my-[50vh]">
+            <img class="col-start-12 w-8" src="/public/cover/snippet_up_right.webp" />
+        </section>
+
+        <section id="thosewerethedays" class="grid-cols h-[90vh] items-center" data-subtitle="Those were the days.">
+        </section>
+
+        <section id="now" class="grid-cols mt-[30vh] min-h-[100vh] items-center">
+            <img class="new opacity-[0] new-sidekick col-start-2 col-end-6 mt-[80%]"
+                src="/public/i/first_fade_sidecar.webp" />
+            <div class="switcher stack col-start-6 col-end-12">
+                <img class="new opacity-[0]" src="/public/i/first_fade_color.webp" />
+                <img class="old scale-[0.9716713881] -translate-x-[8.16326531%] translate-y-[15.75492341%]"
+                    src="/public/i/first_fade_bw.webp" />
             </div>
         </section>
 
-        <section id="arentsoeasy" data-subtitle="Now, things aren't so easy.">
-            <!-- <p data-speed="0.8">Now, things aren't so easy.</p> -->
-            <img src="/public/i/hyde_lens_flare.webp" />
+        <section id="thosewerethedays" class="grid-cols mt-[50vh] h-[90vh] items-center"
+            data-subtitle="Now, things aren't so easy.">
         </section>
 
-        <section id="stillgetlucky" data-subtitle="I still get lucky, sometimes.">
-            <!-- <p data-speed="0.8">I still get lucky, sometimes.</p> -->
-            <img src="/public/i/margate.webp" />
+        <section id="arentsoeasy" class="grid-cols mt-[50vh]">
+            <img class="col-start-7 col-end-13" src="/public/i/hyde_lens_flare.webp" />
         </section>
 
-        <section id="mostlyempty" data-subtitle="But the skies, these days, are mostly empty.">
-            <!-- <p data-speed="0.8">But the skies, these days, are mostly empty.</p> -->
-            <div>
-                <div class="stack">
-                    <img src="/public/i/beach_pole_glitch.webp" />
-                    <img class="hide-after-scroll-past" src="/public/i/beach_pole.webp" />
+        <section id="stillgetlucky" class="grid-cols mt-[40vh]" data-subtitle="I still get lucky, sometimes.">
+            <img class="mt-[50vh] mb-[30vh] col-start-4 col-end-9" src="/public/i/margate.webp" />
+        </section>
+
+        <section id="mostlyempty" class="grid-cols mt-[50vh]"
+            data-subtitle="But the skies, these days, are mostly empty.">
+            <div class="stack mt-[50vh] mb-[30vh] col-start-3 col-end-12 pl-[6.6%]">
+                <img src="/public/i/beach_pole_glitch.webp" />
+                <img class="hide-after-scroll-past" src="/public/i/beach_pole.webp" />
+            </div>
+        </section>
+
+        <section id="hardlypoetic" class="grid-cols mt-[40vh]" data-subtitle="And the birds are hardly poetic.">
+            <img class="mt-[50vh] mb-[10vh] col-start-4 col-end-7" src="/public/i/pelican.webp" />
+        </section>
+
+        <section class="grid-cols mt-[60vh] h-[90vh]"
+            data-subtitle="No, pictures of the sky aren't what they used to be.">
+        </section>
+
+        <section id="nonotwhatusetobe" class="grid-cols mt-[30vh]">
+            <img class="col-start-1 col-end-12" src="public/i/bigempty.webp" />
+        </section>
+
+
+        <section class="mt-[80svh]" data-subtitle="Gone are the days of plenty.">
+            <div id="emptyspread" class="grid-cols mt-[20vh] mb-[80vh]">
+                <div class="stack col-start-1 col-end-7 pt-[2vw]">
+                    <img src="/public/i/spread_left.webp" />
+                    <img class="visible-after-ai" src="/public/ii/4-5_spread/4.webp" />
+                </div>
+                <div class="stack col-start-7 col-end-13">
+                    <img src="/public/i/spread_right.webp" />
+                    <img class="visible-after-ai" src="/public/ii/4-5_spread/5.webp" />
                 </div>
             </div>
         </section>
 
-        <section id="hardlypoetic" data-subtitle="And the birds are hardly poetic.">
-            <!-- <p data-speed="0.8">And the birds are<br />hardly poetic.</p> -->
-            <img src="/public/i/pelican.webp" />
-        </section>
-
-        <section id="nonotwhatusetobe" data-subtitle="No, pictures of the sky aren't what they used to be.">
-            <!-- <p data-speed="0.8">No, pictures of the sky aren't what they used to be.</p> -->
-            <img src="public/i/bigempty.webp" />
-        </section>
-
-        <section>
-            <!-- <p class="col-start-4 col-end-7 text-center">Gone are the days of plenty.</p> -->
-        </section>
-
-        <section id="emptyspread" class="mt-[80svh]" data-subtitle="Gone are the days of plenty.">
-            <div data-speed="1" class="stack col-start-1 col-end-7 mt-[2vw]">
-                <img src="/public/i/spread_left.webp" />
-                <img class="visible-after-ai" src="/public/ii/4-5_spread/4.webp" />
-            </div>
-            <div data-speed="1.05" class="stack stack col-start-7 col-end-13">
-                <img src="/public/i/spread_right.webp" />
-                <img class="visible-after-ai" src="/public/ii/4-5_spread/5.webp" />
+        <section id="goneplenty" class="grid-cols mt-[10vh]" data-subtitle="Now, you have to do things yourself.">
+            <div class="stack mt-[60vh] col-start-2 col-end-11">
+                <img class="empty" src="public/ii/1/1_empty.webp" />
+                <img class="pigeon opacity-[0]" src="public/ii/1/1_final.webp" />
             </div>
         </section>
 
-        <section id="goneplenty" data-subtitle="Now, you have to do things yourself.">
-            <div class="img-col">
-                <div class="stack">
-                    <img class="empty" src="public/ii/1/1_empty.webp" />
-                    <img class="pigeon" src="public/ii/1/1_final.webp" />
-                </div>
-            </div>
-            <div data-speed="0.8" class="text-col" >
-                <!-- <p class="trigger text-center">Now you have to do things yourself.</p> -->
-            </div>
-        </section>
 
-        <section id="fullspread">
+
+
+
+
+
+
+
+
+
+        <!-- need something else here, pacing is off -->
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="fullspread" class="grid-cols mt-[50vh]">
             <div class="stack col-start-1 col-end-7 mt-[2vw]">
                 <img src="/public/ii/4-5_spread/4.webp" />
             </div>
-            <div data-speed="1.05" class="stack col-start-7 col-end-13">
+            <div class="stack col-start-7 col-end-13">
                 <img src="/public/i/spread_right.webp" />
                 <img class="pigeon" src="/public/ii/4-5_spread/5.webp" />
             </div>
         </section>
 
-        <section>
-            <!-- <p class="col-start-1 col-end-4">There is no end to what I can do.</p> -->
-        </section>
-
-        <section data-subtitle="There is no end to what I can do.">
-            <div class="stack col-start-1 col-end-7">
+        <section class="grid-cols mt-[100vh]" data-subtitle="There is no end to what I can do.">
+            <div class="stack col-start-5 col-end-13">
                 <img src="/public/ii/6/6.webp" />
                 <img class="show-after-scroll-past" src="/public/ii/6/6_glitch.webp" />
             </div>
         </section>
 
-        <section>
-            <!-- <p class="col-start-8 col-end-13">What can't I do?</p> -->
-        </section>
-
-        <section data-subtitle="What can't I do?">
-            <div class="stack col-start-1 col-end-7 group scale-[1.089]">
+        <section class="grid-cols mt-[50vh] overflow-hidden" data-subtitle="What can't I do?">
+            <div class="stack col-start-1 col-end-13 group scale-[1.089]">
                 <img class="hide-on-scroll" src="/public/ii/7/7_full.webp" />
                 <img class="show-on-scroll" src="/public/ii/7/animated_long_surprise.webp" />
             </div>
         </section>
 
-        <section>
-            <!-- <p class="col-start-4 col-end-8">The world is my oyster, an oyster filled with pigeons.</p> -->
-        </section>
+        <section></section>
 
-        <section id="oyster" data-subtitle="The world is my oyster, an oyster filled with pigeons.">
+        <section id="oyster" class="grid-cols" data-subtitle="The world is my oyster, an oyster filled with pigeons.">
             <div class="stack col-start-1 col-end-7 scale-[1.315] origin-left">
                 <img src="/public/ii/9/full.webp" />
                 <img class="show-on-move" src="/public/ii/9/animated_glitches_all_2.webp" />
             </div>
         </section>
 
-        <section>
-            <!-- <p class="col-start-4 col-end-8">Look, I’ve named them all: this is Claudette, and George, and Pauline.</p> -->
-        </section>
+        <section></section>
 
-        <section id="names-1" data-subtitle="Look, I’ve named them all: this is Claudette, and George, and Pauline.">
+        <section id="names-1" class="grid-cols"
+            data-subtitle="Look, I’ve named them all: this is Claudette, and George, and Pauline.">
             <div class="stack col-span-8">
                 <img src="/public/ii/10/7_pauline.webp" />
             </div>
         </section>
 
-        <section>
+        <section class="grid-cols">
             <img class="col-start-1 col-span-6" src="/public/ii/11/11_final.webp" />
-            <p data-speed="0.8" class="col-start-9 col-span-3 text-center">Clockwise from center: Octavia, Joseph,
+            <p class="col-start-9 col-span-3 text-center">Clockwise from center: Octavia, Joseph,
                 Josef,<br>
                 Ernest, Hans, Annika, Hannes, Increase, Eugene-<br>
                 Eduard, Magwitch, Kurt, Remedios the Beauty,<br>
@@ -215,9 +241,9 @@
                 Colonel Mustard, Luciano, Gabriel, Aureliano.</p>
         </section>
 
-        <section>
+        <section class="grid-cols">
             <img class="col-start-1 col-span-6" src="/public/ii/12/12_final.webp" />
-            <p data-speed="0.8" class="col-start-7 col-span-6 text-center">Maxine, Marie, Marcel, Maurice, Bette,
+            <p class="col-start-7 col-span-6 text-center">Maxine, Marie, Marcel, Maurice, Bette,
                 Barisse,<br>
                 Concord, Ed, Ulises Lima (the Bird), Sal, Elaine, Elena,<br>
                 Gustave, Gunde, Carel, Umberto, Umbilico, Kirsten,<br>
@@ -241,9 +267,9 @@
                 Saxo Grammaticus, Claude.</p>
         </section>
 
-        <section>
+        <section class="grid-cols">
             <img class="col-start-1 col-span-6" src="public/ii/13/13_final.webp">
-            <p data-speed="0.8" class="col-start-7 col-span-6 text-center">Folkbird, Yorick, Absalon, Juno, Ajax,<br>
+            <p class="col-start-7 col-span-6 text-center">Folkbird, Yorick, Absalon, Juno, Ajax,<br>
                 Ragozine, Heinlein, Heinrich, Heimlich, Heinz,<br>
                 Herman, Hector, Gregor, Flector, Edgar, Allen, Alan,<br>
                 Turing, Midas, Norbert, Knot, Calvino, Dino, Olivier,<br>
@@ -281,86 +307,104 @@
                 I’ll pay you for it.</p>
         </section>
 
-        <section>
-            <img class="col-start-1 col-span-6 mt-[2vw]" src="/public/ii/14/14_final.webp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--
+        maybe this can kind of like glitch down as you scroll, you keep trying to break free but it keeps clinging on, sticking on, showing different ugly faces, pulling you back up the page, until it relents, and is empty, and you continue
+        -->
+
+        <section class="grid-cols mt-[100vh]">
+            <div class="stack col-start-2 col-end-12">
+                <img src="/public/ii/14/14_final.webp" />
+                <img class="show-after-scroll-past" src="/public/ii/14/14_empty.webp" />
+            </div>
         </section>
 
-        <section>
+
+        <section class="grid-cols mt-[100vh]">
             <img class="col-start-1 col-span-6 mt-[2vw]" src="/public/iii/empties/hangover_spread_left.webp" />
-            <img class="col-start-7 col-span-6" data-speed="1.05" src="/public/iii/empties/hangover_spread_right.webp" />
+            <img class="col-start-7 col-span-6" src="/public/iii/empties/hangover_spread_right.webp" />
         </section>
 
-        <section>
-            <img class="col-start-7 col-span-6" src="/public/iii/empties/chimneys.webp" />
+        <section class="grid-cols mt-[80vh]">
+            <img class="col-start-5 col-end-13" src="/public/iii/empties/chimneys.webp" />
         </section>
 
-        <section>
-            <p class="col-start-2 col-span-2 text-center">I’m old enough to remember<br>when pigeons filled the sky.</p>
-            <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_1.webp" />
+        <section class="grid-cols mt-[50vh]" data-subtitle="I’m old enough to remember when pigeons filled the sky.">
+            <img class="col-start-7 col-span-6 mt-[50vh] mb-[20vh]" src="/public/iii/empties/empties_1.webp" />
         </section>
 
-        <section>
-            <p class="col-start-2 col-span-2 text-center">
-                Back then, all you had to do was<br>point, and wings would appear.
-            </p>
-            <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_2.webp" />
+        <section class="grid-cols mt-[50vh]"
+            data-subtitle="Back then, all you had to do was point, and wings would appear.">
+            <img class="col-start-1 col-end-8" src="/public/iii/empties/empties_2.webp" />
         </section>
 
-        <section>
-            <p class="col-start-2 col-span-2 text-center">
-                Now you have to do things the hard way.<br><br>You have to sit around and wait.</p>
+        <section class="grid-cols mt-[50vh]" data-subtitle="Now you have to do things the hard way.">
             <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_3.webp" />
         </section>
 
-        <section>
-            <p class="col-start-2 col-span-2 text-center">And wait.</p>
+        <section class="h-[80vh]" data-subtitle="You have to sit around and wait."></section>
+
+        <section class="grid-cols mt-[50vh]" data-subtitle="And wait.">
             <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_4.webp" />
         </section>
 
-        <section>
-            <p class="col-start-2 col-span-2 text-center">Sometimes, the birds come by.</p>
+        <section class="grid-cols mt-[50vh]" data-subtitle="Sometimes, the birds come by.">
             <img class="col-start-7 col-span-6" src="/public/iii/empties/sometimes_come_by.webp" />
         </section>
 
-        <section>
-            <p class="col-start-2 col-span-2 text-center">But often, they don't.</p>
+        <section class="grid-cols mt-[50vh]" data-subtitle="But often, they don't.">
             <img class="col-start-7 col-span-6" src="/public/iii/empties/often_they_dont.webp" />
         </section>
 
-        <section>
+        <section class="grid-cols mt-[50vh]" data-subtitle="Better a big empty sky than no sky at all.">
             <img class="col-start-1 col-span-6" src="/public/iii/empties/no_sky.webp" />
-            <p class="col-start-8 col-span-2 text-center">Better a big empty sky than no sky at all.</p>
         </section>
 
-        <section>
-            <p class="col-start-2 col-span-2 text-center">
-                Maybe things aren’t so different to how they used to be.<br><br>Maybe things were always this way.
-            </p>
+        <section class="h-[80vh]" data-subtitle="Maybe things aren’t so different to how they used to be."></section>
+
+        <section class="grid-cols mt-[50vh]" data-subtitle="Maybe things were always this way.">
             <img class="col-start-7 col-span-6" src="/public/iii/ending/cambridge_bw.webp" />
         </section>
 
-        <section>
+        <section class="grid-cols mt-[50vh]" data-subtitle="Maybe you always had to wait.">
             <img class="col-start-1 col-span-6" src="/public/iii/ending/trees_bw.webp" />
-            <p class="col-start-7 col-span-2 text-center">Maybe you always had to wait.</p>
         </section>
 
-        <section>
+        <section class="grid-cols mt-[50vh]">
             <img class="col-start-7 col-span-6" src="/public/iii/ending/trees_color.webp" />
         </section>
 
-        <section>
+        <section class="h-[80vh]" data-subtitle="And the birds?"></section>
+
+        <section class="grid-cols mt-[50vh]">
             <img class="col-start-1 col-span-6" src="/public/iii/ending/trees_split.webp" />
-            <p class="col-start-7 col-span-2 text-center">And the birds?</p>
         </section>
 
-        <section>
+        <section class="h-[80vh]" data-subtitle="The birds were always better for it."></section>
+
+        <section class="grid-cols mt-[50vh]">
             <img class="col-start-1 col-span-6" src="/public/iii/ending/last_crow_empty.webp" />
-            <p class="col-start-7 col-span-2 text-center">The birds were always better for it.</p>
         </section>
 
-        <section>
+        <section class="grid-cols mt-[50vh]">
             <img class="col-start-1 col-span-6" src="/public/iii/ending/last_crow.webp" />
         </section>
+
+        <section class="mt-[50vh] h-[52vh]" data-subtitle="Fin."></section>
 
     </main>
 
