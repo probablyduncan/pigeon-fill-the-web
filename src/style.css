@@ -77,30 +77,36 @@ footer {
     right: calc(var(--margin) / 2);
 }
 
-#subtitles {
-    display: none;
+#subtitle-container {
     position: fixed;
     bottom: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
     z-index: 999;
+}
 
-    span {
-        font-size: 1.25rem;
-        line-height: 1;
-        text-align: center;
-        text-wrap: balance;
+#subtitle {
+    display: none;
 
-        background-color: rgb(212, 231, 245);
-        background-color: white;
+    font-size: 1.5rem;
+    line-height: 1;
+    text-align: center;
+    text-wrap: balance;
 
-        padding-right: 0.25em;
-        /* padding: 0.25em 0.5em 0.25em 0.25em; */
+    background-color: rgb(212, 231, 245);
+    background-color: white;
 
-        &::selection {
-            background-color: black;
-            color: white;
-        }
+    /* padding-right: 0.25em; */
+    /* padding: 0.25em 0.5em 0.25em 0.25em; */
+    /* padding: 0 0.25em; */
+
+    &::after, &::before {
+        content: "\0000a0\0000a0";
+    }
+
+    &::selection {
+        background-color: black;
+        color: white;
     }
 }
 
@@ -116,15 +122,42 @@ section {
         } */
 }
 
-#oldenough {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 8px;
-    padding: 8px;
+#title-wrapper {
+    min-height: 95svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    section#title {
+        width: 100%;
+        margin: unset;
+        margin-bottom: 12rem;
+        justify-items: center;
+        align-items: center;
+
+        img {
+            grid-column: 5;
+            width: 1rem;
+            margin-bottom: 8rem;
+        }
+
+        h1 {
+            grid-column: 1 / 13;
+            font-size: 4vw;
+            text-align: center;
+        }
+
+        h3 {
+            grid-column: 1 / 13;
+            font-size: 1.5vw;
+            margin-top: -2rem;
+            text-align: center;
+        }
+    }
+}
+
+section#oldenough {
     margin-top: 0;
-    min-height: 100svh;
-    align-items: end;
 
     img {
         grid-column: 2 / 10;
