@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         animation: gsap.timeline().to("#goneplenty img.pigeon", {
             opacity: 1,
             ease: roughEase,
-            duration: 0.5,
+            duration: 1//0.5,
         })
     })
 
