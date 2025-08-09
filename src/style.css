@@ -44,11 +44,19 @@
 }
 
 @layer utilities {
+
+    .grid-cols {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 8px;
+        padding: 8px;
+    }
+
     .stack {
         position: relative;
         aspect-ratio: 3 / 2;
 
-        & > * {
+        &>* {
             position: absolute;
         }
     }
@@ -130,19 +138,20 @@
     /* background-color: rgb(212, 231, 245); */
     background-color: white;
     box-decoration-break: clone;
-    -webkit-box-decoration-break: clone; /* for Safari/Chrome */
+    -webkit-box-decoration-break: clone;
+    /* for Safari/Chrome */
 
     &:has(.word) {
         /* subtitle when animating */
         padding: 0.1em 0;
     }
-    
+
     &:not(:has(.word)) {
         /* subtitle when not animating */
         padding: 0.1em 0.25em;
     }
-    
-    & > .word:first-child {
+
+    &>.word:first-child {
         /* already revealed indivudial words when animating */
         padding-left: 0.25em;
     }
@@ -160,7 +169,6 @@
         content: "⁖";
         content: "․";
         content: "…";
-        content: "‥";
         content: "🗈";
         content: "🗩";
         /* content: "🗯"; */
@@ -171,6 +179,7 @@
         content: "◮";
         content: "‼";
         content: "⋆";
+        content: "‥";
         position: absolute;
         top: 0;
     }
@@ -180,10 +189,10 @@
         content: "×";
         content: "⋉";
         content: "‥";
-        content: "..";
-        content: "․";
         content: "◦";
+        content: "..";
         content: "⋅";
+        content: "․";
         opacity: 0.8;
         position: absolute;
         bottom: 0;
@@ -207,18 +216,11 @@
     color: black;
 }
 
-main > * {
+main>* {
     position: relative;
     width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;
-}
-
-.grid-cols {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 8px;
-    padding: 8px;
 }
 
 #title-wrapper {
@@ -271,41 +273,31 @@ main > * {
     --border-width: 1px;
     --border-color: #2f2f3120;
 
-    background: linear-gradient(
-            90deg,
+    background: linear-gradient(90deg,
             transparent calc(4px - var(--border-width) / 2),
             var(--border-color) calc(4px - var(--border-width) / 2),
             var(--border-color) calc(4px + var(--border-width) / 2),
-            transparent calc(4px + var(--border-width) / 2)
-        ),
-        linear-gradient(
-            90deg,
+            transparent calc(4px + var(--border-width) / 2)),
+        linear-gradient(90deg,
             transparent calc(25% + 2px - var(--border-width) / 2),
             var(--border-color) calc(25% + 2px - var(--border-width) / 2),
             var(--border-color) calc(25% + 2px + var(--border-width) / 2),
-            transparent calc(25% + 2px + var(--border-width) / 2)
-        ),
-        linear-gradient(
-            90deg,
+            transparent calc(25% + 2px + var(--border-width) / 2)),
+        linear-gradient(90deg,
             transparent calc(50% - var(--border-width) / 2),
             var(--border-color) calc(50% - var(--border-width) / 2),
             var(--border-color) calc(50% + var(--border-width) / 2),
-            transparent calc(50% + var(--border-width) / 2)
-        ),
-        linear-gradient(
-            90deg,
+            transparent calc(50% + var(--border-width) / 2)),
+        linear-gradient(90deg,
             transparent calc(75% - 2px - var(--border-width) / 2),
             var(--border-color) calc(75% - 2px - var(--border-width) / 2),
             var(--border-color) calc(75% - 2px + var(--border-width) / 2),
-            transparent calc(75% - 2px + var(--border-width) / 2)
-        ),
-        linear-gradient(
-            90deg,
+            transparent calc(75% - 2px + var(--border-width) / 2)),
+        linear-gradient(90deg,
             transparent calc(100% - 4px - var(--border-width) / 2),
             var(--border-color) calc(100% - 4px - var(--border-width) / 2),
             var(--border-color) calc(100% - 4px + var(--border-width) / 2),
-            transparent calc(100% - 4px + var(--border-width) / 2)
-        );
+            transparent calc(100% - 4px + var(--border-width) / 2));
 
     /* without this the grid line on the left doesn't render fully for some reason?? */
     background-color: white;
@@ -313,26 +305,20 @@ main > * {
 
 @media (max-width: 768px) {
     #background {
-        background: linear-gradient(
-                90deg,
+        background: linear-gradient(90deg,
                 transparent calc(4px - var(--border-width) / 2),
                 var(--border-color) calc(4px - var(--border-width) / 2),
                 var(--border-color) calc(4px + var(--border-width) / 2),
-                transparent calc(4px + var(--border-width) / 2)
-            ),
-            linear-gradient(
-                90deg,
+                transparent calc(4px + var(--border-width) / 2)),
+            linear-gradient(90deg,
                 transparent calc(50% - var(--border-width) / 2),
                 var(--border-color) calc(50% - var(--border-width) / 2),
                 var(--border-color) calc(50% + var(--border-width) / 2),
-                transparent calc(50% + var(--border-width) / 2)
-            ),
-            linear-gradient(
-                90deg,
+                transparent calc(50% + var(--border-width) / 2)),
+            linear-gradient(90deg,
                 transparent calc(100% - 4px - var(--border-width) / 2),
                 var(--border-color) calc(100% - 4px - var(--border-width) / 2),
                 var(--border-color) calc(100% - 4px + var(--border-width) / 2),
-                transparent calc(100% - 4px + var(--border-width) / 2)
-            );
+                transparent calc(100% - 4px + var(--border-width) / 2));
     }
 }
