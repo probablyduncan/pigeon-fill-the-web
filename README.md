@@ -8,6 +8,8 @@ then I need to work on animations/effects not worrying too much about file size/
 
 finally I need to do some optimization and tighten things up
 
+also attribute tom's new roman!!
+
 ideas:
 
 page number in the corner lol

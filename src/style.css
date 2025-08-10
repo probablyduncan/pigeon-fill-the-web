@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Tom's New Roman";
+    src: local("Tom's New Roman"), url("tomnr.ttf");
+}
+
 @layer base {
     :root {
         --yellow: #ffcc00;
@@ -132,6 +137,12 @@
             background-color: black;
             color: white;
         }
+    }
+
+    .wonky,
+    .wonky *,
+    .label {
+        font-family: "Tom's New Roman", "Times New Roman", Times, serif;
     }
 }
 

@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ScrollTrigger.create({
         id: "clockwise",
-        trigger: "#clockwise",
+        trigger: "#clockwise > div",
         toggleActions: "none play none reset",
         start: "top bottom",
         end: "bottom bottom",
@@ -156,25 +156,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 0.3)
     })
 
+    function toggleNavFont(wonky: boolean) {
+        document.querySelectorAll(".top-left, .top-right, .bottom-left, .bottom-right").forEach(_e => {
+            wonky ? _e.classList.add("wonky") : _e.classList.remove("wonky")
+        })
+    }
+
     ScrollTrigger.create({
         id: "names-3",
-        trigger: "#names-3",
+        trigger: "#names-3 > div",
         toggleActions: "none play none reset",
         start: "top bottom",
         end: "bottom bottom",
         // markers: true,
-        animation: gsap.timeline().to("#names-3 img:not(.final)", {
-            stagger: 0.5,
-            ease: roughEase,
-            autoAlpha: 0,
-            duration: 0.5,
-            reversed: true,
-        }, 0).from("#names-3 > div > div", {
-            stagger: 0.08,
-            autoAlpha: 0,
-            ease: roughEase,
-            duration: 0.1,
-        }, 0.3)
+        animation: gsap.timeline()
+            .to("#names-3 img:not(.final)", {
+                stagger: 0.5,
+                ease: roughEase,
+                autoAlpha: 0,
+                duration: 0.5,
+                reversed: true,
+            }, 0).from("#names-3 > div > div", {
+                stagger: 0.06,
+                autoAlpha: 0,
+                ease: roughEase,
+                duration: 0.1,
+            }, 0.3).eventCallback("onStart", () => toggleNavFont(true)),
+        onLeaveBack: () => toggleNavFont(false),
     })
 
     // ScrollTrigger.create({
@@ -189,6 +197,14 @@ document.addEventListener("DOMContentLoaded", () => {
     //         duration: 10,
     //     })
     // })
+
+    ScrollTrigger.create({
+        id: "reset-nav-font",
+        trigger: "#old-enough-2",
+        start: "top center",
+        onEnter: () => toggleNavFont(false),
+        onLeaveBack: () => toggleNavFont(true),
+    })
 
     ScrollTrigger.create({
         id: "cambridge-split",
@@ -311,11 +327,16 @@ function initSubtitles() {
         subtitleWrapper.style.display = show ? "unset" : "none"
     }
 
+    function toggleWonk(wonky: boolean) {
+        wonky ? subtitleHolder.classList.add("wonky") : subtitleHolder.classList.remove("wonky")
+    }
+
     const subtitles: {
         trigger: Element,
         text: string,
         start: string,
         end: string,
+        wonky: boolean,
     }[] = []
 
     document.querySelectorAll("[data-subtitle]").forEach(_e => {
@@ -327,16 +348,18 @@ function initSubtitles() {
             trigger: e,
             text: e.dataset.subtitle!,
             start, end,
+            wonky: e.hasAttribute("data-subwonky"),
         })
     })
 
     const splitType = "words"
     let currentSplit: SplitText | undefined
 
-    function enter(st: ScrollTrigger, text: string) {
+    function enter(st: ScrollTrigger, data: typeof subtitles[number]) {
         currentSplit?.revert()
         toggleSubtitle(false)
-        subtitleHolder.innerHTML = text
+        toggleWonk(data.wonky)
+        subtitleHolder.innerHTML = data.text
         currentSplit = SplitText.create("#subtitle", {
             type: splitType,
             reduceWhiteSpace: false,
@@ -380,7 +403,7 @@ function initSubtitles() {
 
     for (const subtitle of subtitles) {
 
-        const onEnter = (self: ScrollTrigger) => enter(self, subtitle.text)
+        const onEnter = (self: ScrollTrigger) => enter(self, subtitle)
 
         ScrollTrigger.create({
             id: "text__" + subtitle.text.replaceAll(" ", "_"),
