@@ -9,6 +9,7 @@
     :root {
         --yellow: #ffcc00;
         --blue: rgb(212, 231, 245);
+        --line-color: #2f2f3111;
         --margin: 1.5rem;
         --font-size-body: clamp(1.25rem, 2vw, 1.5rem);
         --font-size-nav: clamp(1rem, 1.5vw, 1.2rem);
@@ -169,33 +170,26 @@
 }
 
 #subtitle {
-    line-height: 1;
     pointer-events: auto;
-
-    /* background-color: rgb(212, 231, 245); */
+    
+    line-height: 1;
+    padding: 0.1em 0.25em;
     background-color: white;
+    border: 1px solid var(--line-color);
+    
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-    /* for Safari/Chrome */
-
-    &:has(.word) {
-        /* subtitle when animating */
-        padding: 0.1em 0;
-    }
-
-    &:not(:has(.word)) {
-        /* subtitle when not animating */
-        padding: 0.1em 0.25em;
-    }
-
-    & > .word:first-child {
-        /* already revealed indivudial words when animating */
-        padding-left: 0.25em;
-    }
 
     &::selection {
         background-color: black;
         color: white;
+    }
+
+    & .word-mask {
+        /* don't clip overhanging italics like 'f'.
+        even though we're removing clip mask, masking in splitText
+        still seems to fix weird empty 2nd line problem */
+        overflow: visible !important;
     }
 }
 
@@ -301,7 +295,7 @@
     pointer-events: none;
 
     --border-width: 1px;
-    --border-color: #2f2f3111;
+    --border-color: var(--line-color);
 
     background: linear-gradient(
             90deg,

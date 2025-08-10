@@ -68,8 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.create({
         id: "ai-2",
         trigger: "#ai-2",
-        start: "center center",
-        toggleActions: "play none none reverse",
+        start: "top bottom",
+        end: "bottom bottom",
+        toggleActions: "none play none reset",
         // markers: true,
         animation: gsap.to("#ai-2 img", {
             opacity: 1,
@@ -82,9 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.create({
         id: "fullspread",
         trigger: "#fullspread",
-        start: "center+=100 center",
+        start: "top bottom",
+        end: "bottom bottom",
         // markers: true,
-        toggleActions: "play none none none",
+        toggleActions: "none play none reset",
         animation: gsap.timeline().to("#fullspread img.pigeon", {
             opacity: 0,
             duration: 0.05,
@@ -365,12 +367,13 @@ function initSubtitles() {
             reduceWhiteSpace: false,
             tag: "div",
             wordsClass: "word",
+            mask: "words",
             onSplit: (split) => gsap.timeline({
                 onStart: () => { toggleSubtitle(true) },
                 onComplete: () => { split.revert() },
             }).from(split[splitType], {
-                duration: 0.01,
-                stagger: 0.1,
+                duration: .01,
+                stagger: .1,
                 display: "none",
                 // autoAlpha: 0,
             }, 0.01)
@@ -384,6 +387,7 @@ function initSubtitles() {
             reduceWhiteSpace: false,
             tag: "div",
             wordsClass: "word",
+            mask: "words",
             onSplit: (split) => gsap.timeline({
                 onComplete: () => {
                     toggleSubtitle(false)
@@ -391,8 +395,8 @@ function initSubtitles() {
                     subtitleHolder.innerHTML = ""
                 },
             }).to(split[splitType], {
-                duration: 0.01,
-                stagger: 0.05,
+                duration: .01,
+                stagger: .05,
                 display: "none",
                 // autoAlpha: 0,
                 reversed: true,
