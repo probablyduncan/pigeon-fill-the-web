@@ -66,6 +66,20 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     ScrollTrigger.create({
+        id: "ai-2",
+        trigger: "#ai-2",
+        start: "center center",
+        toggleActions: "play none none reverse",
+        // markers: true,
+        animation: gsap.to("#ai-2 img", {
+            opacity: 1,
+            stagger: .1,
+            duration: 0.2,
+            ease: roughEase,
+        })
+    })
+
+    ScrollTrigger.create({
         id: "fullspread",
         trigger: "#fullspread",
         start: "center+=100 center",
@@ -101,6 +115,80 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: 0.0333,
         }),
     })
+
+    ScrollTrigger.create({
+        id: "cgp",
+        trigger: "#cgp div",
+        toggleActions: "none play none reset",
+        start: "top bottom",
+        end: "bottom bottom",
+        // markers: true,
+        animation: gsap.timeline().to("#cgp img:not(.final)", {
+            stagger: 0.2,
+            autoAlpha: 0,
+            duration: 0.1,
+            reversed: true,
+        }, 0).from("#cgp .label", {
+            stagger: 0.3,
+            autoAlpha: 0,
+            duration: 0.1,
+        }, 0.5)
+    })
+
+    ScrollTrigger.create({
+        id: "clockwise",
+        trigger: "#clockwise",
+        toggleActions: "none play none reset",
+        start: "top bottom",
+        end: "bottom bottom",
+        // markers: true,
+        animation: gsap.timeline().to("#clockwise img:not(.final)", {
+            stagger: 0.3,
+            ease: roughEase,
+            autoAlpha: 0,
+            duration: 0.5,
+            reversed: true,
+        }, 0).from("#clockwise > div > div", {
+            stagger: 0.15,
+            autoAlpha: 0,
+            ease: roughEase,
+            duration: 0.1,
+        }, 0.3)
+    })
+
+    ScrollTrigger.create({
+        id: "names-3",
+        trigger: "#names-3",
+        toggleActions: "none play none reset",
+        start: "top bottom",
+        end: "bottom bottom",
+        // markers: true,
+        animation: gsap.timeline().to("#names-3 img:not(.final)", {
+            stagger: 0.5,
+            ease: roughEase,
+            autoAlpha: 0,
+            duration: 0.5,
+            reversed: true,
+        }, 0).from("#names-3 > div > div", {
+            stagger: 0.08,
+            autoAlpha: 0,
+            ease: roughEase,
+            duration: 0.1,
+        }, 0.3)
+    })
+
+    // ScrollTrigger.create({
+    //     id: "chimney",
+    //     trigger: "#chimney",
+    //     start: "bottom bottom",
+    //     pin: true,
+    //     markers: true,
+    //     scrub: true,
+    //     animation: gsap.to("#chimney", {
+    //         // scale: 10,
+    //         duration: 10,
+    //     })
+    // })
 
     ScrollTrigger.create({
         id: "cambridge-split",
@@ -213,8 +301,8 @@ function initShowHideAfterPass() {
 function initSubtitles() {
 
     const subtitleHolder = document.getElementById("subtitle")!
-    const subtitleWrapper = subtitleHolder.parentElement!;
-    const subtitleContainer = subtitleWrapper.parentElement!;
+    const subtitleWrapper = subtitleHolder.parentElement!
+    const subtitleContainer = subtitleWrapper.parentElement!
     if (!subtitleHolder || !subtitleWrapper || !subtitleContainer) {
         return
     }
@@ -232,7 +320,8 @@ function initSubtitles() {
 
     document.querySelectorAll("[data-subtitle]").forEach(_e => {
         const e = _e as HTMLElement
-        const [start, end] = e.dataset.subtitleStartEnd?.split(",") ?? ["top center", "bottom center"]
+        const [start, end] = e.dataset.subtitleStartEnd?.split(",")
+            ?? ["top center", "bottom center"]
 
         subtitles.push({
             trigger: e,
@@ -241,8 +330,8 @@ function initSubtitles() {
         })
     })
 
-    const splitType = "words";
-    let currentSplit: SplitText | undefined;
+    const splitType = "words"
+    let currentSplit: SplitText | undefined
 
     function enter(st: ScrollTrigger, text: string) {
         currentSplit?.revert()

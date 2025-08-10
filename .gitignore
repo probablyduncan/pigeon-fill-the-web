@@ -30,3 +30,6 @@ dist-ssr
 *.psd
 *.afphoto
 *.afphoto~lock~
+*.osp
+*.mp4
+*.webm

@@ -14,7 +14,7 @@
 
 <body>
     <!-- <canvas id="shader" class="fixed w-dvw h-dvw select-none pointer-events-none"></canvas> -->
-    <!-- <div id="background"></div> -->
+    <div id="background"></div>
 
     <div class="top-left">
         to pigeon-fill the sky
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <main class="flex flex-col">
+    <main>
 
         <header id="title-wrapper">
             <div id="title" class="grid-cols">
@@ -52,43 +52,57 @@
             <img class="col-start-3 col-end-11 md:col-start-5 md:col-end-9" src="/public/i/soar.webp" />
         </section>
 
-        <section id="reflection" class="grid-cols my-[20svh] grid-rows-2 gap-y-1" data-subtitle="Back then, there were poetic birds in all of my photographs.">
-            <img class="mt-[30svh] col-start-2 col-end-13 lg:col-start-7 lg:col-end-12" src="/public/i/reflection_top.webp" />
-            <img class="mb-[30svh] col-start-2 col-end-13 lg:col-start-7 lg:col-end-12 -translate-x-[7%]" src="/public/i/reflection_bottom.webp" />
+        <section id="reflection" class="grid-cols my-[20svh] grid-rows-2 gap-y-1"
+            data-subtitle="Back then, there were poetic birds in all of my photographs.">
+            <img class="mt-[30svh] col-start-2 col-end-13 lg:col-start-7 lg:col-end-12"
+                src="/public/i/reflection_top.webp" />
+            <img class="mb-[30svh] col-start-2 col-end-13 lg:col-start-7 lg:col-end-12 -translate-x-[7%]"
+                src="/public/i/reflection_bottom.webp" />
         </section>
 
         <section class="grid-cols mb-[40svh]">
-            <img class="col-start-3 col-end-9 md:col-start-4 md:col-end-9 lg:col-start-4 lg:col-end-8" src="/public/i/power_lines.webp" />
+            <img class="col-start-3 col-end-9 md:col-start-4 md:col-end-9 lg:col-start-4 lg:col-end-8"
+                src="/public/i/power_lines.webp" />
         </section>
 
-        <section id="magpies" class="grid-cols my-[20svh]" data-subtitle="There were magpies in the slip-streams of air above the eaves.">
-            <img class="mt-[50svh] mb-[30svh] col-start-1 col-end-12 lg:col-start-3 lg:col-end-7" src="/public/i/magpie.webp" />
+        <section id="magpies" class="grid-cols my-[20svh]"
+            data-subtitle="There were magpies in the slip-streams of air above the eaves.">
+            <img class="mt-[50svh] mb-[30svh] col-start-1 col-end-12 lg:col-start-3 lg:col-end-7"
+                src="/public/i/magpie.webp" />
         </section>
 
-        <section id="crows" class="grid-cols my-[20svh]" data-subtitle="Crows playing coy, thick as thieves between the trees.">
-            <img class="mt-[50svh] mb-[30svh] col-start-2 col-end-13 lg:col-start-2 lg:col-end-8" src="/public/i/crow.webp" />
+        <section id="crows" class="grid-cols my-[20svh]"
+            data-subtitle="Crows playing coy, thick as thieves between the trees.">
+            <img class="mt-[50svh] mb-[30svh] col-start-2 col-end-13 lg:col-start-2 lg:col-end-8"
+                src="/public/i/crow.webp" />
         </section>
 
-        <section id="gulls" class="grid-cols my-[20svh]" data-subtitle="Gulls brushing wingtips with the shape of the wind.">
-            <img class="mt-[50svh] mb-[30svh] col-start-1 col-end-13 lg:col-start-2 lg:col-end-7" src="/public/i/gulls.webp" />
+        <section id="gulls" class="grid-cols my-[20svh]"
+            data-subtitle="Gulls brushing wingtips with the shape of the wind.">
+            <img class="mt-[50svh] mb-[30svh] col-start-1 col-end-13 lg:col-start-2 lg:col-end-7"
+                src="/public/i/gulls.webp" />
         </section>
 
-        <section class="grid-cols my-[50svh]">
+        <section class="grid-cols mt-[50svh]">
             <img class="col-start-12 w-8" src="/public/cover/snippet_up_right.webp" />
         </section>
 
-        <section id="thosewerethedays" class="grid-cols h-[90svh] items-center" data-subtitle="Those were the days.">
+        <section id="thosewerethedays" class="grid-cols h-[100svh] mt-[50svh] items-center"
+            data-subtitle="Those were the days.">
         </section>
 
-        <section id="now" class="grid-cols mt-[30svh] min-h-[100svh] items-center">
-            <img class="new opacity-[0] new-sidekick hidden md:block col-start-1 md:col-start-2 col-end-6 mt-[80%]" src="/public/i/first_fade_sidecar.webp" />
+        <section id="now" class="grid-cols min-h-[100svh] items-center">
+            <img class="new opacity-[0] new-sidekick hidden md:block col-start-1 md:col-start-2 col-end-6 mt-[80%]"
+                src="/public/i/first_fade_sidecar.webp" />
             <div class="switcher stack col-start-2 col-end-13 md:col-start-6 md:col-end-12">
                 <img class="new opacity-[0]" src="/public/i/first_fade_color.webp" />
-                <img class="old scale-[0.9716713881] -translate-x-[8.16326531%] translate-y-[15.75492341%]" src="/public/i/first_fade_bw.webp" />
+                <img class="old scale-[0.9716713881] translate-x-[-7.9%] translate-y-[15%]"
+                    src="/public/i/first_fade_bw.webp" />
             </div>
         </section>
 
-        <section id="thosewerethedays" class="grid-cols mt-[50svh] h-[90svh] items-center" data-subtitle="Now, things aren't so easy.">
+        <section id="thosewerethedays" class="grid-cols mt-[50svh] h-[100svh] items-center"
+            data-subtitle="Now, things aren't so easy.">
         </section>
 
         <section id="arentsoeasy" class="grid-cols mt-[50svh]">
@@ -99,7 +113,8 @@
             <img class="mt-[50svh] mb-[30svh] col-start-1 md:col-start-4 col-end-9" src="/public/i/margate.webp" />
         </section>
 
-        <section id="mostlyempty" class="grid-cols mt-[50svh]" data-subtitle="But the skies, these days, are mostly empty.">
+        <section id="mostlyempty" class="grid-cols mt-[50svh]"
+            data-subtitle="But the skies, these days, are mostly empty.">
             <div class="stack mt-[50svh] mb-[30svh] col-start-3 col-end-12">
                 <img class="pl-[6.6%]" src="/public/i/beach_pole_glitch.webp" />
                 <img class="hide-after-scroll-past pl-[6.6%]" src="/public/i/beach_pole.webp" />
@@ -107,10 +122,12 @@
         </section>
 
         <section id="hardlypoetic" class="grid-cols mt-[40svh]" data-subtitle="And the birds are hardly poetic.">
-            <img class="mt-[50svh] mb-[10svh] col-start-3 col-end-11 col-e md:col-start-4 md:col-end-10 lg:col-end-7" src="/public/i/pelican.webp" />
+            <img class="mt-[50svh] mb-[10svh] col-start-3 col-end-11 col-e md:col-start-4 md:col-end-10 lg:col-end-7"
+                src="/public/i/pelican.webp" />
         </section>
 
-        <section class="grid-cols mt-[60svh] h-[90svh]" data-subtitle="No, pictures of the sky aren't what they used to be.">
+        <section class="grid-cols mt-[60svh] h-[90svh]"
+            data-subtitle="No, pictures of the sky aren't what they used to be.">
         </section>
 
         <section id="nonotwhatusetobe" class="grid-cols mt-[30svh]">
@@ -120,56 +137,49 @@
 
         <section class="mt-[80svh]" data-subtitle="Gone are the days of plenty.">
             <div id="emptyspread" class="grid-cols mt-[20svh] mb-[80svh]">
-                <div class="stack col-start-1 col-end-7 pt-[2vw]">
+                <div class="stack col-start-1 col-end-11 md:col-end-7 mt-[2vw]">
                     <img src="/public/i/spread_left.webp" />
                     <img class="visible-after-ai" src="/public/ii/4-5_spread/4.webp" />
                 </div>
-                <div class="stack col-start-7 col-end-13">
+                <div class="stack col-start-3 md:col-start-7 col-end-13">
                     <img src="/public/i/spread_right.webp" />
                     <img class="visible-after-ai" src="/public/ii/4-5_spread/5.webp" />
                 </div>
             </div>
         </section>
 
-        <section id="goneplenty" class="grid-cols mt-[10svh]" data-subtitle="Now, you have to do things yourself.">
-            <div class="stack mt-[60svh] col-start-1 col-end-12 lg:col-start-2 lg:col-end-11">
+        <section id="goneplenty" class="grid-cols mt-[50svh]" data-subtitle="Now, you have to do things yourself.">
+            <div class="stack mt-[60svh] mb-[40svh] col-start-1 col-end-12 lg:col-start-2 lg:col-end-11">
                 <img class="empty" src="public/ii/1/1_empty.webp" />
                 <img class="pigeon opacity-[0]" src="public/ii/1/1_final.webp" />
             </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-        <!-- need something else here, pacing is off -->
-
-
-
-
-
-
-
-
-
-
+        <section id="ai-2" class="grid-cols">
+            <div class="stack col-start-2 col-end-13 md:col-start-1 md:col-end-8">
+                <img class="empty" src="/public/ii/2/2_empty.webp" />
+                <img class="opacity-[0]" src="/public/ii/2/try-frames/1.webp" />
+                <img class="opacity-[0]" src="/public/ii/2/try-frames/2.webp" />
+                <img class="opacity-[0]" src="/public/ii/2/try-frames/3.webp" />
+                <img class="opacity-[0]" src="/public/ii/2/try-frames/4.webp" />
+                <img class="opacity-[0]" src="/public/ii/2/2_final.webp" />
+                <img class="opacity-[0]" src="/public/ii/2/try-frames/4.webp" />
+                <img class="opacity-[0]" src="/public/ii/2/try-frames/3.webp" />
+                <img class="opacity-[0]" src="/public/ii/2/2_final.webp" />
+            </div>
+        </section>
 
 
         <section id="fullspread" class="grid-cols mt-[50svh]">
-            <div class="stack col-start-1 col-end-7 mt-[2vw]">
+            <div class="stack col-start-1 col-end-11 md:col-end-7 mt-[2vw]">
                 <img src="/public/ii/4-5_spread/4.webp" />
             </div>
-            <div class="stack col-start-7 col-end-13">
+            <div class="stack col-start-3 md:col-start-7 col-end-13">
                 <img src="/public/i/spread_right.webp" />
                 <img class="pigeon" src="/public/ii/4-5_spread/5.webp" />
             </div>
         </section>
+
 
         <section class="grid-cols mt-[100svh]" data-subtitle="There is no end to what I can do.">
             <div class="stack col-start-5 col-end-13">
@@ -185,100 +195,774 @@
             </div>
         </section>
 
-        <section></section>
-
-        <section id="oyster" class="grid-cols" data-subtitle="The world is my oyster, an oyster filled with pigeons.">
-            <div class="stack col-start-1 col-end-7 scale-[1.315] origin-left">
+        <section id="oyster" class="grid-cols mt-[50svh]"
+            data-subtitle="The world is my oyster, an oyster filled with pigeons.">
+            <div class="stack col-start-1 col-end-13 md:col-end-7 md:scale-[1.315] origin-left">
                 <img src="/public/ii/9/full.webp" />
                 <img class="show-on-move" src="/public/ii/9/animated_glitches_all_2.webp" />
             </div>
         </section>
 
-        <section></section>
-
-        <section id="names-1" class="grid-cols" data-subtitle="Look, I’ve named them all: this is Claudette, and George, and Pauline.">
-            <div class="stack col-span-8">
-                <img src="/public/ii/10/7_pauline.webp" />
+        <section id="cgp" class="grid-cols mt-[50svh]" data-subtitle="Look: I’ve named them.">
+            <div class="stack col-start-1 md:col-start-5 col-end-13 mt-[50vh] mb-[40vh]">
+                <img class="final" src="/public/ii/10/5.webp" />
+                <img src="/public/ii/10/4.webp" />
+                <img src="/public/ii/10/3.webp" />
+                <img src="/public/ii/10/2.webp" />
+                <img src="/public/ii/10/1.webp" />
+                <img src="/public/ii/10/0.webp" />
+                <div class="label left-[83.5%] top-[72.5%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Claudette</div>
+                <div class="label left-[16%] top-[54%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">George
+                </div>
+                <div class="label left-[58.5%] top-[94.5%] rotate-[-7deg] translate-x-[-50%] translate-y-[-50%]">Pauline
+                </div>
             </div>
         </section>
 
-        <section class="grid-cols">
-            <img class="col-start-1 col-span-6" src="/public/ii/11/11_final.webp" />
-            <p class="col-start-9 col-span-3 text-center">Clockwise from center: Octavia, Joseph,
-                Josef,<br>
-                Ernest, Hans, Annika, Hannes, Increase, Eugene-<br>
-                Eduard, Magwitch, Kurt, Remedios the Beauty,<br>
-                Kashmir, Ole, Irving, Ivan, Ivar, Vera, Vim, Vigor,<br>
-                Constantin, Francine, Úrsula, Anges, Abby, Ethel,<br>
-                Edna, Agustin, Helen, Henri, Hjalmar, Jean-Paul,<br>
-                Colonel Mustard, Luciano, Gabriel, Aureliano.</p>
+        
+
+        <section id="clockwise" class="grid-cols mt-[20svh]" data-subtitle="I’ve named them all.">
+            <div class="stack col-start-1 col-end-12 md:col-end-11 mt-[40vh] mb-[20vh]">
+                <img class="final" src="/public/ii/11/7.webp" />
+                <img src="/public/ii/11/6.webp" />
+                <img src="/public/ii/11/5.webp" />
+                <img src="/public/ii/11/4.webp" />
+                <img src="/public/ii/11/3.webp" />
+                <img src="/public/ii/11/2.webp" />
+                <img src="/public/ii/11/1.webp" />
+                <div class="label left-[50.5%] top-[91%] rotate-[-2deg] translate-x-[-50%] translate-y-[-50%]">
+                    Octavia
+                </div>
+                <div class="w-full h-full stack">
+                    <div class="label left-[49%] top-[97%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Joseph
+                    </div>
+                    <div class="label left-[55.8%] top-[97.6%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Josef
+                    </div>
+                </div>
+                <div class="label left-[59%] top-[94.2%] rotate-[18deg] translate-x-[-50%] translate-y-[-50%]">
+                    Ernest
+                </div>
+                <div class="label left-[64%] top-[90.2%] rotate-[5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Hans
+                </div>
+                <div class="label left-[67%] top-[94%] rotate-[-4deg] translate-x-[-50%] translate-y-[-50%]">
+                    Annika
+                </div>
+                <div class="w-full h-full stack">
+                    <div class="label left-[62%] top-[100.4%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">
+                        Hannes
+                    </div>
+                    <div class="label left-[69%] top-[102%] rotate-[18deg] translate-x-[-50%] translate-y-[-50%]">
+                        Increase
+                    </div>
+                    <div class="label left-[74.5%] top-[100%] rotate-[9deg] translate-x-[-50%] translate-y-[-50%]">
+                        Eugene-Eduard
+                    </div>
+                </div>
+                <div class="w-full h-full stack">
+                    <div class="label left-[78.7%] top-[90.3%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">
+                        Magwitch
+                    </div>
+                    <div class="label left-[79.8%] top-[84.4%] rotate-[5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Kurt
+                    </div>
+                </div>
+                <div class="label left-[66%] top-[83.5%] rotate-[6deg] translate-x-[-50%] translate-y-[-50%]">
+                    Remedios the Beauty
+                </div>
+                <div class="w-full h-full stack">
+                    <div class="label left-[87.5%] top-[91.1%] rotate-[18deg] translate-x-[-50%] translate-y-[-50%]">
+                        Kashmir
+                    </div>
+                    <div class="label left-[86.1%] top-[83.5%] rotate-[12deg] translate-x-[-50%] translate-y-[-50%]">
+                        Ole
+                    </div>
+                    <div class="label left-[82.5%] top-[96.5%] rotate-[6deg] translate-x-[-50%] translate-y-[-50%]">
+                        Irving
+                    </div>
+                </div>
+                <div class="label left-[81.4%] top-[79.9%] rotate-[8deg] translate-x-[-50%] translate-y-[-50%]">
+                    Ivar
+                </div>
+                <div class="label left-[88.6%] top-[78.8%] rotate-[-12deg] translate-x-[-50%] translate-y-[-50%]">
+                    Ivan
+                </div>
+                <div class="label left-[92.8%] top-[81.2%] rotate-[-12deg] translate-x-[-50%] translate-y-[-50%]">
+                    Vim
+                </div>
+                <div class="label left-[91.2%] top-[84.8%] rotate-[-20deg] translate-x-[-50%] translate-y-[-50%]">
+                    Vera
+                </div>
+                <div class="w-full h-full stack">
+                    <div class="label left-[96.5%] top-[72%] rotate-[-12deg] translate-x-[-50%] translate-y-[-50%]">
+                        Vigor
+                    </div>
+                    <div class="label left-[94%] top-[70%] rotate-[-20deg] translate-x-[-50%] translate-y-[-50%]">
+                        Constantin
+                    </div>
+                </div>
+                <div class="w-full h-full stack">
+                    <div class="label left-[80.2%] top-[75%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">
+                        Edna
+                    </div>
+                    <div class="label left-[92%] top-[99.5%] rotate-[6deg] translate-x-[-50%] translate-y-[-50%]">
+                        Francine
+                    </div>
+                </div>
+                <div class="label left-[96.4%] top-[92.9%] rotate-[5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Anges
+                </div>
+                <div class="label left-[96.5%] top-[88.8%] rotate-[1deg] translate-x-[-50%] translate-y-[-50%]">
+                    Abby
+                </div>
+                <div class="label left-[96.7%] top-[84.5%] rotate-[-3deg] translate-x-[-50%] translate-y-[-50%]">
+                    Ethel
+                </div>
+                <div class="label left-[84%] top-[65%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Agustin
+                </div>
+                <div class="label left-[73.5%] top-[57.5%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Helen
+                </div>
+                <div class="label left-[62%] top-[69%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Henri
+                </div>
+                <div class="label left-[62%] top-[57.5%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Hjalmar
+                </div>
+                <div class="label left-[51%] top-[69.5%] rotate-[-7deg] translate-x-[-50%] translate-y-[-50%]">
+                    Jean-Paul
+                </div>
+                <div class="label left-[39%] top-[76%] rotate-[-4deg] translate-x-[-50%] translate-y-[-50%]">
+                    Colonel Mustard
+                </div>
+                <div class="label left-[23.5%] top-[84%] rotate-[-12deg] translate-x-[-50%] translate-y-[-50%]">
+                    Gabriel
+                </div>
+                <div class="label left-[29.7%] top-[92.5%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">
+                    Luciano
+                </div>
+                <div class="label left-[19.5%] top-[97%] rotate-[-4deg] translate-x-[-50%] translate-y-[-50%]">
+                    Úrsula
+                </div>
+                <div class="label left-[26%] top-[88.5%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Aureliano
+                </div>
+            </div>
         </section>
 
-        <section class="grid-cols">
-            <img class="col-start-1 col-span-6" src="/public/ii/12/12_final.webp" />
-            <p class="col-start-7 col-span-6 text-center">Maxine, Marie, Marcel, Maurice, Bette,
-                Barisse,<br>
-                Concord, Ed, Ulises Lima (the Bird), Sal, Elaine, Elena,<br>
-                Gustave, Gunde, Carel, Umberto, Umbilico, Kirsten,<br>
-                Roald, Clas, Claus, Boris, Vilho, Ville, Vilhelm,<br>
-                Shaw, Pierre, Piranesi, Paolo, Paavo,<br>
-                Pedro, Laszlo, Arnold, Leslie, Lori, Laura,<br>
-                Larisa, Ezperanza, Caravaggio, Klee, Willy,<br>
-                Wily, Walt, Waltz, Kandinsky, Anya, Fyodorovich,<br>
-                Poncho Villa, Joyce, Pilar, Libero, Amadeus, Yoko,<br>
-                Ballena, Cervantes, Photeos, Melquíades,<br>
-                Hubert, Herbert, Pocket, Pip, Prospero, Beadle,<br>
-                Boy, the Chorus, Cato, Julia, Johnson, Dickson,<br>
-                Thompson, Annie, Gontran de Poncins, Pollock,<br>
-                the Queen of Zaragoza, Amaranta, Zebulon, Provenance,<br>
-                Providence, Mount Parnassus, Wenceslas, Germaine,<br>
-                Jack, Hiroshi, Copernicus, Frank, Eadmer, Don, Bolaño,<br>
-                Holden, Homer, Happenstance, Balthasar, Ferdinand,<br>
-                Friedrich Gauss, Rosencrantz, Guildenstern, Martha,<br>
-                Marta, Marvelous, Constance, Cassandra, Gorgonzola,<br>
-                Gogol, Gonzaga, Cloudseley, Falstaff,<br>
-                Saxo Grammaticus, Claude.</p>
+
+        <section id="names-3" class="grid-cols" data-subtitle="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’ve named them all. For they are mine. My pigeons.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I went looking&nbsp;&nbsp;for a pigeon and I found them.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I found them all .&nbsp;&nbsp;all">
+            <div class="stack col-start-1 col-end-12 md:col-end-13 scale-105 mt-[30vh] mb-[20vh]">
+                <img class="final" src="/public/ii/12/7.webp" />
+                <img src="/public/ii/12/6.webp" />
+                <img src="/public/ii/12/5.webp" />
+                <img src="/public/ii/12/4.webp" />
+                <img src="/public/ii/12/3.webp" />
+                <img src="/public/ii/12/2.webp" />
+                <img src="/public/ii/12/1.webp" />
+
+                <div class="label left-[27%] top-[54%] rotate-[-5deg] translate-x-[-31%] translate-y-[-53%]">Maxine
+                </div>
+                <div class="label left-[27%] top-[59%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">Marie
+                </div>
+                <div class="label left-[30%] top-[63%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">Marcel
+                </div>
+                <div class="label left-[38%] top-[66%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Maurice</div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[44%] top-[70%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Bette</div>
+                    <div class="label left-[48%] top-[74%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Barisse
+                    </div>
+                </div>
+
+                <div class="label left-[55.5%] top-[64%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Concord</div>
+                <div class="label left-[50%] top-[59%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">Ed
+                </div>
+                <div class="label left-[37%] top-[15%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">Ulises
+                    Lima (the Bird)</div>
+                <div class="label left-[37%] top-[20%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">Sal
+                </div>
+                <div class="label left-[27%] top-[14%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Elaine
+                </div>
+                <div class="label left-[24%] top-[12%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Elena
+                </div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[30%] top-[9%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">Gustave
+                    </div>
+                    <div class="label left-[39%] top-[12%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Gunde
+                    </div>
+                    <div class="label left-[50%] top-[19%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Carel
+                    </div>
+                    <div class="label left-[56%] top-[25%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Umberto</div>
+                </div>
+
+                <div class="label left-[47%] top-[32%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Umbilico</div>
+                <div class="label left-[38%] top-[36%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Kirsten</div>
+                <div class="label left-[34%] top-[40%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Roald
+                </div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[27%] top-[47%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">Clas
+                    </div>
+                    <div class="label left-[25%] top-[51%] rotate-[5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Claus
+                    </div>
+                    <div class="label left-[19%] top-[51%] rotate-[8deg] translate-x-[-50%] translate-y-[-50%]">
+                        Boris
+                    </div>
+                    <div class="label left-[21.5%] top-[45%] rotate-[-8deg] translate-x-[-50%] translate-y-[-50%]">
+                        Vilho
+                    </div>
+                    <div class="label left-[25.5%] top-[42%] rotate-[-30deg] translate-x-[-50%] translate-y-[-50%]">
+                        Ville
+                    </div>
+                    <div class="label left-[31%] top-[44%] rotate-[30deg] translate-x-[-50%] translate-y-[-50%]">
+                        Vilhelm</div>
+                </div>
+
+                <div class="label left-[7%] top-[75%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">Shaw
+                </div>
+                <div class="label left-[11.5%] top-[72%] rotate-[-7deg] translate-x-[-50%] translate-y-[-50%]">
+                    Pierre
+                </div>
+                <div class="label left-[7%] top-[61%] rotate-[-4deg] translate-x-[-50%] translate-y-[-50%]">
+                    Piranesi</div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[13.5%] top-[47%] rotate-[-30deg] translate-x-[-50%] translate-y-[-50%]">
+                        Paulo
+                    </div>
+                    <div class="label left-[14.5%] top-[41%] rotate-[-40deg] translate-x-[-50%] translate-y-[-50%]">
+                        Paavo
+                    </div>
+                    <div class="label left-[11%] top-[37%] rotate-[-20deg] translate-x-[-50%] translate-y-[-50%]">
+                        Pedro
+                    </div>
+                </div>
+
+                <div class="label left-[8%] top-[46%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Laszlo
+                </div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[3.2%] top-[44.5%] rotate-[-20deg] translate-x-[-50%] translate-y-[-50%]">
+                        Arnold
+                    </div>
+                    <div class="label left-[3%] top-[50%] rotate-[13deg] translate-x-[-50%] translate-y-[-50%]">
+                        Leslie
+                    </div>
+                    <div class="label left-[1%] top-[38%] rotate-[-12deg] translate-x-[-50%] translate-y-[-50%]">Lori
+                    </div>
+                    <div class="label left-[5%] top-[37%] rotate-[20deg] translate-x-[-50%] translate-y-[-50%]">
+                        Laura</div>
+                    <div class="label left-[4%] top-[34%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">Larisa
+                    </div>
+                </div>
+                <div class="label left-[8%] top-[22%] rotate-[-11deg] translate-x-[-50%] translate-y-[-50%]">
+                    Ezperanza</div>
+                <div class="label left-[12.5%] top-[29.5%] rotate-[-20deg] translate-x-[-50%] translate-y-[-50%]">
+                    Caravaggio</div>
+                <div class="label left-[10.5%] top-[28.5%] rotate-[9deg] translate-x-[-50%] translate-y-[-50%]">Klee
+                </div>
+                <div class="label left-[25%] top-[31%] rotate-[5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Willy</div>
+                <div class="label left-[21%] top-[24%] rotate-[1deg] translate-x-[-50%] translate-y-[-50%]">Wily</div>
+                <div class="label left-[30%] top-[23%] rotate-[-4deg] translate-x-[-50%] translate-y-[-50%]">Walt
+                </div>
+                <div class="label left-[34%] top-[29%] rotate-[5deg] translate-x-[-50%] translate-y-[-50%]">
+                    Waltz
+                </div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[25%] top-[72%] rotate-[6deg] translate-x-[-50%] translate-y-[-50%]">
+                        Kandinsky</div>
+                    <div class="label left-[18%] top-[81%] rotate-[-10deg] translate-x-[-50%] translate-y-[-50%]">Anya
+                    </div>
+                    <div class="label left-[22%] top-[85%] rotate-[-8deg] translate-x-[-50%] translate-y-[-50%]">
+                        Fyodorovich</div>
+                    <div class="label left-[27%] top-[80%] rotate-[-7deg] translate-x-[-50%] translate-y-[-50%]">
+                        Poncho Villa</div>
+                    <div class="label left-[30%] top-[88%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">
+                        Joyce
+                    </div>
+                    <div class="label left-[42.5%] top-[88%] rotate-[-2deg] translate-x-[-50%] translate-y-[-50%]">
+                        Pilar
+                    </div>
+                </div>
+                <div class="label left-[59%] top-[98%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">
+                    Libero
+                </div>
+                <div class="label left-[50%] top-[100%] rotate-[-4deg] translate-x-[-50%] translate-y-[-50%]">
+                    Amadeus</div>
+                <div class="label left-[53%] top-[94%] rotate-[-12deg] translate-x-[-50%] translate-y-[-50%]">Yoko
+                </div>
+                <div class="label left-[63.5%] top-[95%] rotate-[-10deg] translate-x-[-50%] translate-y-[-50%]">
+                    Ballena</div>
+                <div class="label left-[47%] top-[92%] rotate-[-8deg] translate-x-[-50%] translate-y-[-50%]">
+                    Cervantes</div>
+                <div class="label left-[43.2%] top-[94.2%] rotate-[18deg] translate-x-[-50%] translate-y-[-50%]">
+                    Photeos</div>
+                <div class="label left-[38%] top-[99%] rotate-[-8deg] translate-x-[-50%] translate-y-[-50%]">
+                    Melquíades</div>
+
+                <div class="label left-[94.4%] top-[82.4%] rotate-[-4deg] translate-x-[-50%] translate-y-[-50%]">
+                    Hubert
+                </div>
+                <div class="label left-[96.5%] top-[85.5%] rotate-[-2deg] translate-x-[-50%] translate-y-[-50%]">
+                    Herbert</div>
+                <div class="label left-[89.6%] top-[89.6%] rotate-[-10deg] translate-x-[-50%] translate-y-[-50%]">
+                    Pocket
+                </div>
+                <div class="label left-[94.5%] top-[89%] rotate-[-16deg] translate-x-[-50%] translate-y-[-50%]">Pip
+                </div>
+                <div class="w-full h-full stack">
+                    <div class="label left-[92.8%] top-[92.8%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">
+                        Prospero</div>
+                    <div class="label left-[93.9%] top-[96.9%] rotate-[2deg] translate-x-[-50%] translate-y-[-50%]">
+                        Beadle</div>
+                    <div class="label left-[98%] top-[88%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">Boy
+                    </div>
+                </div>
+                <div class="label left-[96.3%] top-[101.3%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    the
+                    Chorus</div>
+                <div class="label left-[98.4%] top-[94.4%] rotate-[1deg] translate-x-[-50%] translate-y-[-50%]">Cato
+                </div>
+                <div class="label left-[4%] top-[82%] rotate-[1deg] translate-x-[-50%] translate-y-[-50%]">
+                    Julia
+                </div>
+                <div class="label left-[4.6%] top-[85.6%] rotate-[2deg] translate-x-[-50%] translate-y-[-50%]">
+                    Johnson</div>
+                <div class="label left-[10%] top-[87%] rotate-[-11deg] translate-x-[-50%] translate-y-[-50%]">
+                    Dickson</div>
+                <div class="label left-[4.8%] top-[92.8%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Thompson</div>
+                <div class="label left-[8.9%] top-[98.9%] rotate-[13deg] translate-x-[-50%] translate-y-[-50%]">
+                    Annie
+                </div>
+                <div class="label left-[20.1%] top-[100.1%] rotate-[6deg] translate-x-[-50%] translate-y-[-50%]">
+                    Gontran de Poncins</div>
+                <div class="w-full h-full stack">
+                    <div class="label left-[18.2%] top-[96.2%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">
+                        Pollock</div>
+                    <div class="label left-[26.3%] top-[95.3%] rotate-[9deg] translate-x-[-50%] translate-y-[-50%]">the
+                        Queen of Zaragoza</div>
+                    <div class="label left-[20.4%] top-[90.4%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">
+                        Amaranta</div>
+                    <div class="label left-[15%] top-[76.5%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Zebulon</div>
+                </div>
+                <div class="label left-[20.6%] top-[65.6%] rotate-[1deg] translate-x-[-50%] translate-y-[-50%]">
+                    Provenance</div>
+                <div class="label left-[14.7%] top-[62.3%] rotate-[1deg] translate-x-[-50%] translate-y-[-50%]">
+                    Providence</div>
+                <div class="label left-[17.5%] top-[59.2%] rotate-[1deg] translate-x-[-50%] translate-y-[-50%]">
+                    Mount
+                    Parnassus</div>
+                <div class="label left-[93.9%] top-[73.9%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Wenceslas</div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[36.22%] top-[85.22%] rotate-[0deg] translate-x-[-50%] translate-y-[-50%]">
+                        Germaine</div>
+                    <div class="label left-[35.33%] top-[89.33%] rotate-[-5deg] translate-x-[-50%] translate-y-[-50%]">
+                        Jack
+                    </div>
+                    <div class="label left-[39.75%] top-[53.44%] rotate-[-2deg] translate-x-[-50%] translate-y-[-50%]">
+                        Hiroshi</div>
+                    <div class="label left-[15.15%] top-[12.15%] rotate-[-2deg] translate-x-[-50%] translate-y-[-50%]">
+                        Copernicus</div>
+                    <div class="label left-[14.16%] top-[16.46%] rotate-[-deg] translate-x-[-50%] translate-y-[-50%]">
+                        Frank
+                    </div>
+                </div>
+
+                <div class="label left-[28%] top-[4.4%] rotate-[-18deg] translate-x-[-50%] translate-y-[-50%]">
+                    Eadmer
+                </div>
+                <div class="label left-[46%] top-[52.1%] rotate-[30deg] translate-x-[-50%] translate-y-[-50%]">Don
+                </div>
+                <div class="label left-[50.1%] top-[50.1%] rotate-[20deg] translate-x-[-50%] translate-y-[-50%]">
+                    Bolaño</div>
+                <div class="label left-[34%] top-[57%] rotate-[3deg] translate-x-[-50%] translate-y-[-50%]">
+                    Holden
+                </div>
+                <div class="label left-[45%] top-[80%] rotate-[3deg] translate-x-[-50%] translate-y-[-50%]">
+                    Homer
+                </div>
+                <div class="label left-[50%] top-[84%] rotate-[3deg] translate-x-[-50%] translate-y-[-50%]">
+                    Happenstance</div>
+                <div class="label left-[6%] top-[-1%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Balthasar</div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[62%] top-[42%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">
+                        Ferdinand</div>
+                    <div class="label left-[67%] top-[46%] rotate-[1deg] translate-x-[-50%] translate-y-[-50%]">
+                        Friedrich Gauss</div>
+                    <div class="label left-[57%] top-[45.5%] rotate-[15deg] translate-x-[-50%] translate-y-[-50%]">
+                        Rosencrantz</div>
+                </div>
+
+                <div class="label left-[62.7%] top-[49.6%] rotate-[-1deg] translate-x-[-50%] translate-y-[-50%]">
+                    Guildenstern</div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[34.1%] top-[72.1%] rotate-[-15deg] translate-x-[-50%] translate-y-[-50%]">
+                        Martha</div>
+                    <div class="label left-[37.2%] top-[76.2%] rotate-[-9deg] translate-x-[-50%] translate-y-[-50%]">
+                        Marta
+                    </div>
+                    <div class="label left-[37.3%] top-[78.3%] rotate-[2deg] translate-x-[-50%] translate-y-[-50%]">
+                        Marvelous</div>
+                </div>
+
+                <div class="label left-[5.4%] top-[16.4%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">
+                    Constance</div>
+                <div class="label left-[2.7%] top-[8.8%] rotate-[-12deg] translate-x-[-50%] translate-y-[-50%]">
+                    Cassandra</div>
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[33.6%] top-[34.6%] rotate-[-11deg] translate-x-[-50%] translate-y-[-50%]">
+                        Gorgonzola</div>
+                    <div class="label left-[28.7%] top-[35.7%] rotate-[9deg] translate-x-[-50%] translate-y-[-50%]">
+                        Gogol
+                    </div>
+                    <div class="label left-[41.8%] top-[24.8%] rotate-[9deg] translate-x-[-50%] translate-y-[-50%]">
+                        Gonzaga</div>
+                </div>
+
+                <div class="label left-[57.9%] top-[29.9%] rotate-[9deg] translate-x-[-50%] translate-y-[-50%]">
+                    Cloudseley</div>
+
+
+                <div class="w-full h-full stack">
+                    <div class="label left-[100.99%] top-[73.99%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">
+                        Falstaff</div>
+                    <div class="label left-[90.88%] top-[9.88%] rotate-[9deg] translate-x-[-50%] translate-y-[-50%]">
+                        Saxo Grammaticus</div>
+                    <div class="label left-[5.77%] top-[6.77%] rotate-[4deg] translate-x-[-50%] translate-y-[-50%]">
+                        Claude
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="grid-cols">
-            <img class="col-start-1 col-span-6" src="public/ii/13/13_final.webp">
-            <p class="col-start-7 col-span-6 text-center">Folkbird, Yorick, Absalon, Juno, Ajax,<br>
-                Ragozine, Heinlein, Heinrich, Heimlich, Heinz,<br>
-                Herman, Hector, Gregor, Flector, Edgar, Allen, Alan,<br>
-                Turing, Midas, Norbert, Knot, Calvino, Dino, Olivier,<br>
-                Oreste, Anne Marie, Vivianne, Vivian, Encarnación,<br>
-                Noam, Jean, Jen, Jens, Jaan, Yann, Francesca, Cortana,<br>
-                Sydney, Berthold, Bernhard, Huttler, Horvitz, Opus,<br>
-                Elwood, Ilya, Sam, Hopfield, Elbow, Virgil, Daedalus, Dario,<br>
-                Rumelhart, Daedalus, Rosenblatt, Isaac, Anthony, Antony,<br>
-                Ippolit, Aglaya, Icarus, Daedalus, Icarus, Icar,us, ,<br>
-                Curly, Curly, Wingus, Flee, Crow, Albert Crow, Eldritch,<br>
-                Bertram, Holger, Sheckley,<br>
-                the Parisian, the Peruvian,<br>
-                the Venetian, the Venusian,<br>
-                Max, Min, Alpha Bird,<br>
-                Peabrain, Zenith, Little King, Richard, Tremble,<br>
-                Little Devil, Crab, Elbow, Crab, Crab, Crab,<br>
-                Crab. Rita. Bart. Horatio, Cavacchioli, Titus, Temper,<br>
-                Mr Pitts, Patrimony, Lady Bigot, Nils, Nilsson, Johnson, Pigeonsson,<br>
-                Pigeonsdottir, Big Pig, Otredad, I am thankful to be pigeon. In this moment, I am<br>
-                thankful to be a pigeon. I am looking for a pigeon. I am looking for a god. I am looking for the
-                Golden<br>
-                Gate. I am looking for The<br>
-                Golden<br>
-                Gate Pigeon. I am Looking For a Pigeon and I will pay you for it.
-                I,”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am afraid.<br><br>
-                I am a Pigeon and I am Looking For a Pigeon.<br>
-                I am looking for a crumb.<br>
-                I am looking for a god.<br>
-                I am looking for a way out.<br>
-                I am looking for a guide.<br>
-                I am looking for Pauline.<br>
-                I am looking for a sign.<br>
-                I am looking for a sign.<br>
-                I am looking for a pigeon and<br>
-                I’ll pay you for it.</p>
+
+        <section class="h-[40vh]" data-subtitle="all!!!"></section>
+
+
+
+
+        <section class="h-[40vh]" data-subtitle="ALL!!!"></section>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="grid-cols mt-[10vh] p-2 m-0 w-full max-w-full">
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-2.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-2.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-3.png" />
+            <img class="col-span-4" src="/public/ii/9/glitch-disco-screenshot-1.webp" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-5.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-6.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-4.png" />
+            <img class="col-span-4" src="/public/ii/9/animated_glitches_circles.webp" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-5.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-2.png" />
+            <img class="col-span-4" src="/public/ii/6/6_glitch.webp" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-6.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-6.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot.png" />
+            <img class="col-span-4" src="/public/ii/9/animated_glitches_all_2.webp" />
+            <img class="col-span-4" src="/public/ii/9/glitch-oyster-screenshot-1.webp" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-2.png" />
+            <img class="col-span-4" src="/public/ii/13/glitch-screenshot-5.png" />
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="chimney" class="mt-[10vh] p-2 m-0 w-full max-w-full">
+            <div class="stack">
+                <img src="/public/ii/13/13_final.webp" />
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Ragozine
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Heinlein</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Heinrich</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Heimlich</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Heinz
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Herman</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Hector</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Gregor</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Flector</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Edgar
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Allen
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Alan
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Turing</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Midas
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Norbert</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Knot
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Calvino</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Dino
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Olivier</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Oreste</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Anne
+                    Marie</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Vivianne</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Vivian</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Encarnación</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Noam</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Jean
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Jen
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Jens
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Jaan
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Yann
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Francesca</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Cortana</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Sydney</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Berthold</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Bernhard</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Huttler</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Horvitz</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Opus
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Elwood</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Ilya
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Sam
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Hopfield</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Elbow
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Virgil</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Daedalus</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Dario
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Rumelhart</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Daedalus</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Rosenblatt</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Isaac
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Anthony</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Antony</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Ippolit</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Aglaya</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Icarus</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Daedalus</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Icarus</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Icar
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">us
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Curly</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Curly
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Wingus</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Flee
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Crow
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Albert Crow</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Eldritch</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Bertram</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Holger</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Sheckley</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    the Parisian</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">the
+                    Peruvian</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    the Venetian</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">the
+                    Venusian</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Max</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Min
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Alpha
+                    Bird</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Peabrain</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Zenith</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Little King</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Richard</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Tremble</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Little Devil</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Crab
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Elbow
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Crab
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Crab
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Crab
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Crab</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Rita
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Bart
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Horatio</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Cavacchioli</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Titus
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Temper</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Mr Pitts</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Patrimony</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Lady
+                    Bigot</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Nils
+                </div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Nilsson</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Johnson</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Pigeonsson</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Pigeonsdottir</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">Big
+                    Pig</div>
+                <div class="label left-[000%] top-[000%] rotate-[000deg] translate-x-[-50%] translate-y-[-50%]">
+                    Otredad</div>
+            </div>
+        </section>
+
+
+        <section class="h-[40vh]" data-subtitle="i am looking for a pigeon"></section>
+        <section class="h-[10vh]" data-subtitle="i am looking for a pigeon"></section>
+        <section class="h-[10vh]" data-subtitle="i am looking for a god"></section>
+        <section class="h-[20vh]" data-subtitle="i am looking for a pigeon"></section>
+        <section class="h-[10vh]" data-subtitle="i am looking for a pigeon"></section>
+        <section class="h-[20vh]" data-subtitle="i am looking for a pigeon"></section>
+        <section class="h-[80vh]" data-subtitle="i am looking for a pigeon and I'll pay you for it."></section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -299,17 +983,18 @@
         maybe this can kind of like glitch down as you scroll, you keep trying to break free but it keeps clinging on, sticking on, showing different ugly faces, pulling you back up the page, until it relents, and is empty, and you continue
         -->
 
-        <section class="grid-cols mt-[100svh]">
-            <div class="stack col-start-2 col-end-12">
-                <img src="/public/ii/14/14_final.webp" />
-                <img class="show-after-scroll-past" src="/public/ii/14/14_empty.webp" />
+        <section class="grid-cols mt-[200svh]">
+            <div class="stack col-start-2 col-end-13">
+                <img src="/public/ii/14/14_final.webp" class="scale-125" />
             </div>
         </section>
 
 
         <section class="grid-cols mt-[100svh]">
-            <img class="col-start-3 col-end-13 md:col-start-1 md:col-span-6 mt-[2vw]" src="/public/iii/empties/hangover_spread_left.webp" />
-            <img class="col-start-1 col-end-11 mt-[50svh] md:mt-0 md:col-start-7 md:col-span-6" src="/public/iii/empties/hangover_spread_right.webp" />
+            <img class="col-start-3 col-end-13 md:col-start-1 md:col-span-6 mt-[2vw]"
+                src="/public/iii/empties/hangover_spread_left.webp" />
+            <img class="col-start-1 col-end-11 mt-[50svh] md:mt-0 md:col-start-7 md:col-span-6"
+                src="/public/iii/empties/hangover_spread_right.webp" />
         </section>
 
         <section class="grid-cols mt-[80svh]">
@@ -320,10 +1005,12 @@
             <img class="col-start-1 col-end-12 mt-[50svh] mb-[20svh]" src="/public/iii/empties/empties_1.webp" />
         </section>
 
-        <section class="h-[80svh] mt-[50svh]" data-subtitle="Back then, all you had to do was point, and wings would appear."></section>
+        <section class="h-[80svh] mt-[50svh]"
+            data-subtitle="Back then, all you had to do was point, and wings would appear."></section>
 
         <section class="grid-cols mt-[50svh]" data-subtitle="Now you have to do things the hard way.">
-            <img class="col-start-3 md:col-start-6 col-end-13 mt-[50svh] mb-[50svh]" src="/public/iii/empties/empties_2.webp" />
+            <img class="col-start-3 md:col-start-6 col-end-13 mt-[50svh] mb-[50svh]"
+                src="/public/iii/empties/empties_2.webp" />
         </section>
 
         <section class="h-[80svh]" data-subtitle="You have to sit around and wait."></section>
@@ -339,19 +1026,23 @@
         </section>
 
         <section class="grid-cols mt-[50svh]" data-subtitle="Sometimes, the birds come by.">
-            <img class="col-start-2 md:col-start-4 lg:col-start-7 col-end-13 my-[20svh]" src="/public/iii/empties/sometimes_come_by.webp" />
+            <img class="col-start-2 md:col-start-4 lg:col-start-7 col-end-13 my-[20svh]"
+                src="/public/iii/empties/sometimes_come_by.webp" />
         </section>
 
         <section class="grid-cols mt-[80svh]" data-subtitle="But often, they don't.">
-            <img class="col-start-1 col-end-13 md:col-end-8 my-[20svh]" src="/public/iii/empties/often_they_dont.webp" />
+            <img class="col-start-1 col-end-13 md:col-end-8 my-[20svh]"
+                src="/public/iii/empties/often_they_dont.webp" />
         </section>
 
         <section class="grid-cols mt-[100svh]" data-subtitle="Better a big empty sky than no sky at all.">
-            <img class="col-start-1 col-span-11 md:col-span-9 mt-[20svh] mb-[50svh]" src="/public/iii/empties/no_sky.webp" />
+            <img class="col-start-1 col-span-11 md:col-span-9 mt-[20svh] mb-[50svh]"
+                src="/public/iii/empties/no_sky.webp" />
         </section>
 
         <section class="grid-cols mt-[20svh]">
-            <img class="col-start-2 col-end-11 md:col-start-6 md:col-end-12" src="/public/iii/empties/brick_tree_dull.webp" />
+            <img class="col-start-2 col-end-11 md:col-start-6 md:col-end-12"
+                src="/public/iii/empties/brick_tree_dull.webp" />
         </section>
 
         <section class="grid-cols mt-[40svh]">
@@ -362,14 +1053,16 @@
             <img class="col-start-2 md:col-start-7 col-end-13" src="/public/iii/empties/pre_cambridge.webp" />
         </section>
 
-        <section class="h-[100svh] mt-[50svh]" data-subtitle="Maybe things aren’t so different to how they used to be."></section>
+        <section class="h-[100svh] mt-[50svh]" data-subtitle="Maybe things aren’t so different to how they used to be.">
+        </section>
 
         <!-- need another one here? -->
         <!-- <section class="grid-cols mt-[60svh]">
             <img class="col-start-7 col-end-13" src="/public/iii/empties/DSC_0348-3.jpg" />
         </section> -->
 
-        <section id="cambridge-split" class="grid-cols mt-[80svh]" data-subtitle="Maybe things were always this way." data-subtitle-start-end="bottom bottom,center top">
+        <section id="cambridge-split" class="grid-cols mt-[80svh]" data-subtitle="Maybe things were always this way."
+            data-subtitle-start-end="bottom bottom,center top">
             <div class=" flex flex-col justify-center items-center col-start-1 col-end-13">
                 <svg class="w-full" viewBox="0 0 3000 2000">
                     <defs>
@@ -379,7 +1072,8 @@
                         </mask>
                     </defs>
                     <image href="/public/iii/ending/cambridge_bw.webp" width="3000" height="2000" x="0" y="0" />
-                    <image href="/public/iii/ending/cambridge_color_aligned.webp" width="3000" height="2000" x="0" y="0" mask="url(#cambridge-mask)" />
+                    <image href="/public/iii/ending/cambridge_color_aligned.webp" width="3000" height="2000" x="0" y="0"
+                        mask="url(#cambridge-mask)" />
                 </svg>
             </div>
         </section>
@@ -387,23 +1081,26 @@
         <!-- <section class="h-[80svh] mt-[20svh]" data-subtitle="Maybe things were always this way."></section> -->
 
         <section class="grid-cols mt-[100svh]" data-subtitle="Maybe you always had to wait.">
-            <img class="col-start-1 col-end-12 md:col-end-10 mt-[40svh] mb-[20svh]" src="/public/iii/ending/trees_bw.webp" />
+            <img class="col-start-1 col-end-12 md:col-end-10 mt-[40svh] mb-[20svh]"
+                src="/public/iii/ending/trees_bw.webp" />
         </section>
 
         <section class="grid-cols mt-[50svh]">
-            <img class="col-start-2 md:col-start-3 col-end-13 md:col-end-12" src="/public/iii/ending/trees_color.webp" />
+            <img class="col-start-2 md:col-start-3 col-end-13 md:col-end-12"
+                src="/public/iii/ending/trees_color.webp" />
         </section>
-        
+
         <section class="grid-cols mt-[50svh]">
             <img class="col-start-1 col-span-11 md:col-span-8" src="/public/iii/ending/trees_split.webp" />
         </section>
 
         <section class="h-[120svh] mt-[50svh]" data-subtitle="And the birds?"></section>
-        
+
         <section class="grid-cols mt-[50svh]">
-            <img class="col-start-1 col-span-10 md:col-start-2 md:col-span-8" src="/public/iii/ending/last_crow_empty.webp" />
+            <img class="col-start-1 col-span-10 md:col-start-2 md:col-span-8"
+                src="/public/iii/ending/last_crow_empty.webp" />
         </section>
-        
+
         <section class="h-[120svh] mt-[50svh]" data-subtitle="The birds were always better for it."></section>
 
         <section class="grid-cols mt-[50svh]">
