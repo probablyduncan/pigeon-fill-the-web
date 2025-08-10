@@ -13,16 +13,8 @@
 </head>
 
 <body>
-    <!-- <shader-doodle>
-        void main() {
-        vec2 st = gl_FragCoord.xy / u_resolution.xy;
-        vec3 color = vec3(st.x, st.y, abs(sin(u_time)));
-
-        gl_FragColor = vec4(color, 1.0);
-        }
-    </shader-doodle> -->
     <!-- <canvas id="shader" class="fixed w-dvw h-dvw select-none pointer-events-none"></canvas> -->
-    <div id="background"></div>
+    <!-- <div id="background"></div> -->
 
     <div class="top-left">
         to pigeon-fill the sky
@@ -331,7 +323,7 @@
         <section class="h-[80svh] mt-[50svh]" data-subtitle="Back then, all you had to do was point, and wings would appear."></section>
 
         <section class="grid-cols mt-[50svh]" data-subtitle="Now you have to do things the hard way.">
-            <img class="col-start-6 col-end-13 mt-[50svh] mb-[50svh]" src="/public/iii/empties/empties_2.webp" />
+            <img class="col-start-3 md:col-start-6 col-end-13 mt-[50svh] mb-[50svh]" src="/public/iii/empties/empties_2.webp" />
         </section>
 
         <section class="h-[80svh]" data-subtitle="You have to sit around and wait."></section>
@@ -343,70 +335,82 @@
         <section class="h-[80svh] mt-[50svh]" data-subtitle="And wait."></section>
 
         <section class="grid-cols mt-[50svh]">
-            <img class="col-start-7 col-span-6" src="/public/iii/empties/empties_4.webp" />
+            <img class="col-start-1 md:col-start-7 col-end-13" src="/public/iii/empties/empties_4.webp" />
         </section>
 
         <section class="grid-cols mt-[50svh]" data-subtitle="Sometimes, the birds come by.">
             <img class="col-start-2 md:col-start-4 lg:col-start-7 col-end-13 my-[20svh]" src="/public/iii/empties/sometimes_come_by.webp" />
         </section>
 
-        <section class="grid-cols mt-[50svh]" data-subtitle="But often, they don't.">
+        <section class="grid-cols mt-[80svh]" data-subtitle="But often, they don't.">
             <img class="col-start-1 col-end-13 md:col-end-8 my-[20svh]" src="/public/iii/empties/often_they_dont.webp" />
         </section>
 
-        <section class="grid-cols mt-[50svh]" data-subtitle="Better a big empty sky than no sky at all.">
+        <section class="grid-cols mt-[100svh]" data-subtitle="Better a big empty sky than no sky at all.">
             <img class="col-start-1 col-span-11 md:col-span-9 mt-[20svh] mb-[50svh]" src="/public/iii/empties/no_sky.webp" />
         </section>
 
-        <section class="grid-cols mt-[20vh]">
+        <section class="grid-cols mt-[20svh]">
             <img class="col-start-2 col-end-11 md:col-start-6 md:col-end-12" src="/public/iii/empties/brick_tree_dull.webp" />
         </section>
 
-        <section class="grid-cols mt-[60vh]">
-            <img class="col-start-2 col-end-11 md:col-start-2 md:col-end-6" src="/public/iii/ending/trimmed.webp" />
+        <section class="grid-cols mt-[40svh]">
+            <img class="col-start-5 col-end-13 md:col-start-2 md:col-end-6" src="/public/iii/ending/trimmed.webp" />
         </section>
 
-        <section class="grid-cols mt-[60vh]">
-            <img class="col-start-7 col-end-13" src="/public/iii/empties/DSC_0348-4.jpg" />
+        <section class="grid-cols mt-[60svh]">
+            <img class="col-start-2 md:col-start-7 col-end-13" src="/public/iii/empties/pre_cambridge.webp" />
         </section>
 
-        <section class="h-[80svh] mt-[20vh]" data-subtitle="Maybe things aren’t so different to how they used to be."></section>
+        <section class="h-[100svh] mt-[50svh]" data-subtitle="Maybe things aren’t so different to how they used to be."></section>
 
         <!-- need another one here? -->
-        <section class="grid-cols mt-[60vh]">
-            <!-- <img class="col-start-7 col-end-13" src="/public/iii/empties/DSC_0348-3.jpg" /> -->
+        <!-- <section class="grid-cols mt-[60svh]">
+            <img class="col-start-7 col-end-13" src="/public/iii/empties/DSC_0348-3.jpg" />
+        </section> -->
+
+        <section id="cambridge-split" class="grid-cols mt-[80svh]" data-subtitle="Maybe things were always this way." data-subtitle-start-end="bottom bottom,center top">
+            <div class=" flex flex-col justify-center items-center col-start-1 col-end-13">
+                <svg class="w-full" viewBox="0 0 3000 2000">
+                    <defs>
+                        <mask id="cambridge-mask">
+                            <rect width="3000" height="2000" fill="white" />
+                            <rect id="cambridge-rect" width="13000" height="12000" x="3000" y="-5000" fill="black" />
+                        </mask>
+                    </defs>
+                    <image href="/public/iii/ending/cambridge_bw.webp" width="3000" height="2000" x="0" y="0" />
+                    <image href="/public/iii/ending/cambridge_color_aligned.webp" width="3000" height="2000" x="0" y="0" mask="url(#cambridge-mask)" />
+                </svg>
+            </div>
         </section>
 
-        <section class="grid-cols mt--[50svh]" data-subtitle=" / Maybe things were always this way.">
-            <img class="col-start-2 col-end-13 my-[20vh]" src="/public/iii/ending/cambridge_color.webp" />
-            <img class="col-start-2 col-end-13 my-[20vh]" src="/public/iii/ending/cambridge_bw.webp" />
-        </section>
+        <!-- <section class="h-[80svh] mt-[20svh]" data-subtitle="Maybe things were always this way."></section> -->
 
-        <section class="grid-cols mt-[80svh]" data-subtitle="Maybe you always had to wait.">
-            <img class="col-start-1 col-end-10 mt-[40vh] mb-[20vh]" src="/public/iii/ending/trees_bw.webp" />
+        <section class="grid-cols mt-[100svh]" data-subtitle="Maybe you always had to wait.">
+            <img class="col-start-1 col-end-12 md:col-end-10 mt-[40svh] mb-[20svh]" src="/public/iii/ending/trees_bw.webp" />
         </section>
 
         <section class="grid-cols mt-[50svh]">
-            <img class="col-start-3 col-end-12" src="/public/iii/ending/trees_color.webp" />
+            <img class="col-start-2 md:col-start-3 col-end-13 md:col-end-12" src="/public/iii/ending/trees_color.webp" />
+        </section>
+        
+        <section class="grid-cols mt-[50svh]">
+            <img class="col-start-1 col-span-11 md:col-span-8" src="/public/iii/ending/trees_split.webp" />
         </section>
 
-        <section class="h-[80svh]" data-subtitle="And the birds?"></section>
+        <section class="h-[120svh] mt-[50svh]" data-subtitle="And the birds?"></section>
+        
+        <section class="grid-cols mt-[50svh]">
+            <img class="col-start-1 col-span-10 md:col-start-2 md:col-span-8" src="/public/iii/ending/last_crow_empty.webp" />
+        </section>
+        
+        <section class="h-[120svh] mt-[50svh]" data-subtitle="The birds were always better for it."></section>
 
         <section class="grid-cols mt-[50svh]">
-            <img class="col-start-1 col-span-8" src="/public/iii/ending/trees_split.webp" />
+            <img class="col-start-3 col-span-10 md:col-start-4 md:col-span-8" src="/public/iii/ending/last_crow.webp" />
         </section>
 
-        <section class="h-[80svh]" data-subtitle="The birds were always better for it."></section>
-
-        <section class="grid-cols mt-[50svh]">
-            <img class="col-start-2 col-span-8" src="/public/iii/ending/last_crow_empty.webp" />
-        </section>
-
-        <section class="grid-cols mt-[80svh]">
-            <img class="col-start-4 col-span-8" src="/public/iii/ending/last_crow.webp" />
-        </section>
-
-        <section class="mt-[50svh] h-[52svh]" data-subtitle="Fin."></section>
+        <section class="mt-[50lvh] h-[52lvh]" data-subtitle="Fin."></section>
 
     </main>
 

@@ -23,19 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const roughEase = "rough({template: elastic.inOut, points: 100, randomize:true, clamp:true})"
 
-    // ScrollTrigger.create({
-    //     id: "cover",
-    //     trigger: "#cover",
-    //     start: "top top",
-    //     end: "bottom top",
-    //     markers: true,
-    //     pin: true,
-    //     scrub: 0.5,
-    //     animation: gsap.to("#cover img#pigeon", {
-    //         y: 0,
-    //     }),
-    // })
-
     ScrollTrigger.create({
         id: "title-icon",
         trigger: "#title-wrapper",
@@ -55,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: "#now",
         start: "center center",
         toggleActions: "play none none reverse",
-        // scrub: 0.5,
         // markers: true,
         animation: gsap.timeline().to("#now .new", {
             opacity: 1,
@@ -113,6 +99,25 @@ document.addEventListener("DOMContentLoaded", () => {
             repeat: 5,
             repeatDelay: 0.0333,
             duration: 0.0333,
+        }),
+    })
+
+    ScrollTrigger.create({
+        id: "cambridge-split",
+        trigger: "#cambridge-split",
+        scrub: 0.5,
+        start: "bottom bottom",
+        end: "center top",
+        // pin: true,
+        // markers: true,
+        animation: gsap.timeline().to("#cambridge-rect", {
+            x: -3000,
+            rotate: -20,
+            ease: "none",
+        }).to("#cambridge-rect", {
+            x: -4000,
+            rotate: 0,
+            ease: "none",
         }),
     })
 
@@ -221,12 +226,18 @@ function initSubtitles() {
     const subtitles: {
         trigger: Element,
         text: string,
+        start: string,
+        end: string,
     }[] = []
 
     document.querySelectorAll("[data-subtitle]").forEach(_e => {
+        const e = _e as HTMLElement
+        const [start, end] = e.dataset.subtitleStartEnd?.split(",") ?? ["top center", "bottom center"]
+
         subtitles.push({
-            trigger: _e,
-            text: (_e as HTMLElement).dataset.subtitle!,
+            trigger: e,
+            text: e.dataset.subtitle!,
+            start, end,
         })
     })
 
@@ -289,8 +300,8 @@ function initSubtitles() {
             onEnterBack: onEnter,
             onLeave: exit,
             onLeaveBack: exit,
-            start: "top center",
-            end: "bottom center",
+            start: subtitle.start,
+            end: subtitle.end,
             // markers: true,
         })
     }

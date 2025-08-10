@@ -163,6 +163,16 @@
 }
 
 [data-subtitle] {
+
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: -1;
+        color: #2f2f316f;
+        font-size: 1rem;
+        color: black;
+    }
+
     &::before {
         content: "†";
         content: "※";
@@ -180,7 +190,6 @@
         content: "‼";
         content: "⋆";
         content: "‥";
-        position: absolute;
         top: 0;
     }
 
@@ -194,7 +203,6 @@
         content: "⋅";
         content: "․";
         opacity: 0.8;
-        position: absolute;
         bottom: 0;
     }
 
@@ -207,13 +215,6 @@
     &:not([data-subtitle-icon-right])::after {
         left: 8px;
     }
-}
-
-[data-subtitle]::before,
-[data-subtitle]::after {
-    color: #2f2f316f;
-    font-size: 1rem;
-    color: black;
 }
 
 main>* {
