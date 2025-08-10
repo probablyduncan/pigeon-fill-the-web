@@ -4,7 +4,7 @@ import "./style.css"
 import { gsap } from "gsap"
 import { RoughEase } from "gsap/EasePack"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { ScrollSmoother } from "gsap/ScrollSmoother"
+// import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { SplitText } from "gsap/SplitText"
 
 gsap.registerPlugin(
@@ -357,7 +357,7 @@ function initSubtitles() {
     const splitType = "words"
     let currentSplit: SplitText | undefined
 
-    function enter(st: ScrollTrigger, data: typeof subtitles[number]) {
+    function enter(_st: ScrollTrigger, data: typeof subtitles[number]) {
         currentSplit?.revert()
         toggleSubtitle(false)
         toggleWonk(data.wonky)
@@ -380,7 +380,7 @@ function initSubtitles() {
         })
     }
 
-    function exit(st: ScrollTrigger) {
+    function exit(_st: ScrollTrigger) {
         currentSplit?.revert()
         currentSplit = SplitText.create("#subtitle", {
             type: splitType,
