@@ -210,21 +210,22 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleActions: "none play none reset",
         start: "top bottom",
         end: "top center",
-        animation: gsap.timeline().to("#chimney img:not(.final)", {
-            autoAlpha: 0,
-            duration: 0.2,
-            stagger: 0.2,
-            ease: roughEase,
-            reversed: true,
-        }, 0)
-        .from("#chimney > div > div", {
-            stagger: 0.01,
-            autoAlpha: 0,
-            ease: roughEase,
-            duration: 0.1,
-        }, 0.3)
+        animation: gsap.timeline()
+            // .to("#chimney img:not(.final)", {
+            //     autoAlpha: 0,
+            //     duration: 0.2,
+            //     stagger: 0.2,
+            //     ease: roughEase,
+            //     reversed: true,
+            // }, 0)
+            .from("#chimney > div > div", {
+                stagger: 0.01,
+                autoAlpha: 0,
+                ease: roughEase,
+                duration: 0.1,
+            }, 0.3)
     })
-    
+
     // ;(document.querySelector("#chimney .stack") as HTMLElement)?.addEventListener("click", e => {
     //     const rect = (e.target as HTMLElement).getBoundingClientRect()
     //     const label = `<div class="label left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">NAMENAMENAME</div>`
