@@ -1,4 +1,4 @@
-import frag from "./glsl/background.glsl";
+import frag from "./assets/background.glsl";
 
 (() => {
     const canvas = document.querySelector('canvas#shader')! as HTMLCanvasElement;

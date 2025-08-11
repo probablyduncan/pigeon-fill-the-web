@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Tom's New Roman";
-    src: local("Tom's New Roman"), url("tomnr.ttf");
+    src: local("Tom's New Roman"), url("assets/tomnr.ttf");
 }
 
 @layer base {
