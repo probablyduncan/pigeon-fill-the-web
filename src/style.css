@@ -10,7 +10,6 @@
         --yellow: #ffcc00;
         --blue: rgb(212, 231, 245);
         --line-color: #2f2f3111;
-        --margin: 1.5rem;
         --font-size-body: clamp(1.25rem, 2vw, 1.5rem);
         --font-size-nav: clamp(1rem, 1.5vw, 1.2rem);
         --max-width: 1440px;
@@ -165,21 +164,32 @@
     display: none;
     text-align: center;
     font-style: italic;
-    /* hyphens: auto; */
-    /* text-wrap: balance; */
+
+    &.wonky {
+        text-align: justify;
+        text-align-last: justify;
+    }
 }
 
 #subtitle {
     pointer-events: auto;
-    
+
     line-height: 1;
     padding: 0.1em 0.25em;
+
     background-color: white;
+
+    /* background-image: url("/public/ii/whitesky/2.webp");
+    background-position: 50% 50%;
+    background-size: 40em auto;
+    background-repeat: repeat-x; */
+
     border: 1px solid var(--line-color);
-    
+
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 
+    ::selection,
     &::selection {
         background-color: black;
         color: white;

@@ -18,5 +18,11 @@ noise gradient top of title area mimicking film grain
 
 try speech bubble instead of star icon for starting subtitles
 
-images appears normal width at first but gets wider as you scroll down like pryamid chat
 
+
+
+split extended chimney photo into top, middle, and bottom
+
+top has animated flicker/variations
+middle is static, just original 3/2
+bottom sort of melts into the sky?

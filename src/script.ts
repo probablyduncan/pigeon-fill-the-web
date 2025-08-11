@@ -112,15 +112,31 @@ document.addEventListener("DOMContentLoaded", () => {
         animation: gsap.to("#oyster .show-on-move", {
             opacity: 1,
             yoyo: true,
-            repeat: 5,
+            repeat: 4,
             repeatDelay: 0.0333,
             duration: 0.0333,
         }),
     })
 
     ScrollTrigger.create({
+        id: "overflow",
+        trigger: "#overflow .stack",
+        toggleActions: "none play none reset",
+        start: "top bottom",
+        end: "bottom bottom",
+        // markers: true,
+        animation: gsap.timeline().to("#overflow img:not(.final)", {
+            stagger: 0.1,
+            ease: roughEase,
+            autoAlpha: 0,
+            duration: 0.1,
+            reversed: true,
+        })
+    })
+
+    ScrollTrigger.create({
         id: "cgp",
-        trigger: "#cgp div",
+        trigger: "#cgp .stack",
         toggleActions: "none play none reset",
         start: "top bottom",
         end: "bottom bottom",
@@ -187,17 +203,33 @@ document.addEventListener("DOMContentLoaded", () => {
         onLeaveBack: () => toggleNavFont(false),
     })
 
-    // ScrollTrigger.create({
-    //     id: "chimney",
-    //     trigger: "#chimney",
-    //     start: "bottom bottom",
-    //     pin: true,
-    //     markers: true,
-    //     scrub: true,
-    //     animation: gsap.to("#chimney", {
-    //         // scale: 10,
-    //         duration: 10,
-    //     })
+
+    ScrollTrigger.create({
+        id: "chimney",
+        trigger: "#chimney",
+        toggleActions: "none play none reset",
+        start: "top bottom",
+        end: "top center",
+        animation: gsap.timeline().to("#chimney img:not(.final)", {
+            autoAlpha: 0,
+            duration: 0.2,
+            stagger: 0.2,
+            ease: roughEase,
+            reversed: true,
+        }, 0)
+        .from("#chimney > div > div", {
+            stagger: 0.01,
+            autoAlpha: 0,
+            ease: roughEase,
+            duration: 0.1,
+        }, 0.3)
+    })
+    
+    // ;(document.querySelector("#chimney .stack") as HTMLElement)?.addEventListener("click", e => {
+    //     const rect = (e.target as HTMLElement).getBoundingClientRect()
+    //     const label = `<div class="label left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">NAMENAMENAME</div>`
+    //     console.log(label)
+    //     navigator.clipboard.writeText(label)
     // })
 
     ScrollTrigger.create({
@@ -330,7 +362,7 @@ function initSubtitles() {
     }
 
     function toggleWonk(wonky: boolean) {
-        wonky ? subtitleHolder.classList.add("wonky") : subtitleHolder.classList.remove("wonky")
+        wonky ? subtitleWrapper.classList.add("wonky") : subtitleWrapper.classList.remove("wonky")
     }
 
     const subtitles: {
