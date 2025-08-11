@@ -34,6 +34,8 @@ get first image to peek up on mobile
 
 flicker title with tom new roman if you've been sitting there for a sec
 
+what if some pigeons are in front of the subtitle bar?
+
 
 attributions:
 - tom7 font
