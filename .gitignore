@@ -33,3 +33,7 @@ dist-ssr
 *.osp
 *.mp4
 *.webm
+
+!*apple-touch-icon*
+!*android-chrome*
+!*favicon*
