@@ -26,3 +26,16 @@ split extended chimney photo into top, middle, and bottom
 top has animated flicker/variations
 middle is static, just original 3/2
 bottom sort of melts into the sky?
+
+
+maybe split into acts? different pages?
+
+get first image to peek up on mobile
+
+flicker title with tom new roman if you've been sitting there for a sec
+
+
+attributions:
+- tom7 font
+- lucie tokyo
+- ai disclaimer?
