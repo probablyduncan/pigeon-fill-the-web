@@ -203,23 +203,22 @@ document.addEventListener("DOMContentLoaded", () => {
         onLeaveBack: () => toggleNavFont(false),
     })
 
-
     ScrollTrigger.create({
-        id: "chimney",
-        trigger: "#chimney",
+        id: "chimney-top",
+        trigger: "#chimney-top",
         toggleActions: "none play none reset",
         start: "top bottom",
-        end: "top center",
+        end: "center center",
         // markers: true,
         animation: gsap.timeline()
-            .to("#chimney img:not(.final)", {
+            .to("#chimney-top img:not(.final)", {
                 autoAlpha: 0,
                 duration: 0.2,
                 stagger: 0.5,
                 ease: roughEase,
                 reversed: true,
             }, 0)
-            .from("#chimney .label", {
+            .from("#chimney-top .label", {
                 stagger: 0.01,
                 autoAlpha: 0,
                 ease: roughEase,
@@ -228,12 +227,174 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 0.3)
     })
 
-    // ;(document.querySelector("#chimney .stack") as HTMLElement)?.addEventListener("click", e => {
+    ScrollTrigger.create({
+        id: "chimney-middle",
+        trigger: "#chimney-middle",
+        toggleActions: "none play none reset",
+        start: "top bottom",
+        end: "top bottom",
+        // markers: true,
+        animation: gsap.timeline()
+            // .to("#chimney-middle img:not(.final)", {
+            //     autoAlpha: 0,
+            //     duration: 0.2,
+            //     stagger: 0.5,
+            //     ease: roughEase,
+            //     reversed: true,
+            // }, 0)
+            .from("#chimney-middle .label", {
+                stagger: 0.01,
+                autoAlpha: 0,
+                ease: roughEase,
+                duration: 0.1,
+                delay: 0,
+            }, 0.3)
+    })
+
+    ScrollTrigger.create({
+        id: "chimney-ground",
+        trigger: "#chimney-ground",
+        toggleActions: "none play none reset",
+        start: "top bottom",
+        end: "top bottom",
+        animation: gsap.timeline()
+            // .to("#chimney-ground img:not(.final)", {
+            //     autoAlpha: 0,
+            //     duration: 0.2,
+            //     stagger: 0.5,
+            //     ease: roughEase,
+            //     reversed: true,
+            // }, 0)
+            .from("#chimney-ground .label", {
+                stagger: 0.2,
+                autoAlpha: 0,
+                ease: roughEase,
+                duration: 0.1,
+                delay: 0,
+            }, 0.3)
+    })
+
+    // so how am I gonna do this?
+    // first, there are a bunch of popups
+    // then, the sky comes in:
+    // first, it's empty
+    // then we see that glitch
+    // then empty, then imagination elephant, then empty sky again
+    // then the popups start disappearing?
+    // but the sky remains, flickering artifacts, into emptiness
+
+    // so I need to figure out how this works in two places: html/css and gsap
+    const popupAnimation = gsap.timeline()
+        .to("#glitch-popups > *", {
+            // first, pop glitches onto the screen
+            stagger: 0.1,
+            autoAlpha: 1,
+            duration: 0.001,
+        })
+        .to("#first-sky img", {
+            // tease the sky
+            stagger: 0.3,
+            autoAlpha: 1,
+            duration: 0,
+            delay: 0.1,
+        })
+
+        // .to("#elephant", {
+        //     autoAlpha: 1,
+        //     duration: 0,
+        //     delay: 0.3,
+        //     repeatDelay: 0.1,
+        //     yoyo: true,
+        //     repeat: 3,
+        // })
+
+        // .to("#imagination-popups img", {
+        //     stagger: 0.1,
+        //     autoAlpha: 1,
+        //     duration: 0,
+        //     delay: 0.1,
+        // })
+
+        // .to("#imagination-popups img, #elephant", {
+        //     autoAlpha: 0,
+        //     duration: 0,
+        //     delay: 0,
+        // })
+
+        .to("#sky-glitch", {
+            autoAlpha: 1,
+            duration: 0,
+            delay: 0.2,
+        })
+
+        .to("#glitch-popups > *", {
+            // clear out glitches
+            delay: 0.5,
+            stagger: 0.02,
+            autoAlpha: 0,
+            duration: 0.001,
+        })
+        .to("#sky-glitch", {
+            autoAlpha: 0,
+            duration: 0,
+            delay: 0,
+        }, "-=0.2")
+
+        .to("#last-sky", {
+
+            autoAlpha: 1,
+            duration: 0,
+            delay: 0.2,
+        })
+        .to("#first-sky img", {
+            autoAlpha: 0,
+            duration: 0,
+            delay: 0,
+        })
+
+        .to("#last-sky", {
+
+            autoAlpha: 0,
+            duration: 1,
+            delay: 2,
+        })
+
+    ScrollTrigger.create({
+        id: "popups",
+        trigger: "#popup-section",
+        scrub: true,
+        start: "top center",
+        end: "bottom center",
+        // markers: true,
+        animation: popupAnimation,
+    })
+
+    ScrollTrigger.create({
+        id: "sky-catcher",
+        trigger: "#sky-catcher",
+        start: "center center",
+        end: "bottom top",
+        scrub: true,
+        animation: gsap.timeline()
+            .to("#sky-catcher img", {
+                autoAlpha: 1,
+                duration: 0,
+            })
+    })
+
+    // document.querySelectorAll("#chimney .stack")?.forEach(_e => (_e as HTMLElement).addEventListener("click", e => {
     //     const rect = (e.target as HTMLElement).getBoundingClientRect()
     //     const label = `<div class="label left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%] rotate-[-6deg] translate-x-[-50%] translate-y-[-50%]">NAMENAMENAME</div>`
     //     console.log(label)
     //     navigator.clipboard.writeText(label)
-    // })
+    // }))
+
+    document.getElementById("chimney-last")!.addEventListener("click", e => {
+        const rect = (e.target as HTMLElement).getBoundingClientRect()
+        const img = `<img src="/public/ii/14/1.webp" class="left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%]" />`
+        console.log(img)
+        navigator.clipboard.writeText(img)
+    })
 
     ScrollTrigger.create({
         id: "reset-nav-font",
@@ -392,7 +553,7 @@ function initSubtitles() {
     const splitType = "words"
     let currentSplit: SplitText | undefined
 
-    function enter(_st: ScrollTrigger, data: typeof subtitles[number]) {
+    function enter(data: typeof subtitles[number]) {
         currentSplit?.revert()
         toggleSubtitle(false)
         toggleWonk(data.wonky)
@@ -415,7 +576,7 @@ function initSubtitles() {
         })
     }
 
-    function exit(_st: ScrollTrigger) {
+    function exit() {
         currentSplit?.revert()
         currentSplit = SplitText.create("#subtitle", {
             type: splitType,
@@ -442,13 +603,11 @@ function initSubtitles() {
 
     for (const subtitle of subtitles) {
 
-        const onEnter = (self: ScrollTrigger) => enter(self, subtitle)
-
         ScrollTrigger.create({
             id: "text__" + subtitle.text.replaceAll(" ", "_"),
             trigger: subtitle.trigger,
-            onEnter: onEnter,
-            onEnterBack: onEnter,
+            onEnter: () => enter(subtitle),
+            onEnterBack: () => enter(subtitle),
             onLeave: exit,
             onLeaveBack: exit,
             start: subtitle.start,

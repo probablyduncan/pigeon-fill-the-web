@@ -144,6 +144,11 @@
     .label {
         font-family: "Tom's New Roman", "Times New Roman", Times, serif;
     }
+
+    .start-hidden {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 
 #subtitle-container {
