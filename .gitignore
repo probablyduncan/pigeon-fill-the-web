@@ -28,6 +28,7 @@ dist-ssr
 *.png
 *.tif
 *.psd
+*.psb
 *.afphoto
 *.afphoto~lock~
 *.osp

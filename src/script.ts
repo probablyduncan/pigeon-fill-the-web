@@ -210,19 +210,21 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleActions: "none play none reset",
         start: "top bottom",
         end: "top center",
+        // markers: true,
         animation: gsap.timeline()
-            // .to("#chimney img:not(.final)", {
-            //     autoAlpha: 0,
-            //     duration: 0.2,
-            //     stagger: 0.2,
-            //     ease: roughEase,
-            //     reversed: true,
-            // }, 0)
-            .from("#chimney > div > div", {
+            .to("#chimney img:not(.final)", {
+                autoAlpha: 0,
+                duration: 0.2,
+                stagger: 0.5,
+                ease: roughEase,
+                reversed: true,
+            }, 0)
+            .from("#chimney .label", {
                 stagger: 0.01,
                 autoAlpha: 0,
                 ease: roughEase,
                 duration: 0.1,
+                delay: 0.5,
             }, 0.3)
     })
 
