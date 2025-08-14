@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: "#overflow .stack",
         toggleActions: "none play none reset",
         start: "top bottom",
-        end: "bottom bottom",
+        end: "top center",
         // markers: true,
         animation: gsap.timeline().to("#overflow img:not(.final)", {
             stagger: 0.1,
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: "#clockwise > div",
         toggleActions: "none play none reset",
         start: "top bottom",
-        end: "bottom bottom",
+        end: "top center",
         // markers: true,
         animation: gsap.timeline().to("#clockwise img:not(.final)", {
             stagger: 0.3,
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: "#names-3 > div",
         toggleActions: "none play none reset",
         start: "top bottom",
-        end: "bottom bottom",
+        end: "top center",
         // markers: true,
         animation: gsap.timeline()
             .to("#names-3 img:not(.final)", {
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
             autoAlpha: 1,
             duration: 0,
             delay: 0.2,
-        })
+        }, "-=0.25")
         .to("#first-sky img", {
             autoAlpha: 0,
             duration: 0,
@@ -354,12 +354,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         .to("#last-sky", {
             autoAlpha: 0,
-            duration: 3,
-            delay: 3,
+            duration: 2,
+            delay: 0,
         })
         .to(".top-right, .bottom-right, .top-left, .bottom-left", {
             autoAlpha: 0,
-            duration: 1,
+            duration: 2,
         }, "<")
 
     ScrollTrigger.create({
@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: "#cambridge-split",
         scrub: 0.5,
         start: "bottom bottom",
-        end: "center top",
+        end: "top top",
         // pin: true,
         // markers: true,
         animation: gsap.timeline().to("#cambridge-rect", {
