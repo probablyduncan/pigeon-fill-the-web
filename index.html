@@ -16,7 +16,7 @@
     <!-- <canvas id="shader" class="fixed w-dvw h-dvw select-none pointer-events-none"></canvas> -->
     <div id="background"></div>
 
-    <div id="pigeon" class="fixed z-[999] right-[calc(50%-18px)] top-2 w-[36px] h-[36px]"></div>
+    <!-- <div id="pigeon" class="fixed z-[999] right-[calc(50%-18px)] top-2 w-[36px] h-[36px]"></div> -->
 
     <div class="top-left">
         to pigeon-fill the sky
@@ -24,11 +24,12 @@
 
     <div class="top-right">
         made by <a href="https://duncanpetrie.com" target="_blank" title="duncanpetrie.com">duncan</a>
+        <!-- <a href="/about" target="_blank">about</a> -->
     </div>
 
-    <!-- <div class="top-right"><a href="/about">about</a></div> -->
+    <!-- <div class="bottom-right"><a href="/about">about</a></div> -->
 
-    <!-- <div class="bottom-left">there's a <a href="/book">book</a>??</div> -->
+    <!-- <div class="bottom-left"><a href="/book">book</a></div> -->
 
     <div id="subtitle-container">
         <div id="subtitle-wrapper">
@@ -826,7 +827,7 @@
         <!-- begin act iii -->
 
 
-        <section class="grid-cols mt-[200svh]">
+        <section id="clear-nav" class="grid-cols mt-[200svh]">
             <img class="col-start-3 col-end-13 md:col-start-1 md:col-span-6 mt-[2vw]"
                  src="/public/iii/empties/hangover_spread_left.webp" />
             <img class="col-start-1 col-end-11 mt-[50svh] md:mt-0 md:col-start-7 md:col-span-6"
@@ -944,12 +945,22 @@
             <img class="col-start-3 col-span-10 md:col-start-4 md:col-span-8" src="/public/iii/ending/last_crow.webp" />
         </section>
 
-        <section class="mt-[50lvh] h-[52lvh]" data-subtitle="Fin."></section>
+        <section class="grid-cols mt-[50svh]">
+            <img class="col-start-2 md:col-start-7 col-end-13" src="/public/cover/pigeon-bognor-blurry.webp" />
+        </section>
+
+        <nav class="h-[50vh] grid-cols items-end">
+            <span class="col-start-1 col-end-7"><a href="/about" target="_blank">about</a></span>
+            <span class="col-start-7 col-end-10"><a href="/pigeon-fill-the-sky.pdf" target="_blank">book</a></span>
+            <span class="col-start-10 col-end-13"><a href="https://duncanpetrie.com" target="_blank">duncan</a></span>
+        </nav>
+
+        <section></section>
 
     </main>
 
     <script type="module" src="/src/script.ts"></script>
-    <script type="module" src="/src/3d.ts"></script>
+    <!-- <script type="module" src="/src/3d.ts"></script> -->
 </body>
 
 </html>

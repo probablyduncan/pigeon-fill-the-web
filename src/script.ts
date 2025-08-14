@@ -353,11 +353,14 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
         .to("#last-sky", {
-
             autoAlpha: 0,
             duration: 1,
             delay: 2,
         })
+        .to(".top-right, .bottom-right, .top-left, .bottom-left", {
+            autoAlpha: 0,
+            duration: 1,
+        }, "<")
 
     ScrollTrigger.create({
         id: "popups",
@@ -394,14 +397,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = `<img src="/public/ii/14/1.webp" class="left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%]" />`
         console.log(img)
         navigator.clipboard.writeText(img)
-    })
-
-    ScrollTrigger.create({
-        id: "reset-nav-font",
-        trigger: "#old-enough-2",
-        start: "top center",
-        onEnter: () => toggleNavFont(false),
-        onLeaveBack: () => toggleNavFont(true),
     })
 
     ScrollTrigger.create({

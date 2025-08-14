@@ -21,7 +21,7 @@ import { GLTFLoader } from 'three/examples/jsm/Addons.js';
     const loader = new GLTFLoader();
     let pigeonModel: THREE.Group<THREE.Object3DEventMap> | undefined;
 
-    loader.load('./src/assets/pigeon.glb', (gltf) => {
+    loader.load("./src/assets/pigeon.glb", (gltf) => {
         pigeonModel = gltf.scene;
         birdcage.add(pigeonModel);
         const boundingBox = new THREE.Box3().setFromObject(pigeonModel);
@@ -42,7 +42,6 @@ import { GLTFLoader } from 'three/examples/jsm/Addons.js';
         target: window,
         type: "scroll",
         onChange: (self) => {
-            console.log(self.velocityY);
             if (!pigeonModel) {
                 return
             }
