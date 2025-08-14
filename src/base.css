@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Tom's New Roman";
+    src: local("Tom's New Roman"), url("assets/tomnr.ttf");
+}
+
+@layer base {
+    :root {
+        --yellow: #ffcc00;
+        --blue: rgb(212, 231, 245);
+        --line-color: #2f2f3111;
+
+        --font-size-xl: clamp(2rem, 4vw, 2.5rem);
+        --font-size-lg: clamp(1.5rem, 3vw, 1.875rem);
+        --font-size-md: clamp(1.2rem, 2vw, 1.5rem);
+        --font-size-sm: clamp(1rem, 1.5vw, 1.2rem);
+
+        /* overscroll-behavior: none; */
+        overflow-x: hidden;
+    }
+
+    :root,
+    body {
+        overflow-x: hidden;
+    }
+    body {
+        font-size: var(--font-size-md);
+    }
+
+    * {
+        box-sizing: border-box;
+        padding: unset;
+        margin: unset;
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        user-select: none;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    ::selection,
+    a:hover {
+        background-color: var(--blue);
+    }
+}
+
+@layer utilities {
+    .top-left,
+    .top-right,
+    .bottom-left,
+    .bottom-right {
+        z-index: 999;
+        position: fixed;
+        font-size: var(--font-size-sm);
+        font-style: italic;
+        line-height: 1;
+    }
+
+    .top-left,
+    .top-right {
+        top: 4px;
+    }
+
+    .bottom-left,
+    .bottom-right {
+        bottom: 4px;
+    }
+
+    .top-left,
+    .bottom-left {
+        left: 8px;
+    }
+
+    .top-right,
+    .bottom-right {
+        right: 8px;
+    }
+    .wonky,
+    .wonky * {
+        font-family: "Tom's New Roman", "Times New Roman", Times, serif;
+    }
+}

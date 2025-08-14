@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .to("#glitch-popups > *", {
             // clear out glitches
             delay: 0.5,
-            stagger: 0.02,
+            stagger: 0.05,
             autoAlpha: 0,
             duration: 0.001,
         })
@@ -354,8 +354,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         .to("#last-sky", {
             autoAlpha: 0,
-            duration: 1,
-            delay: 2,
+            duration: 3,
+            delay: 3,
         })
         .to(".top-right, .bottom-right, .top-left, .bottom-left", {
             autoAlpha: 0,
@@ -433,7 +433,7 @@ function initShowHideOnMove() {
         const wrapperEl = _e as HTMLElement
         const showEls = wrapperEl.querySelectorAll(".show-on-move")
         const hideEls = wrapperEl.querySelectorAll(".hide-on-move")
-        let timeoutId: number | undefined
+        let timeoutId: NodeJS.Timeout | undefined
 
         function onMove() {
 
@@ -463,7 +463,7 @@ function initShowHideOnScroll() {
         const wrapperEl = _e as HTMLElement
         const showEls = wrapperEl.querySelectorAll(".show-on-scroll")
         const hideEls = wrapperEl.querySelectorAll(".hide-on-scroll")
-        let timeoutId: number | undefined
+        let timeoutId: NodeJS.Timeout | undefined
 
         function onMove() {
 

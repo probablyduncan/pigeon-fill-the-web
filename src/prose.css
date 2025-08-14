@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "./base.css";
+
+@layer base {
+
+    h1, h2 {
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-lg);
+    }
+
+    h1, h2, p, img, blockquote {
+        margin-top: 1em;
+        text-wrap: pretty;
+    }
+
+    blockquote {
+        margin-left: 1em;
+        font-style: italic;
+    }
+}
