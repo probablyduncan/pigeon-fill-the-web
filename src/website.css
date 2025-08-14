@@ -133,7 +133,7 @@
     }
 }
 
-[data-subtitle] {
+/* [data-subtitle] {
     &::before,
     &::after {
         position: absolute;
@@ -151,10 +151,10 @@
         content: "…";
         content: "🗈";
         content: "🗩";
-        /* content: "🗯"; */
-        /* content: "🗋"; */
-        /* content: "▻"; */
-        /* content: "⇲"; */
+        content: "🗯";
+        content: "🗋";
+        content: "▻";
+        content: "⇲";
         content: "!";
         content: "◮";
         content: "‼";
@@ -164,7 +164,7 @@
     }
 
     &::after {
-        /* content: "↗"; */
+        content: "↗";
         content: "×";
         content: "⋉";
         content: "‥";
@@ -185,7 +185,7 @@
     &:not([data-subtitle-icon-right])::after {
         left: 8px;
     }
-}
+} */
 
 #title-wrapper {
     min-height: calc(90svh);

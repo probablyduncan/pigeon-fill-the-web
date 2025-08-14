@@ -1,4 +1,4 @@
-import "./style.css"
+import "./website.css"
 // import "./shader"
 
 import { gsap } from "gsap"
