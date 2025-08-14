@@ -369,18 +369,18 @@ document.addEventListener("DOMContentLoaded", () => {
         animation: popupAnimation,
     })
 
-    ScrollTrigger.create({
-        id: "sky-catcher",
-        trigger: "#sky-catcher",
-        start: "center center",
-        end: "bottom top",
-        scrub: true,
-        animation: gsap.timeline()
-            .to("#sky-catcher img", {
-                autoAlpha: 1,
-                duration: 0,
-            })
-    })
+    // ScrollTrigger.create({
+    //     id: "sky-catcher",
+    //     trigger: "#sky-catcher",
+    //     start: "center center",
+    //     end: "bottom top",
+    //     scrub: true,
+    //     animation: gsap.timeline()
+    //         .to("#sky-catcher img", {
+    //             autoAlpha: 1,
+    //             duration: 0,
+    //         })
+    // })
 
     // document.querySelectorAll("#chimney .stack")?.forEach(_e => (_e as HTMLElement).addEventListener("click", e => {
     //     const rect = (e.target as HTMLElement).getBoundingClientRect()

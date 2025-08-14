@@ -42,6 +42,8 @@ attributions:
 - lucie tokyo
 - ai disclaimer?
 
+https://sketchfab.com/3d-models/pigeon-ddd5ef4a94eb4159937a9de25c45697c
+- "Pigeon" (https://skfb.ly/oRFtx) by kenchoo is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 
 convert vertical spacing to pixels?
