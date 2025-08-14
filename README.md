@@ -1,49 +1,14 @@
-first I need to mock up the whole length of the thing with images text etc not worrying too much about layout
 
-then I need to get the layouts done for mobile/etc
+This is the source of [To Pigeon-Fill the Sky (the Website)](https://pigeons.duncanpetrie.com), a photographic storybook about the creative process, AI art, and, of course, pigeons.
 
-and I need to figure out how the text will be displayed
+It's a digital adaptation of To Pigeon-Fill the Sky (the Book), which you can read about [here](https://pigeons.duncanpetrie.com/book).
 
-then I need to work on animations/effects not worrying too much about file size/performance
+This site was built with vite, tailwind, and gsap. The code is not great. It's mostly in `website.html`, `website.css`, and `website.ts`.
 
-finally I need to do some optimization and tighten things up
+I would not recommend looking at it!
 
-also attribute tom's new roman!!
+The images are all my own. Some of them have been  using Photoshop's generative fill tool.
 
-ideas:
+Most of the site is in Times New Roman, but I used [tom7](http://tom7.org/)'s incredible font Tom's New Roman (available [here](http://fonts.tom7.com/fonts93.html)) for my scrappy descent into ai-pigeon-hell.
 
-page number in the corner lol
-
-noise gradient top of title area mimicking film grain
-
-try speech bubble instead of star icon for starting subtitles
-
-
-
-
-split extended chimney photo into top, middle, and bottom
-
-top has animated flicker/variations
-middle is static, just original 3/2
-bottom sort of melts into the sky?
-
-
-maybe split into acts? different pages?
-
-get first image to peek up on mobile
-
-flicker title with tom new roman if you've been sitting there for a sec
-
-what if some pigeons are in front of the subtitle bar?
-
-
-attributions:
-- tom7 font
-- lucie tokyo
-- ai disclaimer?
-
-https://sketchfab.com/3d-models/pigeon-ddd5ef4a94eb4159937a9de25c45697c
-- "Pigeon" (https://skfb.ly/oRFtx) by kenchoo is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
-
-
-convert vertical spacing to pixels?
+The grid lines were inspired by [lucie.tokyo](https://lucie.tokyo), which does them much better, I think. When I have more time I'd like to come back and play around with a more dynamic background.
