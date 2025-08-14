@@ -53,8 +53,8 @@ import { GLTFLoader } from 'three/examples/jsm/Addons.js';
         }
     });
 
-    let rotation = Math.PI / 4;
-
+    
+    // let rotation = Math.PI / 4;
     function animate() {
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
