@@ -4,24 +4,44 @@ import "./website.css"
 import { gsap } from "gsap"
 import { RoughEase } from "gsap/EasePack"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-// import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { SplitText } from "gsap/SplitText"
 
 gsap.registerPlugin(
     ScrollTrigger,
-    // ScrollSmoother,
     RoughEase,
     SplitText
 )
 
 document.addEventListener("DOMContentLoaded", () => {
-    // ScrollSmoother.create({
-    //     content: "main",
-    //     smooth: 0.5,
-    //     effects: true,
-    // })
 
     const roughEase = "rough({template: elastic.inOut, points: 100, randomize:true, clamp:true})"
+
+    // page load animations
+    gsap.timeline()
+        .from("#title h1", {
+            x: 0,
+            y: 24,
+            duration: 0.5,
+        }, 0)
+        .from("#title h3", {
+            x: 0,
+            y: 32,
+            duration: 0.6,
+        }, 0)
+        .from("#title img", {
+            x: 16,
+            y: 24,
+            duration: 0.6,
+            ease: "power1.out"
+        }, 0)
+        .from("#title span", {
+            y: 16,
+            duration: 0.5,
+        }, 0)
+        .from("#old-enough-1", {
+            y: 20,
+            duration: 0.5,
+        }, 0)
 
     ScrollTrigger.create({
         id: "title-icon",
@@ -31,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
         scrub: 0.5,
         // markers: true,
         animation: gsap.to("#title img", {
-            y: -90,
             x: -60,
+            y: -90,
             scale: 2,
         })
     })

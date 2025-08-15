@@ -188,7 +188,7 @@
 } */
 
 #title-wrapper {
-    min-height: calc(90svh);
+    min-height: calc(100svh - 1.8em);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,6 +221,10 @@
 
         h3 {
             font-size: clamp(1rem, 3vw, 2.25rem);
+        }
+
+        span {
+            display: inline-block;
         }
     }
 }
