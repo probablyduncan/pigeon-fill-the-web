@@ -16,45 +16,185 @@
 <body>
 
     <div class="top-left">
-        <a href="/" title="back!" class="no-underline">to pigeon-fill the sky</a>
+        <a href="/website" title="To Pigeon-Fill the Sky (the Webside)" class="no-underline">to pigeon-fill the sky (the website)</a>
     </div>
 
     <div class="top-right">
-        made by <a href="https://duncanpetrie.com" target="_blank" title="duncanpetrie.com">duncan</a>
+        made by <a href="https://duncanpetrie.com" target="_blank" title="https://duncanpetrie.com">duncan</a>
     </div>
 
     <main class="mt-[40svh]">
-        <!-- <img src="/public/cover/_cover.jpg" /> -->
+
         <p class="arrow-indent">This is a website about a book about pigeons.</p>
-        <p>The book is about doing something good, once, and trying to do it again, and forgetting how hard it was to do it the first time.</p>
-        <p>When I made it, I was thinking a lot about my past photography. I had spent a year away from my camera, and when I picked it back up, my new work felt flat. I felt like I'd lost my touch.</p>
+
+        <p>The book is a photobook. It’s about doing something good, once, and trying to do it again, and forgetting how hard it was to do it the first time.</p>
+
+        <p>When I made the book, I was thinking a lot about my past photography. I had spent a year away from my camera, and when I picked it back up, my new work felt flat. I felt like I’d lost my touch.</p>
+
         <p>This was most evident in the skies of my new pictures.</p>
+
         <p>My old photography was full of birds. There were birds on telephone poles, birds strutting down gutters and gables, birds among the clouds, between the trees, and in the corners of the sky.</p>
-        
-        <img src="/public/i/flock.webp" />
+
+        <img loading="lazy" src="/public/i/flock.webp" />
 
         <p>And in my new pictures, the skies were all empty.</p>
-        
-        <img src="/public/i/bigempty.webp" />
 
-        <p>I thought I had lost my touch, but really I just wasn't being patient. In that year of inaction, of looking back without moving forward, I had forgotten that good pictures are hard work. You have to keep showing up.</p>
+        <img loading="lazy" src="/public/i/bigempty.webp" />
+
+        <p>I thought I had lost my touch, but really I just wasn’t being patient. In that year of inaction, of looking back without moving forward, I had forgotten that good pictures—pictures with punctum, pictures of some decisive moment—take hard work. You have to keep showing up.</p>
 
         <p>(You can read more about the book <a href="/book" title="To Pigeon-Fill the Sky (the Book)">here</a>.)</p>
-        <br/>
-        <br/>
+        <br />
+        <br />
 
         <h2>Returning</h2>
 
         <p>I made the book in 2024, and decided it needed a website almost exactly a year after it was finished.</p>
-        
-        <p>I'm really proud of the book. It's an extremely satisfying to have such a hefty manifestation of an art that lives mostly on hard drives. It's physicality is one of the things that I love most about it. It's a pleasing object.</p>
 
-        <p>But often, whenever anybody asked to see it, I would have to send them the <span class="small-caps">Pdf</span>, instead of a copy of the actual book. It felt flat. A <span class="small-caps">PDF</span>, like <span class="small-caps">DEATH</span>, is a great equalizer. A <span class="small-caps">PDF</span> doesn't do anything justice.</p>
-        <p>I thought to myself: <i>I'm a programmer; wouldn't it be fun to turn this into a website?</i></p>
-        <br/>
-        <br/>
-        
-        <p>See the website <a href="/website" target="_blank" title="To Pigeon-Fill the Sky (the Website)">here</a>.</p>
+        <p>I’m really proud of the book. It’s an extremely satisfying to have such a hefty manifestation of an art that lives mostly on hard drives. It’s physicality is one of the things that I love most about it. It’s a pleasing object.</p>
+
+        <p>But often, whenever anybody asked to see it, I would have to send them the <span class="small-caps">pdf</span>, instead of a copy of the actual book. It felt flat. A <span class="small-caps">pdf</span> is like <span class="small-caps">death</span>: a great equalizer. A <span class="small-caps">pdf</span> doesn’t do anything justice.</p>
+        <p>I thought to myself: <i>I’m a programmer; wouldn’t it be fun to turn this into a website?</i></p>
+        <br />
+        <br />
+
+        <img loading="lazy" src="/public/cover/cover_pigeon_sky.webp" />
+
+        <h2>Choosing a form</h2>
+
+        <p>I started by directly translating the book to html. At the beginning, I thought this would be a small project. All I wanted was a link to send people who didn’t have access to the physical book.</p>
+
+        <p>But a direct translation is never a good translation.</p>
+
+        <img loading="lazy" src="/public/colophon/initial_design_2.webp" />
+
+        <p>I started with a 12-column grid, and laid out the images and text in a way that matched the book. This looked fine in Figma, but as a website it was static, uninspired. It was too easy.</p>
+
+        <p>The main problem, I think, was the text. It was too small, secondary to the images. I wanted the text to feel less like captions, and more like narration, an equal part of the story.</p>
+
+        <p>So I took inspiration from TV subtitles. I really love <span class="subtitle-yellow">subtitle yellow</span>, but it proved too distracting.</p>
+
+        <img loading="lazy" src="/public/colophon/subtitle_experiment.webp" />
+
+        <p>I ended up sticking with black on white, and centering them on the screen. I used GSAP’s <a target="_blank" title="https://gsap.com/docs/v3/Plugins/SplitText/" href="https://gsap.com/docs/v3/Plugins/SplitText/">SplitText</a> plugin to animate entry/exit, and set up a simple api for adding these subtitles to sections on the page.</p>
+
+        <img loading="lazy" src="/public/colophon/text_animation.webp" />
+
+        <p>So that’s the basic form I chose: images in a 12-column grid and a subtitle box for the narrator.</p>
+
+        <p>Now, I needed to break it.</p>
+        <br />
+        <br />
+
+        <img loading="lazy" src="/public/ii/7/7.webp" />
+
+        <h2>Emphasizing Chaos</h2>
+
+        <p>The second act of this project is a descent into AI madness. The narrator, unsatisfied with the lack of pigeons in the sky, decides he must <i>do it himself</i>.</p>
+
+        <p>A photobook is a good medium in part because it’s rigid. One of the mechanisms of storytelling is the setting and breaking of expectations, and it’s very easy to set expectations in a book. In this book, most pages have an image and some text. When pigeons overflow the expected bounds of an image, it’s a very obvious change. It’s easy to convey a departure from the status quo when the status quo is limited and uncomplicated.</p>
+
+        <p>On the web, however, there are no such constraints. The status quo is already animations and popups, cookie banners and autoplay, content upon content upon content atop a dizzying tower of ungodly css. In the medium of the web, an image with overflowing pigeons isn’t much of a surprise.</p>
+
+        <p>So, in order to accent the second act, I tried to give the first act more structure, more form.</p>
+
+        <p>I used a simple grid system to position the images so that, when the pigeons started spilling, there were rules to be broken. I tried to emphasize this with grid lines, taking inspiration from the lovely <a href="https://lucie.tokyo" title="https://lucie.tokyo" target="_blank">lucie.tokyo</a>, but I definitely under-delivered. When I have more time I’d like to come back and play around with a more dynamic, textural background.</p>
+
+        <p>I added a lot of spacing between images, to make sections with pigeons feel more crowded. (Too much spacing? I used <span class="small-caps">vh</span> units for vertical margins, and I’m not sure that was the best idea.)</p>
+
+        <p>I used Times New Roman because I like it, and because it’s what I used in the book, but also because it’s the definition of status quo, and because, when the pigeons got crazy, I could switch to <span class="wonky"><a href="http://fonts.tom7.com/fonts93.html" title="http://fonts.tom7.com/fonts93.html" target="_blank">Tom’s New Roman</a>, an incredible hand-drawn font</span> created by <a href="http://tom7.org/" title="http://tom7.org/" target="_blank">Tom7</a>. I also considered using <a href="https://github.com/weiweihuanghuang/Times-New-Bastard" title="https://github.com/weiweihuanghuang/Times-New-Bastard" target="_blank">Times New Bastard</a>, or <a href="https://timesnewarial.liebermannkiepereddemann.de/" title="https://timesnewarial.liebermannkiepereddemann.de/" target="_blank">Times New Arial</a>, but <span class="wonky">Tom’s New Roman</span> had exactly the <span class="wonky">wonky, ransom scrawl</span> I needed.</p>
+
+        <br />
+        <br />
+
+        <img loading="lazy" src="/public/ii/14/glitch.webp" />
+
+        <h2>Generating</h2>
+
+        <p>I already had a set of AI-pigeon-images (read more about them in the book’s afterword), but, as previously discussed, they weren’t going to cut it. On the internet, the bar for <i>weird</i> is higher.</p>
+
+        <p>First, I tried animating my previous images. Because I had generated most of the pigeons separately, they were already in their own layers, so I just created 4-6 frames for each one, and set the up to flick through when they come into frame.</p>
+
+        <img loading="lazy" src="/public/colophon/pigeon_pop_in_2.webp" />
+
+        <p>As I progressed, though, I realized the most chaotic images in the book weren’t chaotic enough for the website. I started adding more pigeons.</p>
+
+        <p>I pushed it, and the results got weirder and weirder.</p>
+
+        <img loading="lazy" src="/public/colophon/14_frames.webp" />
+
+        <p>Some example prompts:</p>
+
+        <blockquote>pigeons the likes of which the world has never seen. So many pigeons I am drowning in pigeons. There will never again be a pigeon shortage.</blockquote>
+        <blockquote>a little troupe of faraway flying pigeons, no more than specks against the clear sky</blockquote>
+        <blockquote>un troupeau de pigeons noirs</blockquote>
+        <blockquote>un troupeau de nombreux petits pigeons</blockquote>
+        <blockquote>curly wingus flee pigeon curly whingus fleet dove</blockquote>
+        <blockquote>scheming devious little pigeons</blockquote>
+        <blockquote>Folkbird, Yorick, Absalon, Juno, Ajax,Ragozine, Heinlein, Heinrich, Heimlich, Heinz, Herman, Hector, Gregor, Flector, Edgar, Allen, Alan, Turing, Midas, Norbert, Knot, Calvino, Olivier, Oreste, Anne Marie, Vivianne, Vivian, Encarnación, Noam, Jean, Jen...</blockquote>
+        <blockquote>the golden gate bridge (this generated a single pigeon)</blockquote>
+        <br />
+
+        <p>And then I came across <a href="https://pyramid.chat/" title="https://pyramid.chat/" target="_blank">pyramid.chat</a>, which is a funny website in itself, but its Corporate Structure diagram caught my attention. This is a great example of setting and breaking expectations: at first, it’s a funny little chart, but then it grows, and melts, and soon your screen is on fire and there are skulls everywhere and—</p>
+
+        <p>And before you know it you’re doing the same thing on your website, only instead of a corprate structure, you’re illustrating the descent into pigeon-hell.</p>
+
+        <img loading="lazy" src="/public/colophon/stack_animation.webp" />
+
+        <p>I started with the climax image from the book, an image of pigeons spilling out of a chimney, and extended it down. I used Photoshop’s expand tool to expand the canvas and fill in the new space. I did this 4-5 times for each layer, and blended them together.</p>
+
+        <p>And then, at some point in this process, as my pigeon-hell stack grew, Photoshop flinched.</p>
+
+        <img loading="lazy" src="/public/colophon/glitch_animation.webp" class="border" />
+
+        <p>As I panned up, glitches danced across the image. I tried to export the image, but the glitches were only a visual artifact in Photoshop itself. So I took a lot of screenshots.</p>
+
+        <p>This was the chaos I was looking for. This was my decisive moment.</p>
+
+        <img loading="lazy" src="/public/ii/14/glitch.webp" />
+
+        <p>They’re almost perfect. I could have created collages like this by hand, but that would have gone against the spirit of the project. I tried to make compositions like this using Photoshop’s AI tools, but they were incompotent; it was like doing surgery with a crowbar. It took patience, trial, and error—and my computer deciding that it had had enough—to make something that felt like a miracle.</p>
+
+        <p>I’m hesitant to say that this is the same kind of hard work that I had forgotten when I set out to make the original book, but there’s definitely a parallel. Even in a project about AI art, where I was letting myself explore these tools, it still took an irreproducable miracle to make something good. I still had to wait for the decisive moment.</p>
+
+        <br />
+        <br />
+
+        <img loading="lazy" src="/public/colophon/names_animation.webp" />
+
+        <h2>Naming</h2>
+
+        <p>I also spent a very long time naming pigeons. At last count, I named 390 pigeons. This was all done by hand. I came up with each name myself, and positioned each label myself. This took almost an entire day.</p>
+
+        <p>There’s something interesting in working so painstakingly on an automatable task in a project already full of AI slop.</p>
+
+        <p>The parts of this project that AI would be best at (creating a website, listing hundreds of names) I did myself, and the part that I am best at (taking pictures of skies full of birds) I offloaded on AI.</p>
+
+        <br />
+        <br />
+
+        <img loading="lazy" src="\public\cover\pigeon-bognor-blurry.webp" />
+
+        <h2>Finally</h2>
+
+        <p>When I was making this website, I just wanted it over and done. I had a lot of fun, and I learned a lot, don’t get me wrong, but I already did this project! And here I was, doing it all over again.</p>
+
+        <p>I expected it to take a few days, but I spent two weeks doing this. When I made the book, I was thinking a lot about my old photography, and feeling like my newer work wasn’t as good. But when I was turning that book into a website, I just wanted to move on. I just wanted to make something new.</p>
+
+        <p>I think that’s progress.</p>
+
+        <p class="text-right italic">
+            Duncan Petrie
+            <br />
+            August, 2025
+        </p>
+        <br />
+        <br />
+        <br />
+
+        <p class="italic text-center text-balance" style="font-size: var(--font-size-sm);">Read about the <a href="/book" title="To Pigeon-Fill the Sky (the Book)">book version</a>, see this project on <a href="https://github.com/probablyduncan/pigeon-fill-the-web" title="https://github.com/probablyduncan/pigeon-fill-the-web" target="_blank">github</a>, go back to the <a href="/website" title="To Pigeon-Fill the Sky (the Website)">web version</a>, or check out my other work at <a href="https://duncanpetrie.com" title="https://duncanpetrie.com" target="_blank">duncanpetrie.com</a>.</p>
+
+        <img loading="lazy" class="my-[max(3em,calc((100vh-150%)/2))] mx-auto w-[min(100%,calc((100vh-6em)*2/3))]" src="/public/colophon/do_feed.webp" />
 
     </main>
 
