@@ -2,8 +2,22 @@
 @import "./base.css";
 
 @layer base {
+    
+    body {
+        width: 50ch;
+        max-width: 100%;
+        padding: 8px;
+        margin: 0 auto;
+        overflow-x: visible;
+    }
 
-    h1, h2 {
+    main {
+        position: relative;
+        margin-bottom: 50svh;
+    }
+
+    h1,
+    h2 {
         font-weight: 400;
         font-style: italic;
     }
@@ -16,7 +30,11 @@
         font-size: var(--font-size-lg);
     }
 
-    h1, h2, p, img, blockquote {
+    h1,
+    h2,
+    p,
+    img,
+    blockquote {
         margin-top: 1em;
         text-wrap: pretty;
     }
@@ -24,5 +42,45 @@
     blockquote {
         margin-left: 1em;
         font-style: italic;
+    }
+
+    p,
+    blockquote {
+        hyphens: auto;
+    }
+}
+
+@layer utilities {
+    .small-caps {
+        font-variant-caps: all-petite-caps;
+        font-size: 1.1em;
+        line-height: 1;
+    }
+
+    .arrow-indent {
+        position: relative;
+        &::before {
+            
+            content: "";
+            background: url("/public/cover/icon_transparent.webp");
+            background-size: 100%;
+            background-position: 50% 50%;
+            
+            position: absolute;
+            top: -1em;
+            left: -2em;
+            width: 1.5em;
+            height: 1.5em;
+
+            /* content: '»';
+                top: 0px;
+                left: -1em; */
+        }
+    }
+}
+
+@layer components {
+    #carousel {
+        cursor: e-resize;
     }
 }

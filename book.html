@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./src/prose.css" />
 </head>
 
-<body class="w-xl max-w-full p-2 mx-auto">
+<body>
 
     <div class="top-left">
         <a href="/" title="back!" class="no-underline">to pigeon-fill the sky</a>
@@ -24,22 +24,41 @@
         <!-- <a href="/about" target="_blank">about</a> -->
     </div>
 
-    <main class="mt-2 mb-[50svh]">
-        <img src="/public/book/1.webp" />
+    <main>
+        <img id="carousel" src="/public/book/1.webp" />
 
         <h1>To Pigeon-Fill the Sky</h1>
 
-        <p>To Pigeon-Fill the Sky is a photographic storybook about artificial intelligence, the creative process, and, of course, pigeons.</p>
+        <p class="arrow-indent"><i>To Pigeon-Fill the Sky</i> is a photographic storybook about artificial intelligence, the creative process, and, of course, pigeons.</p>
 
         <p>Returning to photography after a year-long hiatus, I struggled to match the quality of my old work. My new images were weak. They lacked dynamism, punctum, decisive moments. No birds filled their skies. I had spent a year remembering the best of my old images, rose-tinted, and had forgotten the patience and persistence that was required to make them. I saw photographs of miracles, and forgot how long I had stood there waiting for them. I had forgotten that good art takes hard work.</p>
 
-        <p>I’m a software engineer as well as a photographer, and I’ve spent a lot of time thinking about and interacting with artificial intelligence. Over the past three years, I’ve witnessed my two industries froth and fight over the glittering promise of AI, the shortcuts it opens, the expertise and experience it renders obsolete, and the slop that it burns into being. I imagined an artist who might forego patience, persistence, and hard work for an artificially injected decisive moment—why wait for punctum when you can add it in post?</p>
+        <p>As a software engineer and a photographer, and I’ve spent a lot of time thinking about artificial intelligence. Over the past three years, I’ve witnessed my two industries froth and fight over the glittering promise of AI, the shortcuts it opens, the expertise and experience it renders obsolete, and the slop that it burns into being. I imagined an artist who might forego patience, persistence, and hard work for an artificially injected decisive moment—why wait for punctum when you can add it in post?</p>
 
-        <p>To Pigeon-Fill the Sky is the story of that artist. It contains 100 pages of analog photography, digital photography, real pigeons, and digital pigeons. It was shot and edited in the summer of 2024, in and around London, England.</p>
+        <p><i>To Pigeon-Fill the Sky</i> is the story of that artist. It contains 100 pages of analog photography, digital photography, real pigeons, and digital pigeons. It was shot and edited in the summer of 2024, in and around London, England.</p>
 
-        <p>View the whole PDF <a href="/pigeon-fill-the-sky.pdf" target="_blank" title="to-pigeon-fill-the-sky.pdf">here</a>.</p>
+        <p>To view the whole <span class="small-caps">PDF</span>, including an expanded statement on the project's process and motivation, click <a href="/pigeon-fill-the-sky.pdf" target="_blank" title="to-pigeon-fill-the-sky.pdf">here</a>.</p>
+
+        <p>To view the web adaptation, click <a href="/website" target="_blank" title="To Pigeon-Fill the Sky (the Website)">here</a>.</p>
 
     </main>
+
+    <script type="text/javascript">
+        const img = document.querySelector("img#carousel");
+        const numImages = 6
+        img?.addEventListener("click", e => {
+
+            const indexPos = [
+                img.src.lastIndexOf("/") + 1,
+                img.src.lastIndexOf(".webp")
+            ]
+
+            const current = parseInt(img.src.substring(...indexPos));
+            const modifier = (e.offsetX / e.target.clientWidth >= 0.5) ? 1 : -1;
+            const next = (current - 1 + modifier + numImages) % numImages + 1;
+            img.src = img.src.substring(0, indexPos[0]) + next + img.src.substring(indexPos[1])
+        })
+    </script>
 
 </body>
 
