@@ -47,15 +47,15 @@
         const numImages = 6
         img?.addEventListener("click", e => {
 
-            const indexPos = [
+            const indices = [
                 img.src.lastIndexOf("/") + 1,
                 img.src.lastIndexOf(".webp")
             ]
 
-            const current = parseInt(img.src.substring(...indexPos));
+            const current = parseInt(img.src.substring(...indices));
             const modifier = (e.offsetX / e.target.clientWidth >= 0.5) ? 1 : -1;
             const next = (current - 1 + modifier + numImages) % numImages + 1;
-            img.src = img.src.substring(0, indexPos[0]) + next + img.src.substring(indexPos[1])
+            img.src = `/public/book/${next}.webp`;
         })
     </script>
 
