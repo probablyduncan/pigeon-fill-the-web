@@ -12,36 +12,43 @@ gsap.registerPlugin(
     SplitText
 )
 
-document.addEventListener("DOMContentLoaded", () => {
+initGSAP()
+initShowHideOnMove()
+initShowHideOnScroll()
+initShowHideAfterPass()
+initSubtitles()
+
+function initGSAP() {
 
     const roughEase = "rough({template: elastic.inOut, points: 100, randomize:true, clamp:true})"
 
-    // page load animations
-    gsap.timeline()
-        .from("#title h1", {
-            x: 0,
-            y: 24,
-            duration: 0.5,
-        }, 0)
-        .from("#title h3", {
-            x: 0,
-            y: 32,
-            duration: 0.6,
-        }, 0)
-        .from("#title img", {
-            x: 16,
-            y: 24,
-            duration: 0.6,
-            ease: "power1.out"
-        }, 0)
-        .from("#title span", {
-            y: 16,
-            duration: 0.5,
-        }, 0)
-        .from("#old-enough-1", {
-            y: 20,
-            duration: 0.5,
-        }, 0)
+    window.addEventListener("DOMContentLoaded", () => {
+        gsap.timeline()
+            .from("#title h1", {
+                x: 0,
+                y: 24,
+                duration: 0.5,
+            }, 0)
+            .from("#title h3", {
+                x: 0,
+                y: 32,
+                duration: 0.6,
+            }, 0)
+            .from("#title img", {
+                x: 16,
+                y: 24,
+                duration: 0.6,
+                ease: "power1.out"
+            }, 0)
+            .from("#title span", {
+                y: 16,
+                duration: 0.5,
+            }, 0)
+            .from("#old-enough-1", {
+                y: 20,
+                duration: 0.5,
+            }, 0)
+    })
 
     ScrollTrigger.create({
         id: "title-icon",
@@ -311,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // first, pop glitches onto the screen
             stagger: 0.1,
             autoAlpha: 1,
-            duration: 0.001,
+            duration: 0.01,
         })
         .to("#first-sky img", {
             // tease the sky
@@ -414,12 +421,12 @@ document.addEventListener("DOMContentLoaded", () => {
     //     navigator.clipboard.writeText(label)
     // }))
 
-    document.getElementById("chimney-last")!.addEventListener("click", e => {
-        const rect = (e.target as HTMLElement).getBoundingClientRect()
-        const img = `<img src="/ii/14/1.webp" class="left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%]" />`
-        console.log(img)
-        navigator.clipboard.writeText(img)
-    })
+    // document.getElementById("chimney-last")!.addEventListener("click", e => {
+    //     const rect = (e.target as HTMLElement).getBoundingClientRect()
+    //     const img = `<img src="/ii/14/1.webp" class="left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%]" />`
+    //     console.log(img)
+    //     navigator.clipboard.writeText(img)
+    // })
 
     ScrollTrigger.create({
         id: "cambridge-split",
@@ -439,13 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "none",
         }),
     })
-
-
-    initShowHideOnMove()
-    initShowHideOnScroll()
-    initShowHideAfterPass()
-    initSubtitles()
-})
+}
 
 
 function initShowHideOnMove() {
@@ -617,9 +618,7 @@ function initSubtitles() {
         })
     }
 
-
     for (const subtitle of subtitles) {
-
         ScrollTrigger.create({
             id: "text__" + subtitle.text.replaceAll(" ", "_"),
             trigger: subtitle.trigger,
