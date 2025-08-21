@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
         id: "old-new",
         trigger: "#now",
         start: "center center",
-        toggleActions: "play none none reverse",
+        end: "center center",
+        toggleActions: "play none reverse none",
+        scrub: true,
         // markers: true,
         animation: gsap.timeline().to("#now .new", {
             opacity: 1,
