@@ -63,7 +63,7 @@
         position: relative;
         &::before {
             content: "";
-            background: url("/public/cover/icon_transparent.webp");
+            background: url("/cover/icon_transparent.webp");
             background-size: 100%;
             background-position: 50% 50%;
 

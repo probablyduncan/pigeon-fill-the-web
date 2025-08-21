@@ -414,7 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("chimney-last")!.addEventListener("click", e => {
         const rect = (e.target as HTMLElement).getBoundingClientRect()
-        const img = `<img src="/public/ii/14/1.webp" class="left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%]" />`
+        const img = `<img src="/ii/14/1.webp" class="left-[${(100 * e.layerX / rect.width).toFixed(1)}%] top-[${(100 * e.layerY / rect.height).toFixed(1)}%]" />`
         console.log(img)
         navigator.clipboard.writeText(img)
     })
