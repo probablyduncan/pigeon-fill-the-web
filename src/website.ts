@@ -312,85 +312,6 @@ function initGSAP() {
     // then the popups start disappearing?
     // but the sky remains, flickering artifacts, into emptiness
 
-    // so I need to figure out how this works in two places: html/css and gsap
-    const popupAnimation = gsap.timeline()
-        .to("#glitch-popups > *", {
-            // first, pop glitches onto the screen
-            stagger: 0.1,
-            autoAlpha: 1,
-            duration: 0.01,
-        })
-        .to("#first-sky img", {
-            // tease the sky
-            stagger: 0.3,
-            autoAlpha: 1,
-            duration: 0,
-            delay: 0.1,
-        })
-
-        // .to("#elephant", {
-        //     autoAlpha: 1,
-        //     duration: 0,
-        //     delay: 0.3,
-        //     repeatDelay: 0.1,
-        //     yoyo: true,
-        //     repeat: 3,
-        // })
-
-        // .to("#imagination-popups img", {
-        //     stagger: 0.1,
-        //     autoAlpha: 1,
-        //     duration: 0,
-        //     delay: 0.1,
-        // })
-
-        // .to("#imagination-popups img, #elephant", {
-        //     autoAlpha: 0,
-        //     duration: 0,
-        //     delay: 0,
-        // })
-
-        .to("#sky-glitch", {
-            autoAlpha: 1,
-            duration: 0,
-            delay: 0.2,
-        })
-
-        .to("#glitch-popups > *", {
-            // clear out glitches
-            delay: 0.5,
-            stagger: 0.05,
-            autoAlpha: 0,
-            duration: 0.001,
-        })
-        .to("#sky-glitch", {
-            autoAlpha: 0,
-            duration: 0,
-            delay: 0,
-        }, "-=0.2")
-
-        .to("#last-sky", {
-
-            autoAlpha: 1,
-            duration: 0,
-            delay: 0.2,
-        }, "-=0.25")
-        .to("#first-sky img", {
-            autoAlpha: 0,
-            duration: 0,
-            delay: 0,
-        })
-
-        .to("#last-sky", {
-            autoAlpha: 0,
-            duration: 2,
-            delay: 0,
-        })
-        .to(".top-right, .bottom-right, .top-left, .bottom-left", {
-            autoAlpha: 0,
-            duration: 2,
-        }, "<")
-
     ScrollTrigger.create({
         id: "popups",
         trigger: "#popup-section",
@@ -398,7 +319,83 @@ function initGSAP() {
         start: "top center",
         end: "bottom center",
         // markers: true,
-        animation: popupAnimation,
+        animation: gsap.timeline()
+            .to("#glitch-popups > *", {
+                // first, pop glitches onto the screen
+                stagger: 0.1,
+                autoAlpha: 1,
+                duration: 0.01,
+            })
+            .to("#first-sky img", {
+                // tease the sky
+                stagger: 0.3,
+                autoAlpha: 1,
+                duration: 0,
+                delay: 0.1,
+            })
+
+            // .to("#elephant", {
+            //     autoAlpha: 1,
+            //     duration: 0,
+            //     delay: 0.3,
+            //     repeatDelay: 0.1,
+            //     yoyo: true,
+            //     repeat: 3,
+            // })
+
+            // .to("#imagination-popups img", {
+            //     stagger: 0.1,
+            //     autoAlpha: 1,
+            //     duration: 0,
+            //     delay: 0.1,
+            // })
+
+            // .to("#imagination-popups img, #elephant", {
+            //     autoAlpha: 0,
+            //     duration: 0,
+            //     delay: 0,
+            // })
+
+            .to("#sky-glitch", {
+                autoAlpha: 1,
+                duration: 0,
+                delay: 0.2,
+            })
+
+            .to("#glitch-popups > *", {
+                // clear out glitches
+                delay: 0.5,
+                stagger: 0.05,
+                autoAlpha: 0,
+                duration: 0.001,
+            })
+            .to("#sky-glitch", {
+                autoAlpha: 0,
+                duration: 0,
+                delay: 0,
+            }, "-=0.2")
+
+            .to("#last-sky", {
+
+                autoAlpha: 1,
+                duration: 0,
+                delay: 0.2,
+            }, "-=0.25")
+            .to("#first-sky img", {
+                autoAlpha: 0,
+                duration: 0,
+                delay: 0,
+            })
+
+            .to("#last-sky", {
+                autoAlpha: 0,
+                duration: 2,
+                delay: 0,
+            })
+            .to(".top-right, .bottom-right, .top-left, .bottom-left", {
+                autoAlpha: 0,
+                duration: 2,
+            }, "<"),
     })
 
     // ScrollTrigger.create({
