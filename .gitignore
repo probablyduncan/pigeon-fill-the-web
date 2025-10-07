@@ -38,3 +38,4 @@ dist-ssr
 !*apple-touch-icon*
 !*android-chrome*
 !*favicon*
+!noise.png
