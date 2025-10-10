@@ -44,9 +44,14 @@
     a {
         text-decoration: underline;
     }
+    
+    button {
+        font-size: var(--font-size-sm);
+    }
 
     ::selection,
-    a:hover {
+    a:hover,
+    button:hover {
         background-color: var(--blue);
     }
 }
