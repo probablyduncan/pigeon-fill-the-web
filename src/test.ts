@@ -14,7 +14,7 @@ async function initTest() {
     let lastDropSize: [number, number] = [0, 0]
 
 
-    main.addEventListener("mousedown", e => {
+    main.addEventListener("mousedown", () => {
         canPlaceLabel = true
     })
 
@@ -78,11 +78,11 @@ async function initTest() {
         return label
     }
 
-    function onClickLabel(event: MouseEvent, label: HTMLDivElement) {
+    function onClickLabel(event: MouseEvent, _label: HTMLDivElement) {
         event.stopPropagation()
     }
 
-    function onMouseDownLabel(event: MouseEvent, label: HTMLDivElement) {
+    function onMouseDownLabel(event: MouseEvent, _label: HTMLDivElement) {
         event.stopPropagation()
     }
 }
