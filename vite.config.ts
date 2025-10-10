@@ -18,6 +18,7 @@ export default defineConfig({
                 website: resolve(__dirname, 'website.html'),
                 book: resolve(__dirname, 'book.html'),
                 about: resolve(__dirname, 'about.html'),
+                test: resolve(__dirname, 'test.html'),
             },
         },
     },

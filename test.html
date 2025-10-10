@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Pigeon-Fill the Sky (the Website)</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="./src/base.css" />
+</head>
+
+<body>
+
+    <div class="noise"></div>
+    <script type="module" src="/src/test.ts"></script>
+
+    <main></main>
+
+</body>
+
+<style>
+    main {
+        background: url("/cover/inner_cover_empty.webp");
+        background: url("/ii/stack/2.webp");
+        background-size: cover;
+        background-position: bottom right;
+        
+        width: 96vw;
+        height: 96dvh;
+
+        margin: 2vw 2dvh;
+
+        position: relative;
+    }
+
+    .label {
+
+        --top: -100%;
+        --left: -100%;
+        --rotate: 0deg;
+
+        position: absolute;
+        transform: translate(-50%, -50%);
+        /* rotate: var(--rotate); */
+        top: var(--top);
+        left: var(--left);
+
+        transform-origin: left top;
+
+        cursor: zoom-in;
+
+        line-height: 1;
+        background-color: white;
+        padding: 0.1em 0.25em;
+        font-size: var(--font-size-sm);
+        white-space: nowrap;
+
+        font-family: "Tom's New Roman", "Times New Roman", Times, serif;
+        font-family: 'Times New Roman', Times, serif;
+
+        user-select: none;
+        -webkit-user-select: none;
+
+        animation: rotate-jitter 20s linear infinite;
+
+        &:hover {
+            animation: rotate-jitter 2s linear infinite;
+            z-index: 999;
+        }
+    }
+
+    @keyframes rotate-jitter {
+        0% {
+            rotate: -0.1deg;
+        }
+
+        5% {
+            rotate: 0.8deg;
+        }
+
+        10% {
+            rotate: 0.2deg;
+        }
+
+        15% {
+            rotate: -0.6deg;
+        }
+
+        20% {
+            rotate: 0deg;
+        }
+
+        25% {
+            rotate: 0.5deg;
+        }
+
+        30% {
+            rotate: -0.3deg;
+        }
+
+        35% {
+            rotate: 0.4deg;
+        }
+
+        40% {
+            rotate: 0.9deg;
+        }
+
+        45% {
+            rotate: -0.7deg;
+        }
+
+        50% {
+            rotate: 0.3deg;
+        }
+
+        55% {
+            rotate: -0.4deg;
+        }
+
+        60% {
+            rotate: -0.6deg;
+        }
+
+        65% {
+            rotate: 0.7deg;
+        }
+
+        70% {
+            rotate: 0.1deg;
+        }
+
+        75% {
+            rotate: -0.8deg;
+        }
+
+        80% {
+            rotate: -0.9deg;
+        }
+
+        85% {
+            rotate: 0.3deg;
+        }
+
+        90% {
+            rotate: -0.1deg;
+        }
+
+        95% {
+            rotate: 0.5deg;
+        }
+
+        100% {
+            rotate: 0.5deg;
+        }
+    }
+</style>
