@@ -34,13 +34,12 @@ async function initTest() {
         const distanceX = Math.abs(currentPos[0] - lastDropPos[0]);
         const distanceY = Math.abs(currentPos[1] - lastDropPos[1]);
 
-        console.log(distanceX, distanceY, currentPos, lastDropPos)
-
         if (distanceX > lastDropSize[0] || distanceY > lastDropSize[1] * 2) {
             lastDropPos = currentPos
-            const label = createLabel(...currentPos)
-            main!.appendChild(label)
-            lastDropSize = [label.clientWidth, label.clientHeight].map(size => size * (Math.random() * 1 + 1)) as [number, number]
+            const els = createLabel(...currentPos)
+            main!.appendChild(els.label)
+            main!.appendChild(els.img)
+            lastDropSize = [els.label.clientWidth, els.label.clientHeight].map(size => size * (Math.random() * 1 + 1)) as [number, number]
         }
     }
 
@@ -49,7 +48,7 @@ async function initTest() {
         lastDropPos = [-999, -999]
     }
 
-    function createLabel(clientX: number, clientY: number): HTMLDivElement {
+    function createLabel(clientX: number, clientY: number): { label: HTMLDivElement, img: HTMLImageElement } {
         const label = document.createElement("div")
 
         label.classList.add("label")
@@ -75,7 +74,14 @@ async function initTest() {
         label.addEventListener("click", e => onClickLabel(e, label))
         label.addEventListener("mousedown", e => onMouseDownLabel(e, label))
 
-        return label
+        const img = document.createElement("img");
+        img.src = getPigeonImgSrc();
+        img.style.width = "40px";
+        img.alt = label.innerText;
+
+        return {
+            label, img
+        }
     }
 
     function onClickLabel(event: MouseEvent, _label: HTMLDivElement) {
@@ -85,8 +91,36 @@ async function initTest() {
     function onMouseDownLabel(event: MouseEvent, _label: HTMLDivElement) {
         event.stopPropagation()
     }
+
+    const numPigeonFiles = 4;
+    const recentPigeons: number[] = new Array(numPigeonFiles / 2).fill(0);
+    function getPigeonImgSrc() {
+        while (true) {
+            const candidate = Math.floor(Math.random() * numPigeonFiles + 1);
+            if (!recentPigeons.includes(candidate)) {
+                recentPigeons.shift();
+                recentPigeons.push(candidate);
+                return "/test/" + candidate + ".webp";
+            }
+        }
+    }
 }
 
 
 
 initTest()
+
+
+
+
+function letFlyThePigeons() {
+
+    const main = document.querySelector("main")!
+
+    if (!names || !names.length || !main) {
+        return
+    }
+
+
+
+}
