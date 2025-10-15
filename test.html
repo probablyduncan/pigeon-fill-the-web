@@ -38,6 +38,98 @@
         border-radius: 0.25%;
     }
 
+    figure.pigeon  {
+        margin: 0;
+        padding: 0;
+
+        --top: -100%;
+        --left: -100%;
+        --scale: 1;
+
+        position: absolute;
+        top: var(--top);
+        left: var(--left);
+
+        width: calc(var(--scale) * 40px);
+        aspect-ratio: 1;
+
+        transform: translate(-50%, -50%);
+        
+        overflow: visible;
+    }
+
+    figure.pigeon figcaption {
+        --top: 115%;
+        --left: 10%;
+        --rotate: 0deg;
+
+        position: absolute;
+        top: var(--top);
+        left: var(--left);
+        transform: translate(-50%, -50%) rotate(var(--rotate));
+
+        cursor: grab;
+        /* pointer-events: all; */
+
+        line-height: 1;
+        background-color: white;
+        padding: 0.1em 0.25em;
+        font-size: var(--font-size-sm);
+        white-space: nowrap;
+
+        display: inline-block;
+        
+        user-select: none;
+        -webkit-user-select: none;
+
+        z-index: 2;
+    }
+
+    figure.pigeon figcaption input {
+        border: none;
+        background: none;
+        font-family: inherit;
+        text-align: center;
+        outline: none;
+        padding: 0;
+        margin: 0;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        &::selection {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    figure.pigeon figcaption span {
+        display: inline-block;
+        visibility: hidden;
+        white-space: pre;
+    }
+
+    figure.pigeon img {
+        --top: 0%;
+        --left: 0%;
+
+        --flip: 0;
+        --rotate: 0deg;
+
+        position: relative;
+        top: var(--top);
+        left: var(--left);
+        
+        pointer-events: all;
+
+        transform: scaleX(calc(var(--flip) * -2 + 1)) rotate(var(--rotate));
+
+        z-index: 1;
+    }
+
     .label {
 
         --top: -100%;
