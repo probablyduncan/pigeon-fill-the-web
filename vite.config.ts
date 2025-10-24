@@ -16,6 +16,7 @@ export default defineConfig({
             input: {
                 landing: resolve(__dirname, 'index.html'),
                 website: resolve(__dirname, 'website.html'),
+                website__embedded: resolve(__dirname, 'website__embedded.html'),
                 book: resolve(__dirname, 'book.html'),
                 about: resolve(__dirname, 'about.html'),
                 test: resolve(__dirname, 'test.html'),
