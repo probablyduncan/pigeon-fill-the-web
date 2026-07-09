@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @import "./base.css";
 
+/* For vertical spacing */
+@theme {
+    --spacing-v4:   min(2.67vw,  38.4px);
+    --spacing-v10:  min(6.67vw,  96px);
+    --spacing-v20:  min(13.3vw,  192px);
+    --spacing-v30:  min(20vw,    288px);
+    --spacing-v40:  min(26.7vw,  384px);
+    --spacing-v50:  min(33.3vw,  480px);
+    --spacing-v60:  min(40vw,    576px);
+    --spacing-v80:  min(53.3vw,  768px);
+    --spacing-v100: min(66.7vw,  960px);
+    --spacing-v120: min(80vw,    1152px);
+    --spacing-v200: min(133.3vw, 1920px);
+}
+
 @layer base {
     :root {
         --max-width: 1440px;
